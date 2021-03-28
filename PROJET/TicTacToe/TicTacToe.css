@@ -1,0 +1,37 @@
+html{
+    display: table;
+    margin: auto;
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+table{
+    border-collapse:initial;
+    height: 300px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+td{
+    border-spacing: 0;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color:powderblue;
+}
+button{
+    border:1px solid black;
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    background-color:black;
+    color:white;
+}
