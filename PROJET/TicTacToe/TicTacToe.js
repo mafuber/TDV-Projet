@@ -5,7 +5,7 @@ const allcases=["00","01","02","10","11","12","20","21","22"];
 const pattern = [["00","01","02"],["10","11","12"],["20","21","22"],["00","10","20"],["01","11","21"],["02","12","22"],["00","11","22"],["02","11","20"]];
 //maintenant c'est sur GitHub?: oui
 // et là?
-//et le commit?
+//et le commit 1?
 function Restart(){
     for(i=0;i<9;i++){
         identity=allcases[i];
