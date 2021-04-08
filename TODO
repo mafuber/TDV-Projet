@@ -1,4 +1,5 @@
 LISTE DES  TACHES:
+<<<<<<< HEAD
 ----------------------------------------(IVAN)
     CHARACTERISTIQUES ORBITALES 
         - NOMBRES DE SATELLITES
@@ -16,3 +17,19 @@ LISTE DES  TACHES:
     RAYONS X
     SON DES PLANETES ghfh
     Salüü zämo
+=======
+
+Priorité:
+
+1 - Site web: 
+    - principal
+    - 2ème page pour planète cliquée 
+        + bouton pour aller principale 
+        + planete suivante 
+        + planète avant
+    - point noir pour changer de planète : transition à voir
+
+2 - Data : 
+
+    
+>>>>>>> 158f7ee563a3e943e430d4a2c4579738573b249d
