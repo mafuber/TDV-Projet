@@ -1,20 +1,15 @@
 LISTE DES  TACHES:
-----------------------------------------(IVAN)
-    CHARACTERISTIQUES ORBITALES 
-        - NOMBRES DE SATELLITES
-        - DISTANCE AU SOLEIL
-        - REVOLUTIONS
-        - MASSE
-----------------------------------------(KIRA)
-    COMPOSITION
-        - SOL
-        - ATMOSPHERE
-----------------------------------------(JESSICA)
-    TEMPERATURES
-    RAYONS UV
-----------------------------------------(MICHEL)
-    RAYONS X
-    SON DES PLANETES ghfh
-    Salüü zämo
-    
 
+Priorité:
+
+1 - Site web: 
+    - principal
+    - 2ème page pour planète cliquée 
+        + bouton pour aller principale 
+        + planete suivante 
+        + planète avant
+    - point noir pour changer de planète : transition à voir
+
+2 - Data : 
+
+    
