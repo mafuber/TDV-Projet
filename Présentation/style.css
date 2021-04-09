@@ -101,3 +101,20 @@ body {
 
   
   }
+
+
+  .container {
+     animation: transitionIn 1s; 
+  }
+
+  @keyframes transitionIn {
+    from {
+        opacitiy: 0;
+        transform: rotateX(-90deg);
+    }
+
+    to{
+        opacitiy: 1;
+        transform: rotateX(0);
+    }
+  }
