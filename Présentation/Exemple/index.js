@@ -94,3 +94,10 @@ tl.to('#triangle', {
     },
     '-=6'
   );
+
+
+  /*
+  function transition(){
+    HTML
+    <img style="transform:scale(2)" src="rect.png" width="200" height="132"></img>
+  }*/
