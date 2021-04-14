@@ -1,8 +1,8 @@
 body {
     Width: 100%;
-    margin; auto;
     min-width: 600px;
     max-width: 2000px;
+    margin: auto;
     background-image: url('index.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
