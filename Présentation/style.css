@@ -1,4 +1,9 @@
 body {
+    Width: 100%;
+    min-width: 600px;
+    max-width: 2000px;
+    margin: 0px;
+    padding: 0px;
     background-image: url('index.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -6,11 +11,73 @@ body {
     color: white;
   }
 
-.center {
-   
-   text-align: center;
-    
+  nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    position: sticky;
+    top: 0px;
 }
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li{
+    flex: 1 1 auto;
+    text-align: center;
+    position: relative;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous{
+    display: flex;
+    flex-flow: column wrap;
+}
+.sous li{
+    flex: 1 1 auto;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+
+
+/* IVAN
+*/
+
+
 
 #page1{
   background-image: url('space_mainpage.jpg');
@@ -25,8 +92,8 @@ body {
   top: 10%;
   left:45%;
   margin: -25px 0 0 -25px;
-  text-decoration: underline;
 }
+
 .mainb{
   position:absolute; 
   top: 50%;
@@ -46,13 +113,10 @@ body {
 
 .left {
     text-align: left;
- 
 }
 
 .right {
-
     text-align: right;
-   
 }
 
 #planet {
@@ -149,6 +213,7 @@ body {
         opacitiy: 1;
         transform: rotateX(0);
     }
+<<<<<<< HEAD
   }
 
 
@@ -211,3 +276,6 @@ body {
   transition: all 0.5s ease;
 }
 */
+=======
+  }
+>>>>>>> 158a87d25d644b4cf5b5d3ac6939829c84d3bda8
