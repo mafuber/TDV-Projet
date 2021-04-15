@@ -151,7 +151,6 @@ nav>ul li:hover .sous {
     width: 50%;*/
 }
 
-<<<<<<< HEAD
 
 
 .button_last {
@@ -166,24 +165,6 @@ nav>ul li:hover .sous {
   padding: 10px 20px 10px 20px;
 
 
-=======
-.button_last {
-    background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
-    -webkit-border-radius: 20;
-    -moz-border-radius: 20;
-    border-radius: 20px;
-    text-shadow: 1px 0px 0px #0a040a;
-    font-family: Georgia;
-    color: #3e08a3;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    /*verticale centering*/
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
->>>>>>> 6c1aa7db354a31b11b6082b8b688336cedad1f6b
 }
 
 .button_next {
@@ -196,22 +177,9 @@ nav>ul li:hover .sous {
     color: #3e08a3;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
-<<<<<<< HEAD
 
 
   }
-=======
-    transform: translate(44px, 0px);
-    -webkit-transform: translate(44px, 0px);
-    -moz-transform: translate(44px, 0px);
-    /*verticale centering*/
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
->>>>>>> 6c1aa7db354a31b11b6082b8b688336cedad1f6b
 
 .button_overview {
     background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
@@ -223,8 +191,6 @@ nav>ul li:hover .sous {
     color: #3e08a3;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
-<<<<<<< HEAD
-
     position:absolute;
     bottom: 0;
     margin: 0;
@@ -235,18 +201,6 @@ nav>ul li:hover .sous {
   .container {
      animation: transitionIn 1s; 
   }
-=======
-    margin: 0;
-    position: absolute;
-    top: 100%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.container {
-    animation: transitionIn 1s;
-}
->>>>>>> 6c1aa7db354a31b11b6082b8b688336cedad1f6b
 
 @keyframes transitionIn {
     from {
@@ -257,13 +211,16 @@ nav>ul li:hover .sous {
         opacitiy: 1;
         transform: rotateX(0);
     }
-<<<<<<< HEAD
-  }
-=======
-    <<<<<<< HEAD
-}
->>>>>>> 6c1aa7db354a31b11b6082b8b688336cedad1f6b
+  
 
+
+    /*verticale centering
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    */
 
 /* ensures children take full-height of viewport 
 .wrapper {
