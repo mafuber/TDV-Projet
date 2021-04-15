@@ -10,10 +10,14 @@ body {
     color: white;
   }
 
-.wrapper {
+  {
     width: 860px;
     margin: 0 auto;
  }
+
+.a {
+  text-decoration: non;
+}
 
 .wrapper ul {
    list-style: none;
