@@ -153,10 +153,11 @@ nav > ul li:hover .sous{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 
+  
+
 }
 
 .button_next {
-    float: right;
     background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
     -webkit-border-radius: 20;
     -moz-border-radius: 20;
@@ -166,6 +167,10 @@ nav > ul li:hover .sous{
     color: #3e08a3;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
+
+    transform: translate(44px,0px);
+-webkit-transform: translate(44px,0px);
+-moz-transform: translate(44px,0px);
   
   
     /*verticale centering*/
