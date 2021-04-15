@@ -3,23 +3,22 @@ body {
     min-width: 600px;
     max-width: 2000px;
     margin: 0px;
-    padding: 0px;
     background-image: url('index.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: white;
-  }
+}
 
 
 /*IVAN
 */
 
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
-nav{
+nav {
     width: 100%;
     margin: 0 auto;
     background-color: blue;
@@ -27,18 +26,18 @@ nav{
     top: 0px;
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
     display: flex;
 }
 
-nav ul li{
+nav ul li {
     flex: 1 1 auto;
     text-align: center;
     position: relative;
 }
 
-nav a{
+nav a {
     display: block;
     text-decoration: none;
     text-align: center;
@@ -47,12 +46,12 @@ nav a{
     padding: 10px 0px;
 }
 
-nav a:hover{
+nav a:hover {
     color: orange;
     border-bottom: 2px solid blue;
 }
 
-.sous{
+.sous {
     display: none;
     box-shadow: 0px 1px 2px #CCC;
     background-color: black;
@@ -60,61 +59,62 @@ nav a:hover{
     width: 100%;
     z-index: 1000;
 }
-nav > ul li:hover .sous{
+
+nav>ul li:hover .sous {
     display: flex;
     flex-flow: column wrap;
 }
 
-.sous a{
+.sous a {
     padding: 10px;
     border-bottom: none;
 }
-.sous a:hover{
+
+.sous a:hover {
     border-bottom: none;
-    background-color: RGBa(200,200,200,0.1);
-}
-.deroulant > a::after{
-    content:" ▼";
-    font-size: 12px;
+    background-color: RGBa(200, 200, 200, 0.1);
 }
 
+.deroulant>a::after {
+    content: " ▼";
+    font-size: 12px;
+}
 
 
 /* IVAN
 */
 
-
-
-#page1{
-  background-image: url('space_mainpage.jpg');
+#page1 {
+    background-image: url('space_mainpage.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: white;
 }
 
-.main{
-  position:absolute; 
-  top: 10%;
-  left:45%;
-  margin: -25px 0 0 -25px;
+.main {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    margin: -25px 0 0 -25px;
 }
 
-.mainb{
-  position:absolute; 
-  top: 50%;
-  left:42%;
-  margin: -25px 0 0 -25px;
-  border-radius: 12px; /*rounding the button's edges*/
-  background-color:rgb(33, 23, 54);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: sans-serif;
+.mainb {
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    margin: -25px 0 0 -25px;
+    border-radius: 12px;
+    /*rounding the button's edges*/
+    background-color: rgb(33, 23, 54);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: sans-serif;
 }
 
 .left {
@@ -126,7 +126,6 @@ nav > ul li:hover .sous{
 }
 
 #planet {
-
     margin: 0;
     position: absolute;
     top: 40%;
@@ -139,28 +138,22 @@ nav > ul li:hover .sous{
     width: 50%;*/
 }
 
-
 .button_last {
-  background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
-  border-radius: 20px;
-  text-shadow: 1px 0px 0px #0a040a;
-  font-family: Georgia;
-  color: #3e08a3;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-
-
+    background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    text-shadow: 1px 0px 0px #0a040a;
+    font-family: Georgia;
+    color: #3e08a3;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
     /*verticale centering*/
     margin: 0;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-
-  
-
 }
 
 .button_next {
@@ -173,23 +166,18 @@ nav > ul li:hover .sous{
     color: #3e08a3;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
-
-    transform: translate(44px,0px);
--webkit-transform: translate(44px,0px);
--moz-transform: translate(44px,0px);
-  
-  
+    transform: translate(44px, 0px);
+    -webkit-transform: translate(44px, 0px);
+    -moz-transform: translate(44px, 0px);
     /*verticale centering*/
     margin: 0;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
- 
-  
-  }
+}
 
-  .button_overview {
+.button_overview {
     background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
     -webkit-border-radius: 20;
     -moz-border-radius: 20;
@@ -199,36 +187,31 @@ nav > ul li:hover .sous{
     color: #3e08a3;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
-
     margin: 0;
     position: absolute;
     top: 100%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
 
-  
-  }
+.container {
+    animation: transitionIn 1s;
+}
 
-
-  .container {
-     animation: transitionIn 1s; 
-  }
-
-  @keyframes transitionIn {
+@keyframes transitionIn {
     from {
         opacitiy: 0;
         transform: rotateX(-90deg);
     }
-
-    to{
+    to {
         opacitiy: 1;
         transform: rotateX(0);
     }
-<<<<<<< HEAD
-  }
+    <<<<<<< HEAD
+}
 
 
-  /* ensures children take full-height of viewport 
+/* ensures children take full-height of viewport 
 .wrapper {
   display: flex;
   align-items: stretch;
@@ -258,9 +241,12 @@ nav > ul li:hover .sous{
   /* see Step 3 for the rest of the styles 
 }
   /*Hamburger Bar Design*/
-  
-  /*center hamburger*/
-  /*
+
+
+/*center hamburger*/
+
+
+/*
   .hamburger{ 
     position: absolute;
     top: 50%;
@@ -287,6 +273,7 @@ nav > ul li:hover .sous{
   transition: all 0.5s ease;
 }
 */
+
 =======
-  }
->>>>>>> 158a87d25d644b4cf5b5d3ac6939829c84d3bda8
+}
+>>>>>>>158a87d25d644b4cf5b5d3ac6939829c84d3bda8
