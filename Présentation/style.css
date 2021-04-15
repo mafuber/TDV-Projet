@@ -159,10 +159,11 @@ nav > ul li:hover .sous{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 
+  
+
 }
 
 .button_next {
-    float: right;
     background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
     -webkit-border-radius: 20;
     -moz-border-radius: 20;
@@ -172,6 +173,10 @@ nav > ul li:hover .sous{
     color: #3e08a3;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
+
+    transform: translate(44px,0px);
+-webkit-transform: translate(44px,0px);
+-moz-transform: translate(44px,0px);
   
   
     /*verticale centering*/
@@ -219,4 +224,69 @@ nav > ul li:hover .sous{
         opacitiy: 1;
         transform: rotateX(0);
     }
+<<<<<<< HEAD
   }
+
+
+  /* ensures children take full-height of viewport 
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+}
+.menu-toggle {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .menu-toggle {
+    display: initial; /* display the toggle, previously hidden 
+  }
+}
+
+/* To hide the checkbox 
+#hamburger-menu-toggle-1 {
+  display: none;
+}
+/* Styles for the 'open' state, if the checkbox is checked 
+#hamburger-menu-toggle-1:checked ~ .sidebar {
+  display: initial;
+  /* see Step 3 for the rest of the styles 
+}
+  /*Hamburger Bar Design*/
+  
+  /*center hamburger*/
+  /*
+  .hamburger{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    transform: translate(-50%,-50%);
+}
+
+.menubar{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 5px solid #49b293;
+  cursor: pointer;
+  transition: all 0.3s ease;  /*for smooth transition
+}
+
+/*style the elements inside the div bar
+.menubar div{
+  height: 8px;
+  width: 60px;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+*/
+=======
+  }
+>>>>>>> 158a87d25d644b4cf5b5d3ac6939829c84d3bda8
