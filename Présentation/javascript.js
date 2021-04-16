@@ -14,7 +14,7 @@ Array.prototype.forEach.apply(menuTriggers, [
 const menuIcon = document.querySelector("hamburger-menu");
 const navbar = document.querySelector("navbar");
 
-document.getElementsByClassName("container_hamburger").addEventListener("click", function(){navbar.classList.toggle("change");})
+document.querySelector("hamburger-menu").addEventListener("click", function(){navbar.classList.toggle("change");})
 
 /*
 menuIcon.addEventListener("click", () => {

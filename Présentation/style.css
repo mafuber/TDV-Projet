@@ -9,13 +9,25 @@ body {
     min-width: 600px;
     max-width: 2000px;
     margin: 0px;
-    background-image: url('index.jpg');
+    background-image: url('space_mainpage.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: white;
 }
 
+
+.navbar {
+
+  width: 10%;
+  height: 100%;
+  background-color:RGBa(200, 200, 200, 0.1);
+  position: fixed;
+  top : 0;
+  right:0;
+
+
+}
 
 /*IVAN
 */
@@ -151,9 +163,9 @@ nav>ul li:hover .sous {
     width: 50%;*/
 }
 
+/*
 
-
-.button_last {
+.button_last{
   background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
   -webkit-border-radius: 20;
   -moz-border-radius: 20;
@@ -163,11 +175,41 @@ nav>ul li:hover .sous {
   color: #3e08a3;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
+*/
 
+.button_last{
+
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+   background-color: none;
+  color: white;
+   /*verticale centering*/
+   position: fixed;
+
+
+   /*
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);*/
+    
+}
+
+.button_last:hover{
+  color: orange;
+  border-bottom: 2px solid blue
 
 }
 
+
 .button_next {
+    cursor: pointer
     background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
     -webkit-border-radius: 20;
     -moz-border-radius: 20;
@@ -182,6 +224,7 @@ nav>ul li:hover .sous {
   }
 
 .button_overview {
+  cursor: pointer;
     background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
     -webkit-border-radius: 20;
     -moz-border-radius: 20;
@@ -284,10 +327,4 @@ nav>ul li:hover .sous {
   transition: all 0.5s ease;
 }
 */
-<<<<<<< HEAD
-=======
-
-=======
-}
->>>>>>>158a87d25d644b4cf5b5d3ac6939829c84d3bda8
 >>>>>>> 6c1aa7db354a31b11b6082b8b688336cedad1f6b
