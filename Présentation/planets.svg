@@ -1,6 +1,6 @@
 <svg xmlns= "http://www.w3.org/2000/svg">
 <g class="Sun" fill="url(#sunshine)">
-<circle cx="20%" cy="50%" r="50"/>
+<circle cx="17%" cy="50%" r="50"/>
 </g>
 
 <g class="Mercury" fill="#888787">
