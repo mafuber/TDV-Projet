@@ -25,10 +25,13 @@
     position: fixed;
     top: 0;
     right: -300px;
+
+     /*pour que les liens sont centre au millieu du navbar*/
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20% 0 0 60%;
+    border-radius: 20% 0 0 30%; /*border arroundi*/
+
     transition: right 0.8s cubic-bezier(1, 0, 0, 1);
   }
   
