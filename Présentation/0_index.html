@@ -54,7 +54,18 @@
         </ul>
     </nav>
     <svg xmlns= "http://www.w3.org/2000/svg">
-        <g class="Sun" fill="url(#sunshine)">
+        <g>
+                <circle class="neptune-orbit" cx="23%" cy="50%" r="798"/>
+                <circle class="uranus-orbit" cx="23%" cy="50%" r="618"/>
+                <circle class="saturn-orbit" cx="23%" cy="50%" r="439"/>
+                <circle class="jupiter-orbit" cx="23%" cy="50%" r="320"/>
+                <circle class="mars-orbit" cx="23%" cy="50%" r="260"/>
+                <circle class="earth-orbit" cx="23%" cy="50%" r="203"/>
+                <circle class="venus-orbit" cx="23%" cy="50%" r="143"/>
+                <circle class="mercury-orbit" cx="23%" cy="50%" r="83"/>
+                <!--<circle class="sun" cx="23%" cy="50%"  r="0.5"/>-->
+            </g>
+        <g class="Sun" fill="url(#sun)">
         <circle cx="23%" cy="50%" r="50"/>
         </g>
         
@@ -96,8 +107,8 @@
                         <stop offset="100%" stop-color="orange"/>
                 </radialGradient>
                 <radialGradient id="sunshine">
-                        <stop offset="50%" stop-color="orange"/>
-                        <stop offset="95%" stop-color="transparent"/>
+                        <stop offset="20%" stop-color="orange"/>
+                        <stop offset="55%" stop-color="transparent"/>
                 </radialGradient>
                 <linearGradient id="venus" x1="0" y1="0" x2="0" y2="100%">
                         <stop offset="30%"  stop-color="#f0990e"/>
@@ -151,6 +162,7 @@
                         <stop offset="100%" stop-color="#005de8"/>
                     </linearGradient>
             </defs>
+            
             <!-- Code repris d'internet pour les gradients: 
             https://github.com/treedbox/solar-system-orbit-planets -->
         </svg>

@@ -20,8 +20,52 @@
   background-color: rgb(5, 4, 7);
 }
 svg{
-  width: 90%;
+  width: 99%;
+  height:99%;
   position:center;
+}
+
+
+/*orbts line*/
+.mercury-orbit {
+  fill: none;
+  stroke:#E6E6E6;
+  stroke-width:2;
+}
+.venus-orbit {
+  fill: none;
+  stroke:#E6E6E6;
+  stroke-width:2;
+}
+.earth-orbit {
+  fill: url(#sunshine);
+  stroke:#E6E6E6;
+  stroke-width:2;
+}
+.mars-orbit {
+  fill:none;
+  stroke:#E6E6E6;
+  stroke-width:2;
+}
+.jupiter-orbit {
+  fill:none;
+  stroke:#E6E6E6;
+  stroke-width:2;
+}
+.saturn-orbit {
+  fill:none;
+  stroke:#E6E6E6;
+  stroke-width:2;
+}
+.uranus-orbit {
+  fill:none;
+  stroke:#E6E6E6;
+  stroke-width:2;
+}
+.neptune-orbit {
+  fill:none;
+  stroke:#E6E6E6;
+  stroke-width:2;
 }
 
 
