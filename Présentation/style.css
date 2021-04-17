@@ -4,7 +4,7 @@
   padding: 0; /*Zentrieren*/
 }
 
-body {
+#page1{
     Width: 100%;
     min-width: 600px;
     max-width: 2000px;
@@ -16,12 +16,18 @@ body {
     color: white;
 }
 
+.index{
+  background-color: rgb(5, 4, 7);
+}
+
+#title{
+  color:white;
+}
 
 .navbar {
 
   width: 10%;
   height: 100%;
-  background-color:RGBa(200, 200, 200, 0.1);
   position: fixed;
   top : 0;
   right:0;
@@ -34,9 +40,10 @@ h1 {
 nav {
     width: 100%;
     margin: 0 auto;
-    background-color: blue;
+    padding:20px;
+    background-color: rgb(163, 150, 150);
     position: sticky;
-    top: 0px;
+    top: 50px;
 }
 
 nav ul {
@@ -61,14 +68,13 @@ nav a {
 
 /*IVAN*/
 nav a:hover {
-    color: orange;
-    border-bottom: 2px solid blue;
+    color:white;
 }
 
 .sous {
     display: none;
     box-shadow: 0px 1px 2px #CCC;
-    background-color: black;
+    background-color:rgb(163, 150, 150);
     position: absolute;
     width: 100%;
     z-index: 1000;

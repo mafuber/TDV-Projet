@@ -9,10 +9,22 @@
     font-style: normal;
   }
   
+<<<<<<< HEAD
   .hambi {
     position: fixed;
     top:0;
     right: -300px;
+=======
+  .container_hamburger {
+    width: 100%;
+    height: 100vh;  /*viewpoint height*/
+    background: linear-gradient(
+        rgb(255, 255, 255),
+        rgb(152, 151, 153),
+        rgba(255, 255, 255, 0.486)
+      ),
+     
+>>>>>>> 4c44ae84db63ef9fbe81e530391e9d0ba5146e67
   }
   
   .navbar_ham {
@@ -51,7 +63,7 @@
   .line {
     width: 100%;
     height: 3px;
-    background-color: chocolate;
+    background-color: white;
     transition: all 0.8s;
   }
   
@@ -92,7 +104,7 @@
     content: "";
     width: 100%;
     height: 2px;
-    background-color: chocolate;
+    background-color:white;
     position: absolute;
     left: 0;
     transform: scaleX(0);
