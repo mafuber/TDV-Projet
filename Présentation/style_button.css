@@ -1,93 +1,119 @@
 
-.left {
-    text-align: left;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.right {
-    text-align: right;
-}
-
-.center{
-  margin-left: auto;
- margin-right: auto; 
- text-align: center;
-
-}
-
-
-/*
-
-.button_last{
-  background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
-  border-radius: 20px;
-  text-shadow: 1px 0px 0px #0a040a;
-  font-family: Georgia;
-  color: #3e08a3;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-*/
-
-.button_last{
-
+.button_last {
   cursor: pointer;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  color: black;
-  border-bottom: 2px solid transparent;
-  padding: 10px 0px;
-   background-color: none;
   color: white;
-   /*verticale centering*/
+  background-color: rgba(0,0,0,0);
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase; /*Grossbuchstaben*/
+
+  /*freier Platz darum*/
+  position: relative;
+  padding: 4px;
+  margin: 25px;
+  text-decoration: none;    /*underlined none*/
+
+  /*left centering*/
    position: fixed;
-
-
-   /*
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);*/
+   margin: 0;
+   top: 50%;
+   left: 0;
     
 }
 
-.button_last:hover{
-  color: orange;
-  border-bottom: 2px solid blue
+/*transformation of the orange lines*/
 
+.button_last::before, /*insert bevor the element*/
+.button_last::after,
+.button_next::before,
+.button_next::after,
+.button_overview::before,
+.button_overview::after{   /*insert after the element*/
+  content: "";    /*what is going to be insert */
+  width: 100%;  
+  height: 2px;
+  background-color: chocolate;
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.button_overview::after,
+.button_last::after, 
+.button_next::after{
+  bottom: 0;
+  transform-origin: right;
+}
+
+.button_overview::before,
+.button_last::before,
+.button_next::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.button_overview:hover::after,
+.button_overview:hover::before,
+.button_last:hover::before,
+.button_last:hover::before,
+.button_last:hover::after ,
+.button_next:hover::before,
+.button_next:hover::after {
+  transform: scaleX(1);
+}
+
+.button_next {
+
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0,0,0,0);
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase; /*Grossbuchstaben*/
+ 
+  position: relative;
+  padding: 3px 0;
+  margin: 25px;
+  text-decoration: none;    /*underlined none*/
+
+  position: fixed;
+  margin: 0;
+  top: 50%;
+  right: 0;
+  
 }
 
 
-.button_next {
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
-    -webkit-border-radius: 20;
-    -moz-border-radius: 20;
-    border-radius: 20px;
-    text-shadow: 1px 0px 0px #0a040a;
-    font-family: Georgia;
-    color: #3e08a3;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
+.button_overview{
 
+cursor: pointer;
+color: white;
+background-color: rgba(0,0,0,0);
+font-family: 'Dosis';
+font-style: normal;
+font-weight: 300;
+font-size: 22px;
+letter-spacing: 1px;
+text-transform: uppercase; /*Grossbuchstaben*/
+position: relative;
+padding: 3px 0;
+margin: 25px;
+text-decoration: none;    /*underlined none*/
 
-  }
+position: fixed;
+bottom: 0;
+left: 45%;
+}
 
-.button_overview {
-  cursor: pointer;
-    background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
-    -webkit-border-radius: 20;
-    -moz-border-radius: 20;
-    border-radius: 20px;
-    text-shadow: 1px 0px 0px #0a040a;
-    font-family: Georgia;
-    color: #3e08a3;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    position:absolute;
-    bottom: 0;
-    margin: 0;
-  
-  }
