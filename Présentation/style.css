@@ -25,12 +25,7 @@ body {
   position: fixed;
   top : 0;
   right:0;
-
-
 }
-
-/*IVAN
-*/
 
 h1 {
     text-align: center;
@@ -64,6 +59,7 @@ nav a {
     padding: 10px 0px;
 }
 
+/*IVAN*/
 nav a:hover {
     color: orange;
     border-bottom: 2px solid blue;
@@ -163,83 +159,6 @@ nav>ul li:hover .sous {
     width: 50%;*/
 }
 
-/*
-
-.button_last{
-  background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
-  border-radius: 20px;
-  text-shadow: 1px 0px 0px #0a040a;
-  font-family: Georgia;
-  color: #3e08a3;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-*/
-
-.button_last{
-
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  color: black;
-  border-bottom: 2px solid transparent;
-  padding: 10px 0px;
-   background-color: none;
-  color: white;
-   /*verticale centering*/
-   position: fixed;
-
-
-   /*
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);*/
-    
-}
-
-.button_last:hover{
-  color: orange;
-  border-bottom: 2px solid blue
-
-}
-
-
-.button_next {
-    cursor: pointer
-    background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
-    -webkit-border-radius: 20;
-    -moz-border-radius: 20;
-    border-radius: 20px;
-    text-shadow: 1px 0px 0px #0a040a;
-    font-family: Georgia;
-    color: #3e08a3;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-
-
-  }
-
-.button_overview {
-  cursor: pointer;
-    background-image: -webkit-linear-gradient(top, #e8f3fa, #b0e1ff);
-    -webkit-border-radius: 20;
-    -moz-border-radius: 20;
-    border-radius: 20px;
-    text-shadow: 1px 0px 0px #0a040a;
-    font-family: Georgia;
-    color: #3e08a3;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    position:absolute;
-    bottom: 0;
-    margin: 0;
-  
-  }
-
 
   .container {
      animation: transitionIn 1s; 
@@ -327,4 +246,3 @@ nav>ul li:hover .sous {
   transition: all 0.5s ease;
 }
 */
->>>>>>> 6c1aa7db354a31b11b6082b8b688336cedad1f6b
