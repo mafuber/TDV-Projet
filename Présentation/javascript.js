@@ -12,10 +12,22 @@ Array.prototype.forEach.apply(menuTriggers, [
 ]);*/
 
 
-const menuIcon = document.querySelector("hamburger-menu");
-const navbar = document.querySelector("navbar");
+function out(a){
+  console.log(a.classList, "lkjsfdgäl")
+  a.classList.toggle("change"); /*Get the current element (this) and toggle the class between the "current" class und change (ajoute le class change apres lautre class)*/
+  next = document.getElementsByClassName("button_next")
+  next.style.right="200px"; 
 
-document.querySelector("#hamburger-menu").addEventListener("click", function(){navbar.classList.toggle("change");})
+}
+
+/*
+const menuIcon = document.querySelector(".hamburger-menu");
+const navbar = document.querySelector(".navbar");
+
+menuIcon.addEventListener("click", () => {
+  navbar.classList.toggle("change");
+  console.log("lkdsjf")
+})
 
 /*
 menuIcon.addEventListener("click", () => {

@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet"/>
     <link rel = "stylesheet" href = "style_button.css"/>
     <link rel = "stylesheet" href = "style_hamburger.css"/>
-    <link rel = "stylesheet" href = "style_button.css"/>
-    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="style_planets_html.css" /> 
     <link href="index.jpg" rel="stylesheet" />
     <link href="Merkur.jpg" rel="stylesheet"/>
+    
 
     
   </head>
-  <body>
+  <body class="background">
 
    
     <!--
@@ -52,22 +52,22 @@
    
   !-->
     
-      <div class = "container">
+      <div class = "container1">
           
       <p id = "planet"><center><img src ="Merkur.jpg" width="300px" height="300px"alt = "Mercure n`est pas là ajourd`hui"></center> </p>
 
 
     </div>
 
-    
-      <nav class = "navbar_ham">  <!--nav definies a set of navigation links-->
-        <div class= "hamburger-menu">
+      <div class = "container">      
+        <nav class = "navbar_ham" onclick="out(this)">  <!--nav definies a set of navigation links-->
+        <div class= "hamburger-menu" >
           <div class = "line line-1"></div>
           <div class = "line line-2"></div>
           <div class = "line line-3"></div>
         </div>
 
-        <div class = "hambi">
+       
         <ul class = "nav-list">
 
           <li class = "nav-item">
@@ -104,7 +104,8 @@
           </li>
         </ul>
       </nav>
-    </div>
+  </div>
+  
    
 
 
@@ -127,6 +128,6 @@
     </footer>
     
 
-      
+    <script src="javascript.js"></script>
   </body>
 </html>

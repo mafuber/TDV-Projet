@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0; /*Zentrieren*/
+  }
+  
+  .background {
+      Width: 100%;
+      min-width: 600px;
+      max-width: 2000px;
+      margin: 0px;
+      background-image: url('space_mainpage.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+  }
+
+  
+/*Planet Bild positionieren*/
+#planet {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+/*Planeten erscheinen rotierend*/
+.container1 {
+    animation: transitionIn 1s; 
+  }
+
+@keyframes transitionIn {
+    from {
+        opacitiy: 0;
+        transform: rotateX(-90deg);
+    }
+    to {
+        opacitiy: 1;
+        transform: rotateX(0);
+    }
+  }
+  
