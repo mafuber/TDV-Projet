@@ -15,8 +15,9 @@ Array.prototype.forEach.apply(menuTriggers, [
 function out(a){
   console.log(a.classList, "lkjsfdgäl")
   a.classList.toggle("change"); /*Get the current element (this) and toggle the class between the "current" class und change (ajoute le class change apres lautre class)*/
-  next = document.getElementsByClassName("button_next")
-  next.style.right="200px"; 
+ /*next = document.getElementsByClassName("button_next")
+  next.style.right="200px"; */
+  document.getElementById("button_next").style.color="blue"
 
 }
 
