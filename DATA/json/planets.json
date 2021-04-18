@@ -22,8 +22,16 @@
     "numberOfMoons": 0,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "atmosphericcomposition": "none",
-    "dwarf": false
+    "dwarf": false,
+    "carbonDioxide": 0,
+    "nitrogen": 0,
+    "oxgygen": 0.42,
+    "argon": 0,
+    "methane":0,
+    "sodium": 0.22,
+    "hydrogen": 0.22,
+    "helium": 0.06,
+    "other": 0.03
   },
   {
     "id": 2,
@@ -48,8 +56,16 @@
     "numberOfMoons": 0,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "atmosphericcomposition": "CO2",
-    "dwarf": false
+    "dwarf": false,
+    "carbonDioxide": 0.96,
+    "nitrogen": 0.04,
+    "oxgygen": 0,
+    "argon": 0,
+    "methane":0,
+    "sodium": 0,
+    "hydrogen": 0,
+    "helium": 0,
+    "other": 0
   },
   {
     "id": 3,
@@ -74,8 +90,16 @@
     "numberOfMoons": 1,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "atmosphericcomposition": "N2 + O2",
-    "dwarf": false
+    "dwarf": false,
+    "carbonDioxide": 0,
+    "nitrogen": 0.78,
+    "oxgygen": 0.21,
+    "argon": 0.01,
+    "methane":0,
+    "sodium": 0,
+    "hydrogen": 0,
+    "helium": 0,
+    "other": 0
   },
   {
     "id": 4,
@@ -100,8 +124,16 @@
     "numberOfMoons": 2,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "atmosphericcomposition": "CO2",
-    "dwarf": false
+    "dwarf": false,
+    "carbonDioxide": 0.95,
+    "nitrogen": 0.027,
+    "oxgygen": 0,
+    "argon": 0.016,
+    "methane":0,
+    "sodium": 0,
+    "hydrogen": 0,
+    "helium": 0,
+    "other": 0.007
   },
   {
     "id": 5,
@@ -126,8 +158,16 @@
     "numberOfMoons": 79,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "atmosphericcomposition": "H2 + He",
-    "dwarf": false
+    "dwarf": false,
+    "carbonDioxide": 0,
+    "nitrogen": 0,
+    "oxgygen": 0,
+    "argon": 0,
+    "methane":0,
+    "sodium": 0,
+    "hydrogen": 0.898,
+    "helium": 0.102,
+    "other": 0
   },
   {
     "id": 6,
@@ -152,8 +192,16 @@
     "numberOfMoons": 62,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "atmosphericcomposition": "H2+He",
-    "dwarf": false
+    "dwarf": false,
+    "carbonDioxide": 0,
+    "nitrogen": 0,
+    "oxgygen": 0,
+    "argon": 0,
+    "methane":0,
+    "sodium": 0,
+    "hydrogen": 0.963,
+    "helium": 0.032,
+    "other": 0.005
   },
   {
     "id": 7,
@@ -178,8 +226,16 @@
     "numberOfMoons": 27,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "atmosphericcomposition": "H2+He",
-    "dwarf": false
+    "dwarf": false,
+    "carbonDioxide": 0,
+    "nitrogen": 0,
+    "oxgygen": 0,
+    "argon": 0,
+    "methane":0.023,
+    "sodium": 0,
+    "hydrogen": 0.825,
+    "helium": 0.152,
+    "other": 0
   },
   {
     "id": 8,
@@ -204,8 +260,16 @@
     "numberOfMoons": 14,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "atmosphericcomposition": "H2+He",
-    "dwarf": false
+    "dwarf": false,
+    "carbonDioxide": 0,
+    "nitrogen": 0,
+    "oxgygen": 0,
+    "argon": 0,
+    "methane":0.01,
+    "sodium": 0,
+    "hydrogen": 0.8,
+    "helium": 0.19,
+    "other": 0
   },
   {
     "id": 9,
@@ -230,6 +294,15 @@
     "numberOfMoons": 5,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "dwarf": true
+    "dwarf": true,
+    "carbonDioxide": 0.08,
+    "nitrogen": 0.9,
+    "oxgygen": 0,
+    "argon": 0,
+    "methane":0.02,
+    "sodium": 0,
+    "hydrogen": 0,
+    "helium": 0,
+    "other": 0
   }
 ]
