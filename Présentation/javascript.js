@@ -17,7 +17,7 @@ function out(a){
   a.classList.toggle("change"); /*Get the current element (this) and toggle the class between the "current" class und change (ajoute le class change apres lautre class)*/
  /*next = document.getElementsByClassName("button_next")
   next.style.right="200px"; */
-  document.getElementById("button_next").style.color="blue"
+  document.getElementById("button_next").style.right= "200px"
 
 }
 
