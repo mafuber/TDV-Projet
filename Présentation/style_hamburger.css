@@ -30,6 +30,8 @@
   right: 0px;
 }
 
+
+
   
   .hamburger-menu {
     width: 35px;
@@ -107,4 +109,9 @@
   .nav-link:hover::before,
   .nav-link:hover::after {
     transform: scaleX(1);
+  }
+
+  .changeee{
+
+    right: 200px;
   }

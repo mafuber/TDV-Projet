@@ -4,6 +4,15 @@
   padding: 0;
 }
 
+
+.change_left{
+  right: 0px;
+}
+
+.change_right{
+  right: 200px;
+}
+
 .button_last {
   cursor: pointer;
   color: white;
@@ -92,7 +101,9 @@
   margin: 0;
   top: 50%;
   right: 0;
+
   
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);   /*smooth transition*/
 }
 
 
