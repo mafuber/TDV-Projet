@@ -23,21 +23,48 @@
                     .attr("y",function(d){return 330-d.diameter/500})
                     .attr("fill","blue")
             })*/
+            var margin = {top:100,right:30,bottom:30,left:30},
+            width = 700 -margin.left-margin.right,
+            height = 200 - margin.top -margin.bottom;
+
+            var planets;
             d3.json("planets.json").then(function(data){
+                planets=data
+            })
+
+            var planetScale = d3.scale.linear()
+                .domain([0,d3.max(planets, function(d){return d.diameter;})])
+                .range([0,150]);
+
+            var padding = 5;
+            planets.forEach(function(d,i){
+                if(i===0){
+                    d.offset = 0;
+                } else{
+                    d.offset = planets[i-1].offset+planetScale(planets[i-1].diameter)+padding*2;
+                }
+            });
+            /*d3.json("planets.json").then(function(data){
                 var svg = d3.select("body")
                     .append("svg")
                     .attr("width",1000)
                     .attr("height", 1000);
-
+                widthtot=0
+                bottom=500
                 svg.selectAll("circle")
                     .data(data)
                     .enter()
                         .append("circle")
-                        .attr("cx",function(d,i){widthtot=0;width=widthtot+2*d.diameter/1000; return width })
-                        .attr("cy", 200)
+                        .attr("cx",function(d,i){
+                            addition=d.diameter/1000;
+                            widthtot+=d.diameter/1000+d.diameternextplanet/1000;
+                            console.log(widthtot,addition);
+                            return i*100+100;
+                        })
+                        .attr("cy",function(d){return bottom-d.diameter/1000})
                         .attr("r", function(d){return d.diameter/1000} )
                         .attr("fill","black")
-            });
+            });*/
         </script>
     </body>
 </html>
