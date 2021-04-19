@@ -42,6 +42,15 @@
                 .attr("cx","30%")
                 .attr("cy","30%")
                 .attr("r","65%");
+            /*gradientRadial.append("stop")
+                .attr("offset","0%")
+                .attr("stop-color",function(d){ return d3.rgb(d.color).brighter(1);});
+            gradientRadial.append("stop")
+                .attr("offset","50%")
+                .attr("stop-color", function(d){return d.color;});
+            gradientRadial.append("stop")
+                .attr("offset","100%")
+                .attr("stop-color", function(d){rgb(d.color).darker(1.5);});*/
             svg.selectAll(".planetsGradient")
                 .data(planets)
                 .enter()
