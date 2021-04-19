@@ -8,21 +8,6 @@
     </head>
     <body>
         <script type="text/javascript">
-           
-            /*d3.json("planets.json").then(function(data) {
-                var canvas = d3.select("body").append("svg")
-                    .attr("width",1000)
-                    .attr("height",1000);
-                canvas.selectAll("rect")
-                .data(data)
-                .enter()
-                    .append("rect")
-                    .attr("width", 20)
-                    .attr("height",function(d){return d.diameter/500})
-                    .attr("x", function(d,i){return i*50})
-                    .attr("y",function(d){return 330-d.diameter/500})
-                    .attr("fill","blue")
-            })*/
             var margin = {top:100,right:30,bottom:30,left:30},
             width = 700 -margin.left-margin.right,
             height = 200 - margin.top -margin.bottom;
@@ -57,15 +42,6 @@
                 .attr("cx","30%")
                 .attr("cy","30%")
                 .attr("r","65%");
-            /*gradientRadial.append("stop")
-                .attr("offset","0%")
-                .attr("stop-color",function(d){ return d3.rgb(d.color).brighter(1);});
-            gradientRadial.append("stop")
-                .attr("offset","50%")
-                .attr("stop-color", function(d){return d.color;});
-            gradientRadial.append("stop")
-                .attr("offset","100%")
-                .attr("stop-color", function(d){rgb(d.color).darker(1.5);});*/
             svg.selectAll(".planetsGradient")
                 .data(planets)
                 .enter()
@@ -75,27 +51,6 @@
                 .attr("cy",0)
                 .attr("r", function(d){ return planetScale(d.diameter)/2;})
             });
-            /*d3.json("planets.json").then(function(data){
-                var svg = d3.select("body")
-                    .append("svg")
-                    .attr("width",1000)
-                    .attr("height", 1000);
-                widthtot=0
-                bottom=500
-                svg.selectAll("circle")
-                    .data(data)
-                    .enter()
-                        .append("circle")
-                        .attr("cx",function(d,i){
-                            addition=d.diameter/1000;
-                            widthtot+=d.diameter/1000+d.diameternextplanet/1000;
-                            console.log(widthtot,addition);
-                            return i*100+100;
-                        })
-                        .attr("cy",function(d){return bottom-d.diameter/1000})
-                        .attr("r", function(d){return d.diameter/1000} )
-                        .attr("fill","black")
-            });*/
         </script>
     </body>
 </html>
