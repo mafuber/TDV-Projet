@@ -35,10 +35,20 @@
     from {
         opacitiy: 0;
         transform: rotateX(-90deg);
+      
     }
     to {
         opacitiy: 1;
         transform: rotateX(0);
+        
     }
   }
+
+
+  /*
+  #container1:hover
+  #planet:hover {
+    width: 500px;
+    transition:  .5s linear;
+}*/
   
