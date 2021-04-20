@@ -14,6 +14,9 @@
     background-attachment: fixed;
     background-size: cover;
     color: white;
+    
+
+    
 }
 
 .index{
@@ -185,97 +188,3 @@ nav>ul li:hover .sous {
     font-size: 16px;
     font-family: sans-serif;
 }
-
-
-
-/*Planet Bild positionieren*/
-#planet {
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-}
-
-/*Planeten erscheinen rotierend*/
-.container {
-    animation: transitionIn 1s; 
-  }
-
-@keyframes transitionIn {
-    from {
-        opacitiy: 0;
-        transform: rotateX(-90deg);
-    }
-    to {
-        opacitiy: 1;
-        transform: rotateX(0);
-    }
-  }
-  
-
-
-
-/* ensures children take full-height of viewport 
-.wrapper {
-  display: flex;
-  align-items: stretch;
-  min-height: 100vh;
-}
-.menu-toggle {
-  display: none;
-}
-
-
-@media (max-width: 767px) {
-  .sidebar {
-    display: none;
-  }
-  .menu-toggle {
-    display: initial; /* display the toggle, previously hidden 
-  }
-}
-
-/* To hide the checkbox 
-#hamburger-menu-toggle-1 {
-  display: none;
-}
-/* Styles for the 'open' state, if the checkbox is checked 
-#hamburger-menu-toggle-1:checked ~ .sidebar {
-  display: initial;
-  /* see Step 3 for the rest of the styles 
-}
-  /*Hamburger Bar Design*/
-
-
-/*center hamburger*/
-
-
-/*
-  .hamburger{ 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 550px;
-    transform: translate(-50%,-50%);
-}
-
-.menubar{
-  width: 100px;
-  height: 100px;
-  position: relative;
-  border: 5px solid #49b293;
-  cursor: pointer;
-  transition: all 0.3s ease;  /*for smooth transition
-}
-
-/*style the elements inside the div bar
-.menubar div{
-  height: 8px;
-  width: 60px;
-  background-color: #fff;
-  position: absolute;
-  transition: all 0.5s ease;
-}
-*/
