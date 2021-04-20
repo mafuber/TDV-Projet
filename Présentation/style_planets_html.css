@@ -8,11 +8,12 @@
       min-width: 600px;
       max-width: 2000px;
       margin: 0px;
-      background-image: url('../Pictures/space_mainpage.jpg');
+      background-image: url('Pictures/space_mainpage.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
       color: white;
+  
   }
 
   
@@ -23,7 +24,6 @@
     top: 40%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-
 }
 
 /*Planeten erscheinen rotierend*/
@@ -43,7 +43,6 @@
         
     }
   }
-
 
   /*
   #container1:hover

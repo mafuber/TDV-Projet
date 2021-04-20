@@ -2,6 +2,57 @@
 * {
   margin: 0;
   padding: 0; /*Zentrieren*/
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase; /*Grossbuchstaben*/
+
+}
+
+.button_last {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0,0,0,0);
+
+  /*freier Platz darum*/
+  position: relative;
+  padding: 4px;
+  margin: 10px;
+  text-decoration: none;    /*underlined none*/
+
+}
+
+
+.button_last::before, /*insert bevor the element*/
+.button_last::after{   /*insert after the element*/
+  content: "";    /*what is going to be insert */
+  width: 40%;  
+  height: 2px;
+  background-color: chocolate;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.button_last::after{
+  bottom: 0;
+  transform-origin: right;
+}
+
+
+.button_last::before {
+  top: 0;
+  transform-origin: left;
+}
+
+
+.button_last:hover::before,
+.button_last:hover::before,
+.button_last:hover::after{
+  transform: scaleX(1);
 }
 
 .background {
@@ -14,6 +65,7 @@
     background-attachment: fixed;
     background-size: cover;
     color: white;
+    
 }
 
 .index{
@@ -82,17 +134,19 @@ svg{
 }
 
 h1 {
-    text-align: center;
+  padding: 40px;
+  text-align: center;
 }
+
 
 nav {
     width: 100%;
     height: 20%;
     margin: 0 auto;
-    padding:20px;
-    background-color: rgb(163, 150, 150);
+    padding:10px;
+    background-color:  #262626;
     position: sticky;
-    top: 50px;
+    top: 10%;
 }
 
 nav ul {
@@ -111,11 +165,11 @@ nav a {
     text-decoration: none;
     text-align: center;
     color: black;
-    border-bottom: 2px solid transparent;
-    padding: 10px 0px;
+  /*  border-bottom: 2px solid transparent;
+    padding: 10px 0px;*/
 }
 
-/*IVAN*/
+/*IVAN */
 nav a:hover {
     color:white;
 }
@@ -123,7 +177,7 @@ nav a:hover {
 .sous {
     display: none;
     box-shadow: 0px 1px 2px #CCC;
-    background-color:rgb(163, 150, 150);
+    background-color: #262626;
     position: absolute;
     width: 100%;
     z-index: 1000;
@@ -134,9 +188,11 @@ nav>ul li:hover .sous {
     flex-flow: column wrap;
 }
 
+
+/*
 .sous a {
-    padding: 10px;
-    border-bottom: none;
+  padding: 10px;
+  border-bottom: none;
 }
 
 .sous a:hover {
@@ -144,11 +200,12 @@ nav>ul li:hover .sous {
     background-color: RGBa(200, 200, 200, 0.1);
 }
 
+/*
 .deroulant>a::after {
     content: " ▼";
     font-size: 12px;
 }
-
+*/
 
 /* IVAN
 */
@@ -185,97 +242,3 @@ nav>ul li:hover .sous {
     font-size: 16px;
     font-family: sans-serif;
 }
-
-
-
-/*Planet Bild positionieren*/
-#planet {
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-}
-
-/*Planeten erscheinen rotierend*/
-.container {
-    animation: transitionIn 1s; 
-  }
-
-@keyframes transitionIn {
-    from {
-        opacitiy: 0;
-        transform: rotateX(-90deg);
-    }
-    to {
-        opacitiy: 1;
-        transform: rotateX(0);
-    }
-  }
-  
-
-
-
-/* ensures children take full-height of viewport 
-.wrapper {
-  display: flex;
-  align-items: stretch;
-  min-height: 100vh;
-}
-.menu-toggle {
-  display: none;
-}
-
-
-@media (max-width: 767px) {
-  .sidebar {
-    display: none;
-  }
-  .menu-toggle {
-    display: initial; /* display the toggle, previously hidden 
-  }
-}
-
-/* To hide the checkbox 
-#hamburger-menu-toggle-1 {
-  display: none;
-}
-/* Styles for the 'open' state, if the checkbox is checked 
-#hamburger-menu-toggle-1:checked ~ .sidebar {
-  display: initial;
-  /* see Step 3 for the rest of the styles 
-}
-  /*Hamburger Bar Design*/
-
-
-/*center hamburger*/
-
-
-/*
-  .hamburger{ 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 550px;
-    transform: translate(-50%,-50%);
-}
-
-.menubar{
-  width: 100px;
-  height: 100px;
-  position: relative;
-  border: 5px solid #49b293;
-  cursor: pointer;
-  transition: all 0.3s ease;  /*for smooth transition
-}
-
-/*style the elements inside the div bar
-.menubar div{
-  height: 8px;
-  width: 60px;
-  background-color: #fff;
-  position: absolute;
-  transition: all 0.5s ease;
-}
-*/
