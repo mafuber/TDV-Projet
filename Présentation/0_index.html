@@ -153,52 +153,56 @@
             <li><a>Contact</a></li>
         </ul>
     </nav>  -->
-    <svg xmlns= "http://www.w3.org/2000/svg" viewBox="-450 -300 1000 700">
+    <svg xmlns= "http://www.w3.org/2000/svg" viewBox="-480 -450 1000 900">
         <g>
-                <circle class="neptune-orbit" r="49%"/>
-                <circle class="uranus-orbit"  r="39%"/>
-                <circle class="saturn-orbit" r="32%"/>
-                <circle class="jupiter-orbit" r="34%"/>
-                <circle class="mars-orbit" r="25%"/>
-                <circle class="earth-orbit" r="19%"/>
-                <circle class="venus-orbit" r="12%"/>
-                <circle class="mercury-orbit" r="8%"/>
-                <!--<circle class="sun" cx="23%" cy="50%"  r="0.5"/>-->
+                <ellipse class="neptune-orbit" rx="44%" ry="42%"/>
+                <ellipse class="uranus-orbit"  rx="37%" ry="35%"/>
+                <ellipse class="saturn-orbit" rx="30%" ry="28%"/>
+                <ellipse class="jupiter-orbit" rx="26%" ry="24%"/>
+                <ellipse class="mars-orbit" rx="23%" ry="21%"/>
+                <ellipse class="earth-orbit" rx="19%" ry="17%"/>
+                <ellipse class="venus-orbit" rx="12%" ry="10%"/>
+                <ellipse class="mercury-orbit" rx="8%" ry="7%"/>
+                
             </g>
+       
+         <g class="sun" fill="url(#sunshine)">
+            <circle cx="2%" r="120"/>
+        </g>    
         <g class="Sun" fill="url(#sun)">
-        <circle r="40"/>
+        <circle cx="2%" r="40"/>
         </g>
         
         <g class="Mercury" fill="#888787">
-        <circle cx="6%" r="1"/>
+        <circle cx="8%" r="3"/>
         </g>
         
         <g class="Venus" fill="url(#venus)">
-        <circle cx="10%" r="6"/>
+        <circle cx="12%" r="6"/>
         </g>
         
         <g class="Earth" fill="url(#earth)">
-        <circle cx="18%" r="11"/>
+        <circle cx="19%" r="11"/>
         </g>
         
         <g class="Mars" fill="url(#mars)">
-        <circle cx="24%" r="5"/>
+        <circle cx="23%" r="5"/>
         </g>
         
         <g class="Jupiter" fill="url(#jupiter)">
-        <circle cx="30%" r="12"/>
+        <circle cx="26%" r="12"/>
         </g>
         
         <g class="Saturn" fill="url(#saturn)">
-        <circle cx="43%" r="14"/>
+        <circle cx="30%" r="14"/>
         </g>
         
         <g class="Uranus" fill="url(#uranus)">
-        <circle cx="48%" r="35"/>
+        <circle cx="37%" r="35"/>
         </g>
         
         <g class="Neptune" fill="url(#neptune)">
-        <circle cx="50%" r="30"/>
+        <circle cx="44%" r="30"/>
         </g>
         
             <defs>
@@ -207,7 +211,7 @@
                         <stop offset="100%" stop-color="orange"/>
                 </radialGradient>
                 <radialGradient id="sunshine">
-                        <stop offset="20%" stop-color="orange"/>
+                        <stop offset="30%" stop-color="orange"/>
                         <stop offset="55%" stop-color="transparent"/>
                 </radialGradient>
                 <linearGradient id="venus" x1="0" y1="0" x2="0" y2="100%">

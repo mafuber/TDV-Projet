@@ -76,9 +76,12 @@
   background-color: rgb(5, 4, 7);
 }
 svg{
-  width: 99%;
-  height:99%;
-  position:center;
+  display:flex;
+  width: 60%;
+  height:60%;
+  position:relative;
+  left:20%;
+  top:20%;
 }
 
 
@@ -94,7 +97,7 @@ svg{
   stroke-width:2;
 }
 .earth-orbit {
-  fill: url(#sunshine);
+  fill:none;
   stroke:#E6E6E6;
   stroke-width:2;
 }
