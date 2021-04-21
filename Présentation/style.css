@@ -10,23 +10,25 @@
 
 }
 
+
+/*
 .button_last {
   cursor: pointer;
   color: white;
   background-color: rgba(0,0,0,0);
 
-  /*freier Platz darum*/
+  /*freier Platz darum
   position: relative;
   padding: 4px;
   margin: 10px;
-  text-decoration: none;    /*underlined none*/
+  text-decoration: none;    /*underlined none
 
 }
 
 
-.button_last::before, /*insert bevor the element*/
-.button_last::after{   /*insert after the element*/
-  content: "";    /*what is going to be insert */
+.button_last::before, /*insert bevor the element
+.button_last::after{   /*insert after the element
+  content: "";    /*what is going to be insert 
   width: 40%;  
   height: 2px;
   background-color: chocolate;
@@ -54,6 +56,8 @@
 .button_last:hover::after{
   transform: scaleX(1);
 }
+*/
+
 
 .background {
     Width: 100%;
@@ -125,6 +129,12 @@ svg{
   color:white;
 }
 
+h1 {
+  padding: 40px;
+  text-align: center;
+}
+
+/*
 .navbar {
   width: 10%;
   height: 100%;
@@ -132,12 +142,6 @@ svg{
   top : 0;
   right:0;
 }
-
-h1 {
-  padding: 40px;
-  text-align: center;
-}
-
 
 nav {
     width: 100%;
@@ -166,10 +170,10 @@ nav a {
     text-align: center;
     color: black;
   /*  border-bottom: 2px solid transparent;
-    padding: 10px 0px;*/
+    padding: 10px 0px;
 }
 
-/*IVAN */
+
 nav a:hover {
     color:white;
 }
@@ -189,7 +193,7 @@ nav>ul li:hover .sous {
 }
 
 
-/*
+
 .sous a {
   padding: 10px;
   border-bottom: none;
@@ -205,9 +209,8 @@ nav>ul li:hover .sous {
     content: " ▼";
     font-size: 12px;
 }
-*/
 
-/* IVAN
+
 */
 
 #page1 {
