@@ -72,7 +72,7 @@
   
   .nav-list {
     text-align: right;
-    margin-top: 40%;
+    margin-top: 100px;
   }
   
   .nav-item {
@@ -146,5 +146,11 @@
     text-transform: uppercase;
     position: relative;
     padding: 3px;
+
+  }
+
+  .nav-planetes{
+    list-style: none;
+    margin: 25px;
 
   }
