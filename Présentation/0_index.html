@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet"/>
     <link rel ="stylesheet" href = "style_hamburger.css">
     <script src = "javascript.js"></script>
+    <script src="timeline.js"></script>
 
 </head>
 
-<body class="index">
+<body class="index" onload="generatePointOnCircle()">
     <h1 id="title">
     Le système solaire
     </h1>  
@@ -81,78 +82,7 @@
   </div>
   
 
-    <!--
-    <nav>
-        <ul>
-            <li><a href="00_main.html">Accueil</a></li>
-            <li><a>Planètes</a> &ensp;
-                <ul class = "sous">
-                    <li>
-                        <a href="Planets/1_Mercure.html" class = "button_last">Mercure</a>
-                    </li>
-                    <li>
-                        <a href="Planets/2_Venus.html" class = "button_last">Venus</a>
-                    </li>
-                    <li>
-                        <a href="Planets/3_Terre.html" class="button_last">Terre</a>
-                    </li>
-                    <li>
-                        <a href="Planets/4_Mars.html" class ="button_last">Mars</a>
-                    </li>
-                    <li>
-                        <a href="Planets/5_Jupiter.html" class ="button_last">Jupiter</a>
-                    </li>
-                    <li>
-                        <a href="Planets/6_Saturne.html" class = "button_last">Saturne</a>
-                    </li>
-                    <li>
-                        <a href="Planets/7_Uranus.html" class = "button_last">Uranus</a>
-                    </li>
-                    <li>
-                        <a href="Planets/8_Neptun.html" class = "button_last">Neptune</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="https://www.youtube.com/watch?v=libKVRa01L8">Video</a></li>
-            <li><a>Contact</a></li>
-        </ul>
-    </nav>
-    <nav class = "button_last">
-        <ul>
-            <li><a href="00_main.html">Accueil</a></li>
-            <li class="deroulant"><a>Planètes</a> &ensp;
-                <ul class="sous">
-                    <li>
-                        <a href="Planets/1_Mercure.html">Mercure</a>
-                    </li>
-                    <li>
-                        <a href="Planets/2_Venus.html">Venus</a>
-                    </li>
-                    <li>
-                        <a href="Planets/3_Terre.html">Terre</a>
-                    </li>
-                    <li>
-                        <a href="Planets/4_Mars.html">Mars</a>
-                    </li>
-                    <li>
-                        <a href="Planets/5_Jupiter.html">Jupiter</a>
-                    </li>
-                    <li>
-                        <a href="Planets/6_Saturne.html">Saturne</a>
-                    </li>
-                    <li>
-                        <a href="Planets/7_Uranus.html">Uranus</a>
-                    </li>
-                    <li>
-                        <a href="Planets/8_Neptun.html">Neptune</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="https://www.youtube.com/watch?v=libKVRa01L8
-                ">Video</a></li>
-            <li><a>Contact</a></li>
-        </ul>
-    </nav>  -->
+   
     <svg xmlns= "http://www.w3.org/2000/svg" viewBox="-480 -450 1000 900">
         <g>
                 <ellipse class="neptune-orbit" rx="44%" ry="42%"/>
