@@ -60,48 +60,6 @@ d3.json("planets.json").then(function (data) {
         .attr("cy", function (d) { return 50 - planetScale(d.diameter) / 2; })
         .attr("r", function (d) { return planetScale(d.diameter) / 2; })
         .style("fill", "red")
-    });
-d3.json("pluto_elements.json").then(function (data) {
-    pluto_elements = data
-    var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
-        11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
-    
-    var svg2 = d3.select("body")
-        .append("svg")
-        .attr("viewBox", "0 0 1000 50")
-
-    svg2.selectAll("rect")
-        .data(pluto_elements)
-        .enter()
-        .append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", 1000)
-        .attr("height", 50)
-        .attr("fill", "green");
-
-
-    var svg3 = d3.select("body")
-        .append("svg")
-        .attr("viewBox", "0 0 1000 272")
-    w = 1000
-    h = 272
-    svg3.selectAll("rect")
-        .data(pluto_elements)
-        .enter()
-        .append("rect")
-        .attr("x", function (d,i) {
-            return 10 ;
-        })
-        .attr("y", function (d, i) {
-            return i*20;
-            
-        })
-        .attr("width", function(d){
-            return (w-10)/10;
-        })
-        .attr("height", h/pluto_elements.length- 1)
-        .attr("fill","red");
 });
 
 
