@@ -72,15 +72,16 @@
   
   .nav-list {
     text-align: right;
-    margin-top: 40%;
+    margin: 25px;
+    margin-top: 59px;
   }
-  
-  .nav-item {
+
+  .nav-item, .nav-planetes {
     list-style: none;
     margin: 25px;
   }
   
-  .nav-link {
+  .nav-link, .nav-planetes {
     text-decoration: none;
     font-size: 22px;
     color: #eee;
@@ -89,9 +90,12 @@
     text-transform: uppercase;
     position: relative;
     padding: 3px;
+    
   }
   
-
+ .nav_p::after,
+ .nav-planetes::before,
+  .nav-planetes::after,
   ._nav-link::before,
   ._nav-link::after,
   .nav-link::before,
@@ -106,18 +110,35 @@
     transition: transform 0.5s;
   }
   
+   
+
+  .nav_p::after{
+    bottom: 0;  
+    transform-origin: right;
+
+  }
+
+  .nav-planetes::before{
+    top: 0;
+    transform-origin: left;
+  }
+  
   ._nav-link::after,
   .nav-link::after {
-    bottom: 0;
+    bottom: 0;  
     transform-origin: right;
   }
   
-  ._nav-link::before
+
+  ._nav-link::before,
   .nav-link::before {
     top: 0;
     transform-origin: left;
   }
   
+  .nav_p:hover::after,
+  .nav-planetes:hover::before,
+  .nav-planetes:hover::after,
   ._nav-link:hover::before,
   ._nav-link:hover::after,
   .nav-link:hover::before,
@@ -130,10 +151,9 @@
   }
 
   ._nav-item {
-
+    text-align: right;
     list-style: none;
-    margin: 5px;
-
+    
   }
 
   ._nav-link {
@@ -146,5 +166,6 @@
     text-transform: uppercase;
     position: relative;
     padding: 3px;
-
+    text-align: right;
+    margin-right: 40px;
   }
