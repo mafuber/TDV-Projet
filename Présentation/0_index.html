@@ -8,13 +8,13 @@
     <title>Système solaire</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet"/>
-    <!--<link href="space_mainpage.jpg" rel="stylesheet" />-->
     <link rel ="stylesheet" href = "style_hamburger.css">
     <script src = "javascript.js"></script>
+    <script src="timeline.js"></script>
 
 </head>
 
-<body class="index">
+<body class="index" onload="generatePointOnCircle()">
     <h1 id="title">
     Le système solaire
     </h1>  
@@ -88,125 +88,57 @@
   </div>
   
 
-    <!--
-    <nav>
-        <ul>
-            <li><a href="00_main.html">Accueil</a></li>
-            <li><a>Planètes</a> &ensp;
-                <ul class = "sous">
-                    <li>
-                        <a href="Planets/1_Mercure.html" class = "button_last">Mercure</a>
-                    </li>
-                    <li>
-                        <a href="Planets/2_Venus.html" class = "button_last">Venus</a>
-                    </li>
-                    <li>
-                        <a href="Planets/3_Terre.html" class="button_last">Terre</a>
-                    </li>
-                    <li>
-                        <a href="Planets/4_Mars.html" class ="button_last">Mars</a>
-                    </li>
-                    <li>
-                        <a href="Planets/5_Jupiter.html" class ="button_last">Jupiter</a>
-                    </li>
-                    <li>
-                        <a href="Planets/6_Saturne.html" class = "button_last">Saturne</a>
-                    </li>
-                    <li>
-                        <a href="Planets/7_Uranus.html" class = "button_last">Uranus</a>
-                    </li>
-                    <li>
-                        <a href="Planets/8_Neptun.html" class = "button_last">Neptune</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="https://www.youtube.com/watch?v=libKVRa01L8">Video</a></li>
-            <li><a>Contact</a></li>
-        </ul>
-    </nav>
-<!--
-    <nav class = "button_last">
-        <ul>
-            <li><a href="00_main.html">Accueil</a></li>
-            <li class="deroulant"><a>Planètes</a> &ensp;
-                <ul class="sous">
-                    <li>
-                        <a href="Planets/1_Mercure.html">Mercure</a>
-                    </li>
-                    <li>
-                        <a href="Planets/2_Venus.html">Venus</a>
-                    </li>
-                    <li>
-                        <a href="Planets/3_Terre.html">Terre</a>
-                    </li>
-                    <li>
-                        <a href="Planets/4_Mars.html">Mars</a>
-                    </li>
-                    <li>
-                        <a href="Planets/5_Jupiter.html">Jupiter</a>
-                    </li>
-                    <li>
-                        <a href="Planets/6_Saturne.html">Saturne</a>
-                    </li>
-                    <li>
-                        <a href="Planets/7_Uranus.html">Uranus</a>
-                    </li>
-                    <li>
-                        <a href="Planets/8_Neptun.html">Neptune</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="https://www.youtube.com/watch?v=libKVRa01L8
-                ">Video</a></li>
-            <li><a>Contact</a></li>
-        </ul>
-    </nav>  -->
-    <svg xmlns= "http://www.w3.org/2000/svg" viewBox="-300 0 1200 600">
+   
+    <svg xmlns= "http://www.w3.org/2000/svg" viewBox="-480 -450 1000 900">
         <g>
-                <circle class="neptune-orbit" cx="23%" cy="50%" r="80%"/>
-                <circle class="uranus-orbit" cx="23%" cy="50%" r="70%"/>
-                <circle class="saturn-orbit" cx="23%" cy="50%" r="50%"/>
-                <circle class="jupiter-orbit" cx="23%" cy="50%" r="34%"/>
-                <circle class="mars-orbit" cx="23%" cy="50%" r="28%"/>
-                <circle class="earth-orbit" cx="23%" cy="50%" r="21%"/>
-                <circle class="venus-orbit" cx="23%" cy="50%" r="15%"/>
-                <circle class="mercury-orbit"cx="23%" cy="50%" r="7%"/>
-                <!--<circle class="sun" cx="23%" cy="50%"  r="0.5"/>-->
+                <ellipse class="neptune-orbit" rx="44%" ry="42%"/>
+                <ellipse class="uranus-orbit"  rx="37%" ry="35%"/>
+                <ellipse class="saturn-orbit" rx="30%" ry="28%"/>
+                <ellipse class="jupiter-orbit" rx="26%" ry="24%"/>
+                <ellipse class="mars-orbit" rx="23%" ry="21%"/>
+                <ellipse class="earth-orbit" rx="19%" ry="17%"/>
+                <ellipse class="venus-orbit" rx="12%" ry="10%"/>
+                <ellipse class="mercury-orbit" rx="8%" ry="7%"/>
+                
             </g>
+       
+         <g class="sun" fill="url(#sunshine)">
+            <circle cx="2%" r="120"/>
+        </g>    
         <g class="Sun" fill="url(#sun)">
-        <circle cx="23%" cy="50%" r="50"/>
+        <circle cx="2%" r="40"/>
         </g>
         
         <g class="Mercury" fill="#888787">
-        <circle cx="30%" cy="50%" r="1"/>
+        <circle cx="8%" r="3"/>
         </g>
         
         <g class="Venus" fill="url(#venus)">
-        <circle cx="35%" cy="50%" r="6"/>
+        <circle cx="12%" r="6"/>
         </g>
         
         <g class="Earth" fill="url(#earth)">
-        <circle cx="40%" cy="50%" r="11"/>
+        <circle cx="19%" r="11"/>
         </g>
         
         <g class="Mars" fill="url(#mars)">
-        <circle cx="45%" cy="50%" r="5"/>
+        <circle cx="23%" r="5"/>
         </g>
         
         <g class="Jupiter" fill="url(#jupiter)">
-        <circle cx="50%" cy="50%" r="12"/>
+        <circle cx="26%" r="12"/>
         </g>
         
         <g class="Saturn" fill="url(#saturn)">
-        <circle cx="60%" cy="50%" r="14"/>
+        <circle cx="30%" r="14"/>
         </g>
         
         <g class="Uranus" fill="url(#uranus)">
-        <circle cx="75%" cy="50%" r="35"/>
+        <circle cx="37%" r="35"/>
         </g>
         
         <g class="Neptune" fill="url(#neptune)">
-        <circle cx="90%" cy="50%" r="30"/>
+        <circle cx="44%" r="30"/>
         </g>
         
             <defs>
@@ -215,7 +147,7 @@
                         <stop offset="100%" stop-color="orange"/>
                 </radialGradient>
                 <radialGradient id="sunshine">
-                        <stop offset="20%" stop-color="orange"/>
+                        <stop offset="30%" stop-color="orange"/>
                         <stop offset="55%" stop-color="transparent"/>
                 </radialGradient>
                 <linearGradient id="venus" x1="0" y1="0" x2="0" y2="100%">

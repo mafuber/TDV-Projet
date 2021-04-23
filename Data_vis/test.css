@@ -1,4 +1,7 @@
-.svg-container {
+svg {
+    border: solid 1px blue;
+  }
+  .svg-container {
     display: inline-block;
     position: relative;
     width: 100%;
@@ -18,3 +21,6 @@
     stroke: steelblue;
     stroke-width: 5px;
   }
+body{
+  background-color:coral;
+}

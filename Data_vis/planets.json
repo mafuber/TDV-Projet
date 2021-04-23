@@ -303,15 +303,6 @@
     "numberOfMoons": 5,
     "hasRingSystem": false,
     "hasGlobalMagneticField": false,
-    "dwarf": true,
-    "carbonDioxide": 0.08,
-    "nitrogen": 0.9,
-    "oxgygen": 0,
-    "argon": 0,
-    "methane":0.02,
-    "sodium": 0,
-    "hydrogen": 0,
-    "helium": 0,
-    "other": 0
+    "dwarf": true
   }
 ]
