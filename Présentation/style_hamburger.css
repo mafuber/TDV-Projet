@@ -117,28 +117,25 @@
     left: 0px;
     transform: scaleX(0);
     transition: transform 0.5s;
-  }
-
- 
+  } 
 
   .nav-planetes::after{
-    bottom: 0;
     transform-origin: right;
+
   }
 
   .nav-planetes::before{
-    top: 0;
     transform-origin: left;
   }
   
   ._nav-link::after,
   .nav-link::after {
-    bottom: 0;
+    bottom: 0;  
     transform-origin: right;
   }
   
 
-  ._nav-link::before
+  ._nav-link::before,
   .nav-link::before {
     top: 0;
     transform-origin: left;
@@ -179,10 +176,17 @@
 
   }
 
+
+  
   .nav-planetes{
     list-style: none;
-    margin: 25px;
     font-size: 22px;
     color: #eee;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px;
+    text-align: right;
 
   }
