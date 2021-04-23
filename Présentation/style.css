@@ -89,42 +89,42 @@ svg{
 .mercury-orbit {
   fill: none;
   stroke:#E6E6E6;
-  stroke-width:2;
+  stroke-width:1px;
 }
 .venus-orbit {
   fill: none;
   stroke:#E6E6E6;
-  stroke-width:2;
+  stroke-width:1px;
 }
 .earth-orbit {
   fill:none;
   stroke:#E6E6E6;
-  stroke-width:2;
+  stroke: width 1px;;
 }
 .mars-orbit {
   fill:none;
   stroke:#E6E6E6;
-  stroke-width:2;
+  stroke-width:1px;
 }
 .jupiter-orbit {
   fill:none;
   stroke:#E6E6E6;
-  stroke-width:2;
+  stroke-width:1px;
 }
 .saturn-orbit {
   fill:none;
   stroke:#E6E6E6;
-  stroke-width:2;
+  stroke-width:1px;
 }
 .uranus-orbit {
   fill:none;
   stroke:#E6E6E6;
-  stroke-width:2;
+  stroke-width:1px;
 }
 .neptune-orbit {
   fill:none;
   stroke:#E6E6E6;
-  stroke-width:2;
+  stroke-width:1px;
 }
 
 
