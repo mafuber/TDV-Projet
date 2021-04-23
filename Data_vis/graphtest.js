@@ -82,17 +82,38 @@ d3.json("planets.json").then(function (data) {
         if(choice==1){
             data=d.data1;
         }
-        else{
+        else if(choice==2){
             data=d.data2;
         }
+        else if(choice==3){
+            data=d.data3;
+        }
+        else if(choice==4){
+            data=d.data4;
+        }
+        else if(choice==5){
+            data=d.data5;
+        }
+        else if(choice==6){
+            data=d.data6;
+        }
+        else if(choice==7){
+            data=d.data7;
+        }
+        else if(choice==8){
+            data=d.data8;
+        }
+        else if(choice==9){
+            data=d.data9;
+        }
    // Create the X axis:
-   x.domain([0, d3.max(data, function(d) { return d.ser1 }) ]);
+   x.domain([0, d3.max(data, function(d) { return d.name }) ]);
    svg.selectAll(".myXaxis").transition()
      .duration(3000)
      .call(xAxis);
  
    // create the Y axis
-   y.domain([0, d3.max(data, function(d) { return d.ser2  }) ]);
+   y.domain([0, d3.max(data, function(d) { return d.percentage  }) ]);
    svg.selectAll(".myYaxis")
      .transition()
      .duration(3000)
@@ -100,7 +121,7 @@ d3.json("planets.json").then(function (data) {
  
    // Create a update selection: bind to the new data
    var u = svg.selectAll(".lineTest")
-     .data([data], function(d){ return d.ser1 });
+     .data([data], function(d){ return d.name });
  
    // Updata the line
    u
@@ -111,8 +132,8 @@ d3.json("planets.json").then(function (data) {
      .transition()
      .duration(3000)
      .attr("d", d3.line()
-       .x(function(d) { return x(d.ser1); })
-       .y(function(d) { return y(d.ser2); }))
+       .x(function(d) { return x(d.name); })
+       .y(function(d) { return y(d.percentage); }))
        .attr("fill", "none")
        .attr("stroke", "steelblue")
        .attr("stroke-width", 2.5)
