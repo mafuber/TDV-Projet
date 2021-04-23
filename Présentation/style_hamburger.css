@@ -94,8 +94,7 @@
   }
   
  .nav_p::after,
- .nav-planetes::before,
-  .nav-planetes::after,
+ .nav_p::before,
   ._nav-link::before,
   ._nav-link::after,
   .nav-link::before,
@@ -112,16 +111,17 @@
   
    
 
-  .nav_p::after{
-    bottom: 0;  
+  .nav_p::after{  
     transform-origin: right;
+    padding-bottom: 2px;
 
   }
 
-  .nav-planetes::before{
-    top: 0;
+  .nav_p::before{
     transform-origin: left;
+    padding-top: 2px;
   }
+
   
   ._nav-link::after,
   .nav-link::after {
@@ -137,8 +137,7 @@
   }
   
   .nav_p:hover::after,
-  .nav-planetes:hover::before,
-  .nav-planetes:hover::after,
+  .nav_p:hover::before,
   ._nav-link:hover::before,
   ._nav-link:hover::after,
   .nav-link:hover::before,
