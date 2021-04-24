@@ -1,92 +1,92 @@
 {
-    "data1":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":1}
+    "data1": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 1 }
     ],
-    "data2":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":2}
+    "data2": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 2 }
     ],
-    "data3":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":3}
+    "data3": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 3 }
     ],
-    "data4":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":4}
+    "data4": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 4 }
     ],
-    "data5":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":5}
+    "data5": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 5 }
     ],
-    "data6":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":6}
+    "data6": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 6 }
     ],
-    "data7":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":7}
+    "data7": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 7 }
     ],
-    "data8":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":8}
+    "data8": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 8 }
     ],
-    "data9":[
-        {"name":1,"percentage":4},
-        {"name":2,"percentage":16},
-        {"name":3,"percentage":10},
-        {"name":4,"percentage":0.1},
-        {"name":5,"percentage":2},
-        {"name":6,"percentage":5},
-        {"name":7,"percentage":6},
-        {"name":8,"percentage":9}
+    "data9": [
+        { "name": 1, "percentage": 4 },
+        { "name": 2, "percentage": 16 },
+        { "name": 3, "percentage": 10 },
+        { "name": 4, "percentage": 0.1 },
+        { "name": 5, "percentage": 2 },
+        { "name": 6, "percentage": 5 },
+        { "name": 7, "percentage": 6 },
+        { "name": 8, "percentage": 9 }
     ]
 }
