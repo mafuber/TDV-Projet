@@ -45,16 +45,11 @@ d3.json("planets.json").then(function (data) {
         .attr("r", function (d) { return planetScale(d.diameter) / 2; })
         .style("fill", "red")
 });
-// Create 2 datasets
 
-//var data1 = [{ser1: 0.3, ser2: 4},{ser1: 2, ser2: 16},{ser1: 3, ser2: 8}];
- 
- // set the dimensions and margins of the graph
  var margin = {top: 10, right: 30, bottom: 30, left: 50},
      width = 460 - margin.left - margin.right,
      height = 400 - margin.top - margin.bottom;
  
- // append the svg object to the body of the page
  var svg = d3.select("#my_dataviz")
    .append("svg")
      .attr("width", width + margin.left + margin.right)
@@ -62,21 +57,18 @@ d3.json("planets.json").then(function (data) {
    .append("g")
      .attr("transform",
            "translate(" + margin.left + "," + margin.top + ")");
- 
- // Initialise a X axis:
+/*
  var x = d3.scaleLinear().range([0,width]);
  var xAxis = d3.axisBottom().scale(x);
  svg.append("g")
    .attr("transform", "translate(0," + height + ")")
    .attr("class","myXaxis")
- 
- // Initialize an Y axis
+
  var y = d3.scaleLinear().range([height, 0]);
  var yAxis = d3.axisLeft().scale(y);
  svg.append("g")
    .attr("class","myYaxis")
- 
- // Create a function that takes a dataset as input and update the plot:
+*/
  function update(choice) {
     d3.json("graphtest.json").then(function(d){
         if(choice==1){
@@ -106,40 +98,53 @@ d3.json("planets.json").then(function (data) {
         else if(choice==9){
             data=d.data9;
         }
-   // Create the X axis:
+    var margin = {top:20, right:20, bottom:20,left:20};
+    var xScale = d3.scaleLinear()
+    .domain([0,d3.max(data,function(d){ return d.percentage})])
+    .range([0,width]);
+   
+    var yScale = d3.scaleBand()
+    .domain(d3.map(data,function(d){return d.name}))
+    .range([0,height]);
+        console.log(margin.left)
+    var g = svg.append("g")
+    .attr("transform","translate(0,0)");
+    console.log(data)
+    svg.selectAll("rect")
+    .data(data)
+    .enter()
+    .append("rect")
+    .attr("y",function(d){return yScale(d.name)})
+    .attr("width",function(d){return xScale(d.percentage);})
+    .attr("height",yScale.bandwidth());
+
+    /*
    x.domain([0, d3.max(data, function(d) { return d.name }) ]);
    svg.selectAll(".myXaxis").transition()
      .duration(3000)
      .call(xAxis);
- 
-   // create the Y axis
+
    y.domain([0, d3.max(data, function(d) { return d.percentage  }) ]);
    svg.selectAll(".myYaxis")
      .transition()
      .duration(3000)
-     .call(yAxis);
- 
-   // Create a update selection: bind to the new data
+
    var u = svg.selectAll(".lineTest")
      .data([data], function(d){ return d.name });
- 
-   // Updata the line
+
    u
      .enter()
-     .append("path")
+     .append("rect")
      .attr("class","lineTest")
      .merge(u)
      .transition()
-     .duration(3000)
-     .attr("d", d3.line()
-       .x(function(d) { return x(d.name); })
-       .y(function(d) { return y(d.percentage); }))
-       .attr("fill", "none")
-       .attr("stroke", "steelblue")
-       .attr("stroke-width", 2.5)
+     .duration(1000)
+       .attr("y",function(d){ return [10,20];})
+       .attr("x",function(d,i){return [10,20];})
+       .attr("width", 100)
+       .attr("height",10)
+       .attr("fill", "red")
+       */
     });
- }
- 
- // At the beginning, I run the update function on the first dataset:
- update(1)
-
+}
+update(1)
