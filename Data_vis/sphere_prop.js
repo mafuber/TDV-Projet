@@ -18,18 +18,14 @@ var margin = {top:100,right:30,bottom:30,left:30},
                     d.offset = planets[i-1].offset+planetScale(planets[i-1].diameter)+padding*2;
                 }
             });
-
             var svg = d3.select("body")
                 .classed("svg-container",true)
                 .append("svg")
                 .attr("preserveAspectRatio", "xMinYMin meet")
                 .attr("viewBox", "0 0 650 1000")
                 .classed("svg-content-responsive", true)
-                    //.attr("width",width+margin.left+margin.right)
-                    //.attr("height",height+margin.top+margin.bottom)
                 .append("g")
                     .attr("transform","translate("+(margin.left)+","+margin.top+")");
-
             var gradientRadial = svg.append("defs").selectAll("radialGradient")
                 .data(planets)
                 .enter().append("radialGradient")
@@ -37,15 +33,6 @@ var margin = {top:100,right:30,bottom:30,left:30},
                 .attr("cx","30%")
                 .attr("cy","30%")
                 .attr("r","65%");
-            /*gradientRadial.append("stop")
-                .attr("offset","0%")
-                .attr("stop-color",function(d){ return d3.rgb(d.color).brighter(1);});
-            gradientRadial.append("stop")
-                .attr("offset","50%")
-                .attr("stop-color", function(d){return d.color;});
-            gradientRadial.append("stop")
-                .attr("offset","100%")
-                .attr("stop-color", function(d){rgb(d.color).darker(1.5);});*/
             svg.selectAll("rect")
                 .data(planets)
                 .enter()
