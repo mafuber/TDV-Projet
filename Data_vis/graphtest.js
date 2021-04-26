@@ -15,11 +15,11 @@ d3.json("planets.json").then(function (data) {
     });
 
 
-    var svg1 = d3.select("#my_planets")
+    var svg = d3.select("#my_planets")
         .append("svg")
         .attr("viewBox", "-19 -100 1000 180")
 
-    svg1.selectAll("rect")
+    svg.selectAll("rect")
         .data(planets)
         .enter()
         .append("rect")
@@ -28,14 +28,14 @@ d3.json("planets.json").then(function (data) {
         .attr("width", function (d, i) { return planetScale(d.diameter) + 2 * padding })
         .attr("height", function (d) { return 190; })
         .attr("fill", "green");
-    svg1.selectAll("text")
+    svg.selectAll("text")
         .data(planets)
         .enter()
         .append("text")
         .attr("x", function (d, i) { return d.offset + planetScale(d.diameter) / 2 + padding / 2; })
         .attr("y", function (d) { return 50 + 20; })
         .text(function (d) { return "" + d.name });
-    svg1.selectAll(".planetsGradient")
+    svg.selectAll(".planetsGradient")
         .data(planets)
         .enter()
         .append("circle")
@@ -46,6 +46,17 @@ d3.json("planets.json").then(function (data) {
         .on("mousedown",function(d,i){update(i.id)})
         .style("fill", "red")
 });
+
+var margin = {top: 20, right: 20, bottom: 20, left: 100},
+    width = 1000 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+var svg3 = d3.select("#mybuttons")
+    .append("svg")
+    .attr("width",100)
+    .attr("height",100);
+    svg3.selectAll("rect")
+    .append("rect")
 var margin = {top: 20, right: 20, bottom: 20, left: 100},
     width = 1000 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
