@@ -1,4 +1,24 @@
-[
+[ 
+  {
+  "id": 0,
+  "name": "Sun",
+  "mass": 1988500,
+  "diameter": 1392684,
+  "density": 1.408,
+  "gravity": 274,
+  "escapeVelocity": 617.7,
+  "rotationPeriod": 1407.6,
+  "lengthOfDay": 0,
+  "distanceFromSun": 0,
+  "meanTemperature": 15700000,
+  "numberOfMoons": 0,
+  "hasRingSystem": false,
+  "hasGlobalMagneticField": false,
+  "dwarf": false,
+  "cx": 0.02,
+  "r": 40
+  },
+
   {
     "id": 1,
     "name": "Mercury",
@@ -31,7 +51,9 @@
     "sodium": 0.22,
     "hydrogen": 0.22,
     "helium": 0.06,
-    "other": 0.03
+    "other": 0.03,
+    "cx": 0.08,
+    "r": 3
   },
   {
     "id": 2,
@@ -65,7 +87,9 @@
     "sodium": 0,
     "hydrogen": 0,
     "helium": 0,
-    "other": 0
+    "other": 0,
+    "cx": 0.12,
+    "r": 6
   },
   {
     "id": 3,
@@ -99,7 +123,9 @@
     "sodium": 0,
     "hydrogen": 0,
     "helium": 0,
-    "other": 0
+    "other": 0,
+    "cx": 0.19,
+    "r": 11
   },
   {
     "id": 4,
@@ -133,7 +159,9 @@
     "sodium": 0,
     "hydrogen": 0,
     "helium": 0,
-    "other": 0.007
+    "other": 0.007,
+    "cx": 0.23,
+    "r": 5
   },
   {
     "id": 5,
@@ -167,7 +195,9 @@
     "sodium": 0,
     "hydrogen": 0.898,
     "helium": 0.102,
-    "other": 0
+    "other": 0,
+    "cx": 0.26,
+    "r": 12
   },
   {
     "id": 6,
@@ -201,7 +231,9 @@
     "sodium": 0,
     "hydrogen": 0.963,
     "helium": 0.032,
-    "other": 0.005
+    "other": 0.005,
+    "cx": 0.30,
+    "r": 14
   },
   {
     "id": 7,
@@ -235,7 +267,9 @@
     "sodium": 0,
     "hydrogen": 0.825,
     "helium": 0.152,
-    "other": 0
+    "other": 0,
+    "cx": 0.37,
+    "r": 35
   },
   {
     "id": 8,
@@ -269,7 +303,9 @@
     "sodium": 0,
     "hydrogen": 0.8,
     "helium": 0.19,
-    "other": 0
+    "other": 0,
+    "cx": 0.44,
+    "r": 30
   },
   {
     "id": 9,
