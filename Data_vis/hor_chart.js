@@ -37,7 +37,7 @@ function update(choice) {
         else if(choice==9){
             data=d.data9;
         }
-    var xScale = d3.scaleLinear()
+   var xScale = d3.scaleLinear()
     .domain([0,d3.max(data,function(d){ return d.percentage})])
     .range([0,width]);
 
@@ -55,7 +55,22 @@ function update(choice) {
     g.append("g").call(d3.axisBottom(xScale))
     .attr("transform","translate(" + 0 + "," + height + ")");
     ;
-
+   // Create the u variable
+   var u = svg.selectAll("rect")
+     .data(data)
+ 
+   u
+     .enter()
+     .append("rect") // Add a new rect for each new elements
+     .merge(u) // get the already existing elements as well
+     .transition() // and apply changes to all of them
+     .duration(1000)
+       //.attr("x", function(d) { return x(d.name); })
+       .attr("y", function(d) { return yScale(d.name); })
+       .attr("width", function(d) { return xScale(d.percentage); })
+       .attr("height",yScale.bandwidth() )
+       .attr("fill", "#69b3a2")
+    /*
     console.log(data)
     svg.selectAll("rect")
     .data(data)
@@ -64,6 +79,11 @@ function update(choice) {
     .attr("y",function(d){return yScale(d.name)})
     .attr("width",function(d){return xScale(d.percentage);})
     .attr("height",yScale.bandwidth())
-    .attr("fill","steelblue");
-    });
+    .attr("fill","steelblue");*/
+    u
+    .exit()
+    .remove()
 }
+)}
+// Initialize the plot with the first dataset
+update(1)

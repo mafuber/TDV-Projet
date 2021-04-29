@@ -15,11 +15,11 @@ d3.json("planets.json").then(function (data) {
     });
 
 
-    var svg1 = d3.select("body")
+    var svg = d3.select("#my_planets")
         .append("svg")
         .attr("viewBox", "-19 -100 1000 180")
 
-    svg1.selectAll("rect")
+    svg.selectAll("rect")
         .data(planets)
         .enter()
         .append("rect")
@@ -28,14 +28,14 @@ d3.json("planets.json").then(function (data) {
         .attr("width", function (d, i) { return planetScale(d.diameter) + 2 * padding })
         .attr("height", function (d) { return 190; })
         .attr("fill", "green");
-    svg1.selectAll("text")
+    svg.selectAll("text")
         .data(planets)
         .enter()
         .append("text")
         .attr("x", function (d, i) { return d.offset + planetScale(d.diameter) / 2 + padding / 2; })
         .attr("y", function (d) { return 50 + 20; })
         .text(function (d) { return "" + d.name });
-    svg1.selectAll(".planetsGradient")
+    svg.selectAll(".planetsGradient")
         .data(planets)
         .enter()
         .append("circle")
@@ -43,33 +43,31 @@ d3.json("planets.json").then(function (data) {
         .attr("cx", function (d, i) { return d.offset + planetScale(d.diameter) / 2 + padding; })
         .attr("cy", function (d) { return 50 - planetScale(d.diameter) / 2; })
         .attr("r", function (d) { return planetScale(d.diameter) / 2; })
+        .on("mousedown",function(d,i){update(i.id)})
         .style("fill", "red")
 });
 
- var margin = {top: 10, right: 30, bottom: 30, left: 50},
-     width = 460 - margin.left - margin.right,
-     height = 400 - margin.top - margin.bottom;
- 
- var svg = d3.select("#my_dataviz")
-   .append("svg")
-     .attr("width", width + margin.left + margin.right)
-     .attr("height", height + margin.top + margin.bottom)
-   .append("g")
-     .attr("transform",
-           "translate(" + margin.left + "," + margin.top + ")");
-/*
- var x = d3.scaleLinear().range([0,width]);
- var xAxis = d3.axisBottom().scale(x);
- svg.append("g")
-   .attr("transform", "translate(0," + height + ")")
-   .attr("class","myXaxis")
+var margin = {top: 20, right: 20, bottom: 20, left: 100},
+    width = 1000 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
- var y = d3.scaleLinear().range([height, 0]);
- var yAxis = d3.axisLeft().scale(y);
- svg.append("g")
-   .attr("class","myYaxis")
-*/
- function update(choice) {
+var svg3 = d3.select("#mybuttons")
+    .append("svg")
+    .attr("width",100)
+    .attr("height",100);
+    svg3.selectAll("rect")
+    .append("rect")
+var margin = {top: 20, right: 20, bottom: 20, left: 100},
+    width = 1000 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+    
+    var svg = d3.select("#my_dataviz")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")");
+function update(choice) {
     d3.json("graphtest.json").then(function(d){
         if(choice==1){
             data=d.data1;
@@ -98,17 +96,35 @@ d3.json("planets.json").then(function (data) {
         else if(choice==9){
             data=d.data9;
         }
-    var margin = {top:20, right:20, bottom:20,left:20};
-    var xScale = d3.scaleLinear()
-    .domain([0,d3.max(data,function(d){ return d.percentage})])
+   var xScale = d3.scaleLinear()
+    .domain([0,1/*d3.max(data,function(d){ return d.percentage})*/])
     .range([0,width]);
-   
     var yScale = d3.scaleBand()
     .domain(d3.map(data,function(d){return d.name}))
-    .range([0,height]);
-        console.log(margin.left)
-    var g = svg.append("g")
-    .attr("transform","translate(0,0)");
+    .range([0,height])
+    .padding(0.1);
+    console.log(margin.left)
+    svg.selectAll("g").remove();
+    var g = svg.append("g");
+    g.append("g").call(d3.axisLeft(yScale));
+    g.append("g").call(d3.axisBottom(xScale))
+    .attr("transform","translate(" + 0 + "," + height + ")");
+    ;
+   // Create the u variable
+   var u = svg.selectAll("rect")
+     .data(data)
+   u
+     .enter()
+     .append("rect") // Add a new rect for each new elements
+     .merge(u) // get the already existing elements as well
+     .transition() // and apply changes to all of them
+     .duration(1000)
+       //.attr("x", function(d) { return x(d.name); })
+       .attr("y", function(d) { return yScale(d.name); })
+       .attr("width", function(d) { return xScale(d.percentage); })
+       .attr("height",yScale.bandwidth() )
+       .attr("fill", "#69b3a2")
+    /*
     console.log(data)
     svg.selectAll("rect")
     .data(data)
@@ -116,35 +132,10 @@ d3.json("planets.json").then(function (data) {
     .append("rect")
     .attr("y",function(d){return yScale(d.name)})
     .attr("width",function(d){return xScale(d.percentage);})
-    .attr("height",yScale.bandwidth());
-
-    /*
-   x.domain([0, d3.max(data, function(d) { return d.name }) ]);
-   svg.selectAll(".myXaxis").transition()
-     .duration(3000)
-     .call(xAxis);
-
-   y.domain([0, d3.max(data, function(d) { return d.percentage  }) ]);
-   svg.selectAll(".myYaxis")
-     .transition()
-     .duration(3000)
-
-   var u = svg.selectAll(".lineTest")
-     .data([data], function(d){ return d.name });
-
-   u
-     .enter()
-     .append("rect")
-     .attr("class","lineTest")
-     .merge(u)
-     .transition()
-     .duration(1000)
-       .attr("y",function(d){ return [10,20];})
-       .attr("x",function(d,i){return [10,20];})
-       .attr("width", 100)
-       .attr("height",10)
-       .attr("fill", "red")
-       */
-    });
+    .attr("height",yScale.bandwidth())
+    .attr("fill","steelblue");*/
+    u.exit().remove();
 }
+)}
+// Initialize the plot with the first dataset
 update(1)
