@@ -1,4 +1,15 @@
 
+
+
+* {
+	margin: 0;
+	padding: 0; /*Zentrieren*/
+	font-family: 'Dosis';
+	font-style: normal;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
 body{
 	background-image: url('Pictures/space_mainpage.jpg');
 	background-repeat: no-repeat;
@@ -12,15 +23,12 @@ body{
 	margin-left: 20%;
 	margin-right: 20%;
 	background: black;
-	
-
   }
   
   .global > h2, .paragraph {
 	margin: 10px;
 	padding: 5px;
 	color: black;
-
 
   }
   
@@ -34,52 +42,14 @@ body{
 
   }
 
-* {
-	margin: 0;
-	padding: 0; /*Zentrieren*/
-	font-family: 'Dosis';
-	font-style: normal;
-	font-weight: 300;
-	letter-spacing: 1px;
-}
-
 
 .space{
 	display: block;
 	margin-left: 10px;
 }
 
-
   h1 {
 	  text-transform: uppercase;
 	  padding: 40px;
 	  text-align: center;
   }
-
-  /*
-  
-
-  fieldset {
-	
-	display: block;
-	margin-left: 20%;
-	margin-right: 20%;
-	border: 2px groove;
-	text-transform: uppercase;
-
-	
-	
-  }
-  
-
-
-  legend {
-	background-color: grey;
-	color: white;
-	padding: 5px 10px;
-  }
-  
-  input {
-	margin: 5px;}
-
-

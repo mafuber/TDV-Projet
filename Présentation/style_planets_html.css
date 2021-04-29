@@ -44,6 +44,43 @@
     }
   }
 
+  
+.global {
+	display: block;
+	margin-left: 20%;
+	margin-right: 20%;
+	background: black;
+  }
+  
+  .global > h2, .paragraph {
+	margin: 10px;
+	padding: 5px;
+	color: black;
+
+  }
+  
+  .paragraph {
+	background: white;
+  }
+  
+  .paragraph > h2, p {
+	margin: 4px;
+	font-size: 90%;
+
+  }
+
+
+.space{
+	display: block;
+	margin-left: 10px;
+}
+
+  h1 {
+	  text-transform: uppercase;
+	  padding: 40px;
+	  text-align: center;
+  }
+
   /*
   #container1:hover
   #planet:hover {
