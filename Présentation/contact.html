@@ -6,24 +6,89 @@
   
     <title>Welcome to space</title>
     <script src="index.js" async></script>
-    <link rel="stylesheet" href="style.css" />
     <link href="Pictures/space_mainpage.jpg" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="form.css">
+
 
   </head>
-  <body class="background">
+  <body>
 
-    <h2 class="main">Discover our solar system</h2>
-    <p><a href = "0_index.html"><button class = "mainb">Let's explore the solar system!</button></a></p>
+    <h1>Informations</h1>
+
+    <article class = "global">
+      <h1>Contact</h1>
+<div class = "space">
+
+  Si vous avez des questions ou des remarques, n`hésitez pas à nous contacter. 
+  </div>
+  <article class = "paragraph">
+    <form id="form"  method="post" action="mailto:jessica.ruffiner@unifr.ch">
+    <fieldset class = "paragraph">
+      <legend> <h2>Contact</h2></legend>
+      <br>
+
+      <label for="firstname">Prénom:</label>
+      <input type="text" id="firstname" name="firstname"><br><br>
+      <label for="lastname">Nom de famille:</label>
+      <input type="text" id="lastname" name="lastname"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label type = "sexe" id = "sexe">Sexe</label> <br><br>
+
+  <input name="sexe" type="radio" value="Femme" />
+  <label  for="sexe">Femme</label><br>
+  <input  name="sexe" type="radio" value="Homme" />
+  <label for="sexe">Homme</label><br>
+  <input name="sexe" type="radio" value="Autres" checked="checked"/>
+  <label for="sexe">Autres</label><br><br>
 
 
-    <div>En cas des questions sur des representations graphiques, cliquez ici.</div>
- 
+  <label for="Tel">Numéro de téléphone </label><br>
+        <input name="Tel"  size="3" maxlength="3" value="" type="text"> -
+        <label for="Tel">###</label>
+        <input name="Tel" size="3" maxlength="3" value="" type="text"> -
+        <label for="Tel">###</label>
+         <input name="Tel" size="4" maxlength="4" value="" type="text"> -
+        <label for="Tel">####</label><br><br>
+       
+      <label for="Text">Votre demande </label><br>
+        <textarea name="Text" ></textarea> <br><br>
+     
+   
+            <input type="submit" value="Submit">
+          
+            <input type="reset" value="Effacer">
+    </fieldset>
 
-    <div>Source des infromations</div>
+  </form>
 
-    <div>Pour découvrir encore plus de notre univers
-        https://www.geo.de/geolino/service/schreibt-uns--30417020.html
-    </div>
+  </article>
+  
+  <br>
+</article>
+<div><br></div>
+  <article class = "global">
+
+    <h1>Source des informations</h1>
+  <article class = "paragraph">
+   
+
+   <a href= "https://www.nasa.gov/" style="color:black">Informations sur des planètes</a><br>
+   <a href = "https://www.spaceweatherlive.com/community/topic/1361-best-source-of-live-json-data-for-solar-geomagnetic-activity/" style="color:black">Data</a>
+  </article>
+  <br>
+</article>
+<br>
+<article class = "global">
+  <h1>Pour découvrir notre univers</h1>
+
+  <article class = "paragraph">
+    <a href = "0_index.html" style = "color:black">Cliquez ici</a>
+  <br>
+</article>
+<br>
+</article>
+
     
   </body>
   </html>
