@@ -128,6 +128,37 @@ svg{
 }
 
 
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background:#f08080;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 #title{
   color:white;
 }
@@ -227,7 +258,7 @@ nav>ul li:hover .sous {
 .main {
     position: absolute;
     top: 10%;
-    left: 45%;
+    left: 35%;
     margin: -25px 0 0 -25px;
 }
 

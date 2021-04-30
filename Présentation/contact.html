@@ -6,24 +6,164 @@
   
     <title>Welcome to space</title>
     <script src="index.js" async></script>
-    <link rel="stylesheet" href="style.css" />
     <link href="Pictures/space_mainpage.jpg" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet"/>
+    <link rel ="stylesheet" href = "style_hamburger.css">
+    <script src = "javascript.js"></script>
+
 
   </head>
-  <body class="background">
+  <body>
 
-    <h2 class="main">Discover our solar system</h2>
-    <p><a href = "0_index.html"><button class = "mainb">Let's explore the solar system!</button></a></p>
+    <div class = "container">      
+      <nav class = "navbar_ham" onclick="out(this)">  <!--nav definies a set of navigation links -->
+      <div class= "hamburger-menu" >
+        <div class = "line line-1"></div>
+        <div class = "line line-2"></div>
+        <div class = "line line-3"></div>
+      </div>
+
+     
+      <ul class = "nav-list">
+
+      <li class = "nav-item">
+          
+          <a href="00_main.html" class ="nav-link">Accueil</a>
+      </li>
+
+        <li class = "nav-item">
+  
+          <a href = "0_index.html" class = "nav-link">Système solaire</a>
+        </li>
+
+        
+        <ul class="nav_p">
+
+          
+        <li class ="nav-planetes">Planètes</li>
+  
+          <li class = "_nav-item">
+              <a href = "Planets/1_Mercure.html" class = "_nav-link">Mercure</a>
+          </li>
+
+          <li class = "_nav-item">
+              <a href = "Planets/2_Venus.html" class = "_nav-link">Venus</a>
+          </li>
+
+          <li class = "_nav-item">
+              <a href = "Planets/3_Terre.html" class = "_nav-link">Terre</a>
+          </li>
+
+          <li class = "_nav-item">
+              <a href = "Planets/4_Mars.html" class = "_nav-link">Mars</a>
+          </li>
+        
+          <li class = "_nav-item">
+              <a href = "Planets/5_Jupiter.html" class = "_nav-link">Jupiter</a>
+          </li>
+
+          <li class = "_nav-item">
+              <a href = "Planets/6_Saturne.html" class = "_nav-link">Saturne</a>
+          </li>
+          
+          <li class = "_nav-item">
+              <a href = "Planets/7_Uranus.html" class = "_nav-link">Uranus</a>
+          </li>
+
+          <li class = "_nav-item">
+              <a href = "Planets/8_Neptun.html" class = "_nav-link">Neptune</a>
+          </li>
+
+          </ul>
+        
+      <li class = "nav-item">
+          <a href="https://www.youtube.com/watch?v=libKVRa01L8" class = "nav-link">Video</a>
+      </li>
+        <li class = "nav-item">    
+          <a href = "contact.html" class = "nav-link">Contact</a>
+            </li>             
+      
+      </ul>
+    </nav>
+</div>
+
+    <h1>Informations</h1>
+
+    <article class = "global">
+      <h1>Contact</h1>
+<div class = "space">
+
+  Si vous avez des questions ou des remarques, n`hésitez pas à nous contacter. 
+  </div>
+  <article class = "paragraph">
+    <form id="form"  method="post" action="mailto:jessica.ruffiner@unifr.ch">
+    <fieldset class = "paragraph">
+      <legend> <h2>Contact</h2></legend>
+      <br>
+
+      <label for="firstname">Prénom:</label>
+      <input type="text" id="firstname" name="firstname"><br><br>
+      <label for="lastname">Nom de famille:</label>
+      <input type="text" id="lastname" name="lastname"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label type = "sexe" id = "sexe">Sexe</label> <br><br>
+
+  <input name="sexe" type="radio" value="Femme" />
+  <label  for="sexe">Femme</label><br>
+  <input  name="sexe" type="radio" value="Homme" />
+  <label for="sexe">Homme</label><br>
+  <input name="sexe" type="radio" value="Autres" checked="checked"/>
+  <label for="sexe">Autres</label><br><br>
 
 
-    <div>En cas des questions sur des representations graphiques, cliquez ici.</div>
- 
+  <label for="Tel">Numéro de téléphone </label><br>
+        <input name="Tel"  size="3" maxlength="3" value="" type="text"> -
+        <label for="Tel">###</label>
+        <input name="Tel" size="3" maxlength="3" value="" type="text"> -
+        <label for="Tel">###</label>
+         <input name="Tel" size="4" maxlength="4" value="" type="text"> -
+        <label for="Tel">####</label><br><br>
+       
+      <label for="Text">Votre demande </label><br>
+        <textarea name="Text" ></textarea> <br><br>
+     
+   
+            <input type="submit" value="Submit">
+          
+            <input type="reset" value="Effacer">
+    </fieldset>
 
-    <div>Source des infromations</div>
+  </form>
 
-    <div>Pour découvrir encore plus de notre univers
-        https://www.geo.de/geolino/service/schreibt-uns--30417020.html
-    </div>
+  </article>
+  
+  <br>
+</article>
+<div><br></div>
+  <article class = "global">
+
+    <h1>Source des informations</h1>
+  <article class = "paragraph">
+   
+
+   <a href= "https://www.nasa.gov/" style="color:black">Informations sur des planètes</a><br>
+   <a href = "https://www.spaceweatherlive.com/community/topic/1361-best-source-of-live-json-data-for-solar-geomagnetic-activity/" style="color:black">Data</a>
+  </article>
+  <br>
+</article>
+<br>
+<article class = "global">
+  <h1>Pour découvrir notre univers</h1>
+
+  <article class = "paragraph">
+    <a href = "0_index.html" style = "color:black">Cliquez ici</a>
+  <br>
+</article>
+<br>
+</article>
+
     
   </body>
   </html>
