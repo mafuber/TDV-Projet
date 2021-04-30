@@ -30,6 +30,7 @@ d3.json("planets.json").then(function (data) {
         .attr("height", function (d) { return 215; })
         .attr("fill","black")
         .attr("id",function(d,i){return i;})
+        .style("cursor", "pointer")
         .on("click",function(d,i){
             var selection = i.id
             d3.select("rect[id='"+(OldSelection-1)+"']")
@@ -53,6 +54,7 @@ d3.json("planets.json").then(function (data) {
         .attr("y", function (d) { return 100; })
         .text(function (d) { return "" + d.name })
         .style("fill","white")
+        .style("cursor", "pointer")
         .on("click",function(d,i){
             var selection = i.id
             d3.select("rect[id='"+(OldSelection-1)+"']")
@@ -68,6 +70,7 @@ d3.json("planets.json").then(function (data) {
         .enter()
         .append("circle")
         .attr("class", "planetGradient")
+        .style("cursor", "pointer")
         .attr("cx", function (d, i) { return d.offset + planetScale(d.diameter) / 2 + padding; })
         .attr("cy", function (d) { return 60 - planetScale(d.diameter) / 2; })
         .attr("r", function (d) { return planetScale(d.diameter) / 2; })
@@ -125,6 +128,7 @@ function AtmosphericUpdate(choice) {
         else if(choice==9){
             data=d.data9;
         }
+        console.log(data)
     var xScale = d3.scaleLinear()
                 .domain([0,1])
                 .range([0,width]);
