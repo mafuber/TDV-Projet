@@ -14,11 +14,11 @@ var text2 = d3.json("../DATA/json/planets.json", function(data) {
     var canvas = d3.select("body").append("svg").attr("width", width).attr("height", height);
     var circles = d3.selectAll("svg").append("circle").attr("r", data.r).attr("cx", data.cx)
 
-    canvas.on("mouseover", function(d) {
-            canvas.selectAll("text")
+    circles.on("mouseover", function(d) {
+            canvas.selectAll("g")
                 .data(data)
                 .enter()
-                .append("text")
+                .append("g")
                 .attr("y", function(d, i) { return i * 50 + 100; })
                 .attr("fill", "white")
                 .text(function(d) {
@@ -98,7 +98,7 @@ var circles = svg.selectAll("circle");
 */
 
 
-/*var formatDateIntoYear = d3.timeFormat("%Y");
+var formatDateIntoYear = d3.timeFormat("%Y");
 var formatDate = d3.timeFormat("%b %Y");
 var parseDate = d3.timeParse("%m/%d/%y");
 
@@ -176,4 +176,3 @@ var label = slider.append("text")
     .attr("text-anchor", "middle")
     .text(formatDate(startDate))
     .attr("transform", "translate(0," + (-25) + ")")
-*/

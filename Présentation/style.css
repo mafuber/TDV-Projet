@@ -141,6 +141,7 @@ svg{
 }
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
+  position:fixed;
 }
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
