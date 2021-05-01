@@ -9,18 +9,23 @@
         
     </head>
     <body>
-        <div id="my_planets"></div><br>
-        <div id="my_buttons"></div>
-        <button onclick="update(1)">Mercury</button>
-        <button onclick="update(2)">Venus</button>
-        <button onclick="update(3)">Earth</button>
-        <button onclick="update(4)">Mars</button>
-        <button onclick="update(5)">Jupiter</button>
-        <button onclick="update(6)">Saturn</button>
-        <button onclick="update(7)">Uranus</button>
-        <button onclick="update(8)">Neptune</button>
-        <button onclick="update(9)">Pluto</button>
-        <div id="my_dataviz"></div>
+        
+        <table style="background-color: black;position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+            <tr>
+                <td colspan="2">
+                    <div id="my_planets"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div id="my_dataviz1"></div>
+                </td>
+                <td>
+                    <div id="my_dataviz2"></div>
+                </td>
+            </tr>
+        </table>
         <script type="text/javascript" src="graphtest.js"></script>
     </body>
 </html>

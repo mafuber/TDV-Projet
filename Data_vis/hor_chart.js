@@ -69,7 +69,7 @@ function update(choice) {
        .attr("y", function(d) { return yScale(d.name); })
        .attr("width", function(d) { return xScale(d.percentage); })
        .attr("height",yScale.bandwidth() )
-       .attr("fill", "#69b3a2")
+       .attr("fill", "blue")
     /*
     console.log(data)
     svg.selectAll("rect")

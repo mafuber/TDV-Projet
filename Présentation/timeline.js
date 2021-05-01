@@ -54,7 +54,7 @@ var circles = svg.select("circle");
         });
 })
 
-var formatDateIntoDay = d3.timeFormat("%D");
+var formatDateIntoYear = d3.timeFormat("%Y");
 var formatDate = d3.timeFormat("%b %Y");
 var parseDate = d3.timeParse("%m/%d/%y");
 
@@ -71,6 +71,14 @@ var svg = d3.select("#vis")
     .attr("height", height + margin.top + margin.bottom);  
 
 ////////// slider //////////
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
 
 var moving = false;
 var currentValue = 0;
