@@ -28,6 +28,8 @@ var info = d3.json("../../Data_vis/mydata.json", function(data) {
             var texto = canvas.selectAll("text")
                 .data(data.Mercury)
                 .enter()
+
+            //on n'arrivait pas à effectuer une seule formule avec l'assistant
             texto.append("text")
                 .attr("dy", "1em")
                 .text(function(d) {
@@ -47,6 +49,16 @@ var info = d3.json("../../Data_vis/mydata.json", function(data) {
                 .attr("dy", "4em")
                 .text(function(d) {
                     return "Mesure de la gravité : " + d.gravity + " unités"
+                })
+            texto.append("text")
+                .attr("dy", "5em")
+                .text(function(d) {
+                    return "Période de rotation : " + d.rotationPeriod + " unités"
+                })
+            texto.append("text")
+                .attr("dy", "6em")
+                .text(function(d) {
+                    return "Longeur d'une journée : " + d.lengthOfDay + " unités"
                 })
             d3.select(this)
                 .style("cursor", "pointer")
