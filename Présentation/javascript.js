@@ -21,21 +21,32 @@ var info = d3.json("../../Data_vis/mydata.json", function(data) {
     var canvas = d3.select(".centered_container").append("svg").attr("width", width).attr("height", height);
     var imag = canvas.append("image").attr("xlink:href", "../Pictures/Merkur.jpg").attr("width", width).attr("height", height);
 
-    //var text =
+
     canvas.on("mouseover", function(d) {
             canvas.selectAll("text").remove()
             canvas.selectAll("image").remove()
-            canvas.selectAll("text")
+            var texto = canvas.selectAll("text")
                 .data(data.Mercury)
                 .enter()
-                .append("text")
-                .attr("y", function(d, i) { return i * 50 + 20; })
-                .attr("fill", "black")
+            texto.append("text")
+                .attr("dy", "1em")
                 .text(function(d) {
-                    return "Juste pour voir si ça marche " + d.mass;
-                    // " &#xA;" +
-                    //   " Diamètre : " + d.diameter + "<br/>" +
-                    // " autres dimensions " + "<br/>";
+                    return "Masse de la planète : " + d.mass + " unités";
+                })
+            texto.append("text")
+                .attr("dy", "2em")
+                .text(function(d) {
+                    return "Diamètre de la planète : " + d.diameter + " unités"
+                })
+            texto.append("text")
+                .attr("dy", "3em")
+                .text(function(d) {
+                    return "Densité de la planète : " + d.density + " unités"
+                })
+            texto.append("text")
+                .attr("dy", "4em")
+                .text(function(d) {
+                    return "Mesure de la gravité : " + d.gravity + " unités"
                 })
             d3.select(this)
                 .style("cursor", "pointer")
