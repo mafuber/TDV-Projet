@@ -1,23 +1,24 @@
 * {
     margin: 0;
-    padding: 0; /*Zentrieren*/
-  }
-  
-  .background {
-      Width: 100%;
-      min-width: 600px;
-      max-width: 2000px;
-      margin: 0px;
-      background-image: url('Pictures/space_mainpage.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      color: white;
-  
-  }
+    padding: 0;
+    /*Zentrieren*/
+}
 
-  
-/*Planet Bild positionieren*/
+.background {
+    Width: 100%;
+    min-width: 600px;
+    max-width: 2000px;
+    margin: 0px;
+    background-image: url('Pictures/space_mainpage.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+
+/*Planet Bild positionieren
+
 #planet {
     margin: 0;
     position: absolute;
@@ -25,66 +26,58 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+*/
+
 
 /*Planeten erscheinen rotierend*/
-.container1 {
-    animation: transitionIn 1s; 
-  }
 
 @keyframes transitionIn {
     from {
         opacitiy: 0;
         transform: rotateX(-90deg);
-      
     }
     to {
         opacitiy: 1;
         transform: rotateX(0);
-        
     }
-  }
-
-  
-.global {
-	display: block;
-	margin-left: 20%;
-	margin-right: 20%;
-	background: black;
-  }
-  
-  .global > h2, .paragraph {
-	margin: 10px;
-	padding: 5px;
-	color: black;
-
-  }
-  
-  .paragraph {
-	background: white;
-  }
-  
-  .paragraph > h2, p {
-	margin: 4px;
-	font-size: 90%;
-
-  }
-
-
-.space{
-	display: block;
-	margin-left: 10px;
 }
 
-  h1 {
-	  text-transform: uppercase;
-	  padding: 40px;
-	  text-align: center;
-  }
+.global {
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: black;
+}
 
-  /*
-  #container1:hover
-  #planet:hover {
-    width: 500px;
-    transition:  .5s linear;
-}*/
-  
+.global>h2,
+.paragraph {
+    margin: 10px;
+    padding: 5px;
+    color: black;
+}
+
+.paragraph {
+    background: white;
+}
+
+.paragraph>h2,
+p {
+    margin: 4px;
+    font-size: 90%;
+}
+
+.space {
+    display: block;
+    margin-left: 10px;
+}
+
+h1 {
+    text-transform: uppercase;
+    padding: 40px;
+    text-align: center;
+}
+
+.centered_container {
+    animation: transitionIn 1s;
+    text-align: center;
+}

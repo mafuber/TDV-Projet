@@ -1,5 +1,5 @@
 svg {
-    border: solid 1px blue;
+    /*border: solid 1px blue;*/
   }
   .svg-container {
     display: inline-block;
@@ -8,6 +8,7 @@ svg {
     padding-bottom: 100%; /* aspect ratio */
     vertical-align: top;
     overflow: hidden;
+    /**/
   }
   .svg-content-responsive {
     display: inline-block;
@@ -20,6 +21,7 @@ svg {
     fill: gold;
     stroke: steelblue;
     stroke-width: 5px;
+    cursor:pointer;
   }
 body{
   background-color:black;
