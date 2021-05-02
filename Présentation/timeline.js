@@ -12,7 +12,11 @@ height= 30
 
 var text2 = d3.json("../DATA/json/planets.json", function(data) {
     var canvas = d3.select("body").append("svg").attr("width", width).attr("height", height);
-    var circles = d3.selectAll("svg").append("circle").attr("r", data.r).attr("cx", data.cx)
+    var circles = d3.selectAll("svg")
+    .append("circle")
+    .attr("r", data.r)
+    .attr("cx", data.cx)
+    .attr("viewBox", "-480 -450 1000 900")
 
     circles.on("mouseover", function(d) {
             canvas.selectAll("g")
