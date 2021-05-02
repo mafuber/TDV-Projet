@@ -8,14 +8,26 @@ var uranus = [document.getElementsByClassName('Uranus')];
 var neptune = [document.getElementsByClassName('Neptune')];
 
 width = 150
-height= 30
 
-var text2 = d3.json("../DATA/json/planets.json", function(data) {
+var json = d3.json("../DATA/json/planets.json", function(data){
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width",width)
+    var g = svg.selectAll("g")
+            .append("g")
+    var circle = g.selectAll("circle")
+                .append("circle")
+                .data(data)
+                .attr("r", data.r)
+                .attr("cx", data.cx)
+                .attr("name", data.name)
+})
+
+/*var text2 = d3.json("../DATA/json/planets.json", function(data) {
     var canvas = d3.select("body").append("svg").attr("width", width).attr("height", height);
     var circles = d3.selectAll("svg")
     .append("circle")
-    .attr("r", data.r)
-    .attr("cx", data.cx)
+    
     .attr("viewBox", "-480 -450 1000 900")
 
     circles.on("mouseover", function(d) {
