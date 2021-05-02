@@ -1,6 +1,6 @@
 {
     "data1": [
-        { "name": "Carbon Dioxide", "percentage": 0 },
+        { "name": "Carbon Dioxide", "percentage": 1 },
         { "name": "Nitrogen", "percentage": 0},
         { "name": "Oxygen", "percentage": 0.42},
         { "name": "Argon", "percentage": 0 },
@@ -14,7 +14,7 @@
         { "name": "not", "percentage": 0}
     ],
     "data2": [
-        { "name": "Carbon Dioxide", "percentage": 0.96 },
+        { "name": "Carbon Dioxide", "percentage": 0.5 },
         { "name": "Nitrogen", "percentage": 0.04},
         { "name": "Oxygen", "percentage": 0},
         { "name": "Argon", "percentage": 0 },
@@ -26,7 +26,7 @@
         { "name": "Others", "percentage": 0}
     ],
     "data3": [
-        { "name": "Carbon Dioxide", "percentage": 0 },
+        { "name": "Carbon Dioxide", "percentage": 0.4 },
         { "name": "Nitrogen", "percentage": 0.78},
         { "name": "Oxygen", "percentage": 0.21},
         { "name": "Argon", "percentage": 0.01},
@@ -38,7 +38,7 @@
         { "name": "Others", "percentage": 0}
     ],
     "data4": [
-        { "name": "Carbon Dioxide", "percentage": 0.95 },
+        { "name": "Carbon Dioxide", "percentage": 0.3 },
         { "name": "Nitrogen", "percentage": 0.027},
         { "name": "Oxygen", "percentage": 0},
         { "name": "Argon", "percentage": 0.016},
@@ -50,7 +50,7 @@
         { "name": "Others", "percentage": 0}
     ],
     "data5": [
-        { "name": "Hydrogen", "percentage": 0.75 },
+        { "name": "Hydrogen", "percentage": 0.2 },
         { "name": "Helium", "percentage": 0.25},
         { "name": "Oxygen", "percentage": 0},
         { "name": "Argon", "percentage": 0},
@@ -62,7 +62,7 @@
         { "name": "Others", "percentage": 0}
     ],
     "data6": [
-        { "name": "Carbon Dioxide", "percentage": 0 },
+        { "name": "Carbon Dioxide", "percentage": 0.1 },
         { "name": "Nitrogen", "percentage": 0},
         { "name": "Oxygen", "percentage": 0},
         { "name": "Argon", "percentage": 0},
