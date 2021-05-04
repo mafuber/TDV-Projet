@@ -7,21 +7,78 @@ var saturn = [document.getElementsByClassName('Saturn')];
 var uranus = [document.getElementsByClassName('Uranus')];
 var neptune = [document.getElementsByClassName('Neptune')];
 
+width = 150
 
+var json = d3.json("../DATA/json/planets.json", function(data){
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width",width)
+    var g = svg.selectAll("g")
+            .append("g")
+    var circle = g.selectAll("circle")
+                .append("circle")
+                .data(data)
+                .attr("r", data.r)
+                .attr("cx", data.cx)
+                .attr("name", data.name)
+})
+
+/*var text2 = d3.json("../DATA/json/planets.json", function(data) {
+    var canvas = d3.select("body").append("svg").attr("width", width).attr("height", height);
+    var circles = d3.selectAll("svg")
+    .append("circle")
+    
+    .attr("viewBox", "-480 -450 1000 900")
+
+    circles.on("mouseover", function(d) {
+            canvas.selectAll("g")
+                .data(data)
+                .enter()
+                .append("g")
+                .attr("y", function(d, i) { return i * 50 + 100; })
+                .attr("fill", "white")
+                .text(function(d) {
+                    return "Nom: " + d.name + "</br>" + 
+                    "Masse: " + d.mass + "x 10^(24) kg" + "</br>" +
+                    "Diamètre: " + d.diameter + "km" + "</br>" +
+                    "Température moyenne: " + d.meanTemperature + "°C" + "</br>" +
+                    "Période de rotation: " + d.rotationPeriod + "h" + "</br>" +
+                    "Nombre de lunes: " + d.numberOfMoons + "</br>";
+                })
+            d3.select(this)
+                .style("cursor", "pointer")
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+
+
+        })
+        .on("mouseout", function(d) {
+            d3.select(this)
+                .append("image")
+                .attr("width", width)
+                .attr("height", 200)
+                .style("cursor", "")
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+        })
+
+});
+/*
 // load the json
-d3.json('../DATA/json/planets.json', function (error, world) {
+d3.json('../DATA/json/planets.json', function (error, planets) {
     // Check your console to detect potential errors while loading data
     if (error) throw ('There was an error while getting geoData: ' + error);
     var svg = d3.select("body").append("svg")
 
 // Creation of the SVG
-var circles = svg.select("circle");
+var circles = svg.selectAll("circle");
     svg.selectAll("circle")
-        .data(world)
-        .enter()
-        .append("circle")
-        .attr("cx", )
-        .attr("r", )
+        .data(planets)
+        .append("g")
+        .attr("cx", function(d){return d.cx})
+        .attr("r", function(d){return d.r})
         .on("mouseover", function (d) {
             // makes the tooltip appear on mouseover
             d3.select(this)
@@ -53,6 +110,9 @@ var circles = svg.select("circle");
                 .style("opacity", 0);
         });
 })
+
+*/
+
 
 var formatDateIntoYear = d3.timeFormat("%Y");
 var formatDate = d3.timeFormat("%b %Y");
