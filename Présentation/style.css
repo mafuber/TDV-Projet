@@ -116,6 +116,16 @@ svg{
   stroke:#E6E6E6;
   stroke-width:1px;
 }
+.saturn-ring1{
+  fill:none;
+  stroke:#bf4c0d;
+  stroke-width:8px;
+}
+.saturn-ring2{
+  fill:none;
+  stroke:#bf4c0d;
+  stroke-width:1px;
+}
 .uranus-orbit {
   fill:none;
   stroke:#E6E6E6;

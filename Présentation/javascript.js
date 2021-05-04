@@ -33,12 +33,12 @@ var info = d3.json("../../Data_vis/mydata.json", function(data) {
             texto.append("text")
                 .attr("dy", "1em")
                 .text(function(d) {
-                    return "Masse de la planète : " + d.mass + " unités";
+                    return "Masse de la planète : " + d.mass + " x 10^(24) kg";
                 })
             texto.append("text")
                 .attr("dy", "2em")
                 .text(function(d) {
-                    return "Diamètre de la planète : " + d.diameter + " unités"
+                    return "Diamètre de la planète : " + d.diameter + "km"
                 })
             texto.append("text")
                 .attr("dy", "3em")

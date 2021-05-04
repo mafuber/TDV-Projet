@@ -15,7 +15,7 @@
   "hasRingSystem": false,
   "hasGlobalMagneticField": false,
   "dwarf": false,
-  "cx": 0.003,
+  "cx": 0,
   "r": 40
   },
 
@@ -124,7 +124,7 @@
     "hydrogen": 0,
     "helium": 0,
     "other": 0,
-    "cx": 0.19,
+    "cx": 0.18,
     "r": 11
   },
   {
@@ -196,7 +196,7 @@
     "hydrogen": 0.898,
     "helium": 0.102,
     "other": 0,
-    "cx": 0.26,
+    "cx": 0.27,
     "r": 12
   },
   {
@@ -232,7 +232,7 @@
     "hydrogen": 0.963,
     "helium": 0.032,
     "other": 0.005,
-    "cx": 0.30,
+    "cx": 0.32,
     "r": 14
   },
   {
@@ -268,7 +268,7 @@
     "hydrogen": 0.825,
     "helium": 0.152,
     "other": 0,
-    "cx": 0.37,
+    "cx": 0.39,
     "r": 35
   },
   {
@@ -304,7 +304,7 @@
     "hydrogen": 0.8,
     "helium": 0.19,
     "other": 0,
-    "cx": 0.44,
+    "cx": 0.46,
     "r": 30
   },
   {
