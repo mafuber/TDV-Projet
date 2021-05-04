@@ -13,9 +13,15 @@
   top: 10px;
   left: 0;
 }
-table{
-  width: 100%;
+.myDiv{
+  padding-right: 20%;
 }
-body{
+.secondgraph{
+  padding-top:0%;
+}
+.Aestheticwhole{
+  background-color: black;
+}
+div{
   background-color: black;
 }

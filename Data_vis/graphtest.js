@@ -92,16 +92,14 @@ d3.json("planets.json").then(function (data) {
 });
     
 
-var margin = {top: 20, right: 10, bottom: 20, left: 100},
-    width = 1000 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-    
+var margin = {top: 20, right: 10, bottom: 20, left: 100};
+var width = 1000 - margin.left - margin.right;
+var height = 500 - margin.top - margin.bottom;
 var svg1 = d3.select("#my_dataviz1")
             .append("svg")
-            .attr("viewBox", "0 0 1000 500")
+            .attr("viewBox", "0 0 750 350")
             .append("g")
             .attr("transform","translate(" + margin.left + "," + margin.top + ")");
-
 function GraphUpdate(choice){
     if(graphType == 0){
         d3.json("elements-ground.json").then(function(d){
@@ -132,6 +130,7 @@ function GraphUpdate(choice){
             else if(choice==9){
                 data=d.data9;
             }
+        width =630;
         var xScale = d3.scaleLinear()
                     .domain([0,1])
                     .range([0,width]);
