@@ -1,22 +1,22 @@
-[ 
+[
   {
-  "id": 0,
-  "name": "Sun",
-  "mass": 1988500,
-  "diameter": 1392684,
-  "density": 1.408,
-  "gravity": 274,
-  "escapeVelocity": 617.7,
-  "rotationPeriod": 1407.6,
-  "lengthOfDay": 0,
-  "distanceFromSun": 0,
-  "meanTemperature": 15700000,
-  "numberOfMoons": 0,
-  "hasRingSystem": false,
-  "hasGlobalMagneticField": false,
-  "dwarf": false,
-  "cx": 0,
-  "r": 50
+    "id": 0,
+    "name": "Sun",
+    "mass": 1988500,
+    "diameter": 1392684,
+    "density": 1.408,
+    "gravity": 274,
+    "escapeVelocity": 617.7,
+    "rotationPeriod": 1407.6,
+    "lengthOfDay": 0,
+    "distanceFromSun": 0,
+    "meanTemperature": 15700000,
+    "numberOfMoons": 0,
+    "hasRingSystem": false,
+    "hasGlobalMagneticField": false,
+    "dwarf": false,
+    "cx": 0,
+    "r": 50
   },
 
   {
@@ -47,12 +47,12 @@
     "nitrogen": 0,
     "oxgygen": 0.42,
     "argon": 0,
-    "methane":0,
+    "methane": 0,
     "sodium": 0.22,
     "hydrogen": 0.22,
     "helium": 0.06,
     "other": 0.03,
-    "cx": 0.068,
+    "cx": 6.8,
     "r": 3
   },
   {
@@ -83,12 +83,12 @@
     "nitrogen": 0.04,
     "oxgygen": 0,
     "argon": 0,
-    "methane":0,
+    "methane": 0,
     "sodium": 0,
     "hydrogen": 0,
     "helium": 0,
     "other": 0,
-    "cx": 0.098,
+    "cx": 9.8,
     "r": 6
   },
   {
@@ -119,12 +119,12 @@
     "nitrogen": 0.78,
     "oxgygen": 0.21,
     "argon": 0.01,
-    "methane":0,
+    "methane": 0,
     "sodium": 0,
     "hydrogen": 0,
     "helium": 0,
     "other": 0,
-    "cx": 0.145,
+    "cx": 14.5,
     "r": 11
   },
   {
@@ -155,12 +155,12 @@
     "nitrogen": 0.027,
     "oxgygen": 0,
     "argon": 0.016,
-    "methane":0,
+    "methane": 0,
     "sodium": 0,
     "hydrogen": 0,
     "helium": 0,
     "other": 0.007,
-    "cx": 0.195,
+    "cx": 19.5,
     "r": 5
   },
   {
@@ -191,12 +191,12 @@
     "nitrogen": 0,
     "oxgygen": 0,
     "argon": 0,
-    "methane":0,
+    "methane": 0,
     "sodium": 0,
     "hydrogen": 0.898,
     "helium": 0.102,
     "other": 0,
-    "cx": 0.263,
+    "cx": 26.3,
     "r": 37
   },
   {
@@ -227,12 +227,12 @@
     "nitrogen": 0,
     "oxgygen": 0,
     "argon": 0,
-    "methane":0,
+    "methane": 0,
     "sodium": 0,
     "hydrogen": 0.963,
     "helium": 0.032,
     "other": 0.005,
-    "cx": 0.35,
+    "cx": 35,
     "r": 30
   },
   {
@@ -263,12 +263,12 @@
     "nitrogen": 0,
     "oxgygen": 0,
     "argon": 0,
-    "methane":0.023,
+    "methane": 0.023,
     "sodium": 0,
     "hydrogen": 0.825,
     "helium": 0.152,
     "other": 0,
-    "cx": 0.41,
+    "cx": 41,
     "r": 22
   },
   {
@@ -299,13 +299,12 @@
     "nitrogen": 0,
     "oxgygen": 0,
     "argon": 0,
-    "methane":0.01,
+    "methane": 0.01,
     "sodium": 0,
     "hydrogen": 0.8,
     "helium": 0.19,
     "other": 0,
-    "cx": 0.46,
+    "cx": 46,
     "r": 20
   }
 ]
-
