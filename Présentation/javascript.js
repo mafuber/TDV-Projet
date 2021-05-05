@@ -20,22 +20,24 @@ var height = 300;
 var info = d3.json("../../Data_vis/mydata.json", function(data) {
 
     var planete = document.getElementsByTagName("H1")[1].getAttribute("id")
-    var don = data.planete
+    var don = data[planete]
+
     console.log(don)
+    console.log(planete)
 
     if (planete == "Mercure") {
         var canvas = d3.select(".Mercure").append("svg").attr("width", width).attr("height", height);
-        var imag = canvas.append("image").attr("xlink:href", "../Pictures/Mercure.jpg").attr("width", width).attr("height", height);
+        canvas.append("image").attr("xlink:href", "../Pictures/Mercure.jpg").attr("width", width).attr("height", height);
     }
     if (planete == "Venus") {
         var canvas = d3.select(".Venus").append("svg").attr("width", width).attr("height", height);
-        var imag = canvas.append("image").attr("xlink:href", "../Pictures/Venus.jpg").attr("width", width).attr("height", height);
+        canvas.append("image").attr("xlink:href", "../Pictures/Venus.jpg").attr("width", width).attr("height", height);
     }
     canvas.on("mouseover", function(d) {
             canvas.selectAll("text").remove()
             canvas.selectAll("image").remove()
             var texto = canvas.selectAll("text")
-                .data(data.Mercury)
+                .data(don)
                 .enter()
 
             //on n'arrivait pas à effectuer une seule formule avec l'assistant

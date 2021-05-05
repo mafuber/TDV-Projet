@@ -1,38 +1,38 @@
 {
-    "Mercury": [{
-        "mass": 0.33,
-        "diameter": 4879.0,
-        "diameternextplanet": 12104.0,
-        "density": 5427.0,
-        "gravity": 3.7,
-        "escapeVelocity": 4.3,
-        "rotationPeriod": 1407.6,
-        "lengthOfDay": 4222.6,
-        "distanceFromSun": 57.9,
-        "perihelion": 46.0,
-        "aphelion": 69.8,
-        "orbitalPeriod": 88.0,
-        "orbitalVelocity": 47.4,
-        "orbitalInclination": 7.0,
-        "orbitalEccentricity": 0.205,
-        "obliquityToOrbit": 0.034,
-        "meanTemperature": 167.0,
-        "surfacePressure": 0.0,
-        "numberOfMoons": 0,
-        "hasRingSystem": false,
-        "hasGlobalMagneticField": false,
-        "dwarf": false,
-        "carbonDioxide": 0,
-        "nitrogen": 0,
-        "oxgygen": 0.42,
-        "argon": 0,
-        "methane": 0,
-        "sodium": 0.22,
-        "hydrogen": 0.22,
-        "helium": 0.06,
-        "other": 0.03
-    }],
 
+    "Mercure": [
+        { "mass": 0.33 },
+        { "diameter": 4879.0 },
+        { "diameternextplanet": 12104.0 },
+        { "density": 5427.0 },
+        { "gravity": 3.7 },
+        { "escapeVelocity": 4.3 },
+        { "rotationPeriod": 1407.6 },
+        { "lengthOfDay": 4222.6 },
+        { "distanceFromSun": 57.9 },
+        { "perihelion": 46.0 },
+        { "aphelion": 69.8 },
+        { "orbitalPeriod": 88.0 },
+        { "orbitalVelocity": 47.4 },
+        { "orbitalInclination": 7.0 },
+        { "orbitalEccentricity": 0.205 },
+        { "obliquityToOrbit": 0.034 },
+        { "meanTemperature": 167.0 },
+        { "surfacePressure": 0.0 },
+        { "numberOfMoons": 0 },
+        { "hasRingSystem": false },
+        { "hasGlobalMagneticField": false },
+        { "dwarf": false },
+        { "carbonDioxide": 0 },
+        { "nitrogen": 0 },
+        { "oxgygen": 0.42 },
+        { "argon": 0 },
+        { "methane": 0 },
+        { "sodium": 0.22 },
+        { "hydrogen": 0.22 },
+        { "helium": 0.06 },
+        { "other": 0.03 }
+    ],
     "Venus": [{
         "mass": 4.87,
         "diameter": 12104.0,
@@ -67,7 +67,7 @@
         "other": 0
     }],
 
-    "Earth": [{
+    "Terre": [{
         "mass": 5.97,
         "diameter": 12756.0,
         "diameternextplanet": 6792.0,
@@ -169,7 +169,7 @@
         "other": 0
     }],
 
-    "Saturn": [{
+    "Saturne": [{
         "mass": 568.0,
         "diameter": 120536.0,
         "diameternextplanet": 51118.0,
@@ -271,7 +271,7 @@
         "other": 0
     }],
 
-    "Pluto": [{
+    "Pluton": [{
         "mass": 0.0146,
         "diameter": 2370.0,
         "diameternextplanet": 0,
