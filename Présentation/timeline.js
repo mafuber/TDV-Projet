@@ -10,55 +10,57 @@ var neptune = [document.getElementsByClassName('Neptune')];*/
 
 
 var div = d3.select("body")
-    .append("div")
-    .attr("class", "tooltip")
-    .style("opacity", 0)
-    .style("position", "absolute");
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0)
+  .style("position", "absolute");
 
 
 // load the json
 d3.json('../DATA/json/planets.json', function (error, planets) {
-    // Check your console to detect potential errors while loading data
-    if (error) throw ('There was an error while getting data: ' + error);
-console.log(planets)
+  // Check your console to detect potential errors while loading data
+  if (error) throw ('There was an error while getting data: ' + error);
+  // console.log(planets)
 
-// Creation of the SVG
-      d3.select("svg")
-        .selectAll("circle")
-        .data(planets)
-        .enter()
-        .append("circle")
-        .attr("cx", function(d){return d.cx})
-        .attr("r", function(d){console.log(d.r);return d.r})
-        .attr("class", function(d) {console.log(d.name.toLowerCase());return d.name.toLowerCase()})
-        .on("mouseover", function (d) {
-            // makes the tooltip appear on mouseover
-            d3.select(this)
-                .style("stroke", "white")
-                .style("stroke-width", 1)
-            div.transition()
-                .duration(200)
-                .style("opacity", .9); 
-            div.html("Nom: " + d.name + "</br>" + 
-            "Masse: " + d.mass + "x 10^(24) kg" + "</br>" +
-            "Diamètre: " + d.diameter + "km" + "</br>" +
-            "Température moyenne: " + d.meanTemperature + "°C" + "</br>" +
-            "Période de rotation: " + d.rotationPeriod + "h" + "</br>" +
-            "Nombre de lunes: " + d.numberOfMoons + "</br>")
-                .style("left", (d3.event.pageX) + "px")
-                .style("top", (d3.event.pageY - 28) + "px");
+  // Creation of the SVG
+  d3.select("svg")
+    .selectAll(".p")
+    .data(planets)
+    .enter()
+    .append("circle")
+    .attr("class", "p")
+    .attr("cx", function (d) { console.log(d.cx); return parseInt(d.cx) + '%' })
+    .attr("r", function (d) { console.log(d.r); return parseInt(d.r) })
+    .attr("fill", function (d) { return "url(#" + d.name.toLowerCase() + ")" })
+    .on("mouseover", function (d) {
+      // makes the tooltip appear on mouseover
+      console.log("mouseover")
+      d3.select(this)
+        .style("stroke", "white")
+        .style("stroke-width", 1)
+      div.transition()
+        .duration(200)
+        .style("opacity", .9);
+      div.html("Nom: " + d.name + "</br>" +
+        "Masse: " + d.mass + "x 10^(24) kg" + "</br>" +
+        "Diamètre: " + d.diameter + "km" + "</br>" +
+        "Température moyenne: " + d.meanTemperature + "°C" + "</br>" +
+        "Période de rotation: " + d.rotationPeriod + "h" + "</br>" +
+        "Nombre de lunes: " + d.numberOfMoons + "</br>")
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY - 28) + "px");
 
-        })
+    })
 
-        .on("mouseout", function (d) {
-            d3.select(this)
-                .style("stroke-width", 0)
-            //makes the tooltip disappear on mouseout
+    .on("mouseout", function (d) {
+      d3.select(this)
+        .style("stroke-width", 0)
+      //makes the tooltip disappear on mouseout
 
-            div.transition()
-                .duration(200)
-                .style("opacity", 0);
-        });
+      div.transition()
+        .duration(200)
+        .style("opacity", 0);
+    });
 })
 
 
@@ -69,91 +71,92 @@ var orbitsOn = true;
 var w = window.innerWidth;
 var h = window.innerHeight;
 
-if (w>h) {var max = h}
-else {var max = w}
+if (w > h) { var max = h }
+else { var max = w }
 
 // Select info div by id
-d3.json('../DATA/json/planets.json', function(planets){
+d3.json('../DATA/json/planets.json', function (planets) {
 
-var svgDiv = d3.select("#planet");
+  var svgDiv = d3.select("#planet");
 
-// define scales
-var posScale = d3.scaleLinear()
-            .domain([0, 10])
-            .range([0, max/2]);
+  // define scales
+  var posScale = d3.scaleLinear()
+    .domain([0, 10])
+    .range([0, max / 2]);
 
-var sizeScale = d3.scaleSqrt()
-            .domain([0, 10])
-            .range([0, max/20])
-        
+  var sizeScale = d3.scaleSqrt()
+    .domain([0, 10])
+    .range([0, max / 20])
 
-//Create SVG element
-var svg = d3.select("#planet")
-  .append("svg")
-  .data(planets)
-  .enter()
-  
 
-// add circles
+  //Create SVG element
+  var svg = d3.select("#planet")
+    .append("svg")
+    .data(planets)
+    .enter()
+
+
+  // add circles
 
   var all = svg.selectAll("circle")
-  .data(planets)
-  .enter();
+    .data(planets)
+    .enter();
 
   // orbits
   if (orbitsOn) {
     all.append("circle")
-    
+
   }
-  
+
   // planets
   all.append("circle")
-  .classed("planet", true)
-  .attr("id", function(d) {return "planet" + d.id})
-  
+    .classed("planet", true)
+    .attr("id", function (d) { return "planet" + d.id })
 
 
-// timer adapted from http://bl.ocks.org/cloudshapes/5662234
 
-// Kick off the timer, and the action begins: 
-d3.timer(tickFn);
+  // timer adapted from http://bl.ocks.org/cloudshapes/5662234
 
-function tickFn(_elapsed) {
-  timer_elapsed = _elapsed;
+  // Kick off the timer, and the action begins: 
+  d3.timer(tickFn);
 
-  // Process all circles data. 
-  for (var i = 1; i<planets.length;i++)  {
+  function tickFn(_elapsed) {
+    timer_elapsed = _elapsed;
 
-    var t_circleData = planets[i];
+    // Process all circles data. 
+    for (var i = 1; i < planets.length; i++) {
 
-    if (t_circleData.start == undefined) {
-      t_circleData.start = _elapsed;
-    };
+      var t_circleData = planets[i];
 
-    // Calc elapsed time.
-    var t_elapsed = _elapsed - t_circleData.start;
+      if (t_circleData.start == undefined) {
+        t_circleData.start = _elapsed;
+      };
 
-    // Calculate how far through the desired time for one iteration.
-    var t = t_elapsed / t_circleData.speed;
+      // Calc elapsed time.
+      var t_elapsed = _elapsed - t_circleData.start;
 
-    // Calculate new x/y positions
-    var rotation_radius = t_circleData.radius;
-    var t_angle = (2 * Math.PI) * t;
-    var t_x = rotation_radius * Math.cos(t_angle);
-    var t_y = rotation_radius * Math.sin(t_angle);
+      // Calculate how far through the desired time for one iteration.
+      var t = t_elapsed / t_circleData.speed;
 
-    t_circleData.x = t_x - rotation_radius;
-    t_circleData.y = t_y;
-    
+      // Calculate new x/y positions
+      var rotation_radius = t_circleData.radius;
+      var t_angle = (2 * Math.PI) * t;
+      var t_x = rotation_radius * Math.cos(t_angle);
+      var t_y = rotation_radius * Math.sin(t_angle);
+
+      t_circleData.x = t_x - rotation_radius;
+      t_circleData.y = t_y;
+
+    }
+
+
+    // Actually move the circles and the text.
+    var t_circle = svg.selectAll("#planet");
+    t_circle
+      .attr("transform", function (d) { return "translate(" + posScale(d.x) + "," + posScale(d.y) + ")" });
+
   }
-
-
-  // Actually move the circles and the text.
-  var t_circle = svg.selectAll("#planet");
-  t_circle
-    .attr("transform", function(d) {return "translate(" + posScale(d.x) + "," + posScale(d.y) + ")"});
-
-}})
+})
 
 
 
@@ -173,7 +176,7 @@ var margin = {top:50, right:50, bottom:0, left:50},
 var svg = d3.select("#vis")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom);  
+    .attr("height", height + margin.top + margin.bottom);
 
 ////////// slider //////////
 var slider = document.getElementById("myRange");
@@ -190,7 +193,7 @@ var currentValue = 0;
 var targetValue = width;
 
 var playButton = d3.select("#play-button");
-    
+
 var x = d3.scaleTime()
     .domain([startDate, endDate])
     .range([0, targetValue])
@@ -213,7 +216,7 @@ slider.append("line")
         .on("start.interrupt", function() { slider.interrupt(); })
         .on("start drag", function() {
           currentValue = d3.event.x;            //appel de fonction tickfn
-          update(x.invert(currentValue)); 
+          update(x.invert(currentValue));
         })
     );
 
@@ -233,7 +236,7 @@ var handle = slider.insert("circle", ".track-overlay")
     .attr("class", "handle")
     .attr("r", 9);
 
-var label = slider.append("text")  
+var label = slider.append("text")
     .attr("class", "label")
     .attr("text-anchor", "middle")
     .text(formatDate(startDate))
