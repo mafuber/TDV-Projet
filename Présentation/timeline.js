@@ -1,81 +1,31 @@
-var mercury = [document.getElementsByClassName('Mercury')];
+/*var mercury = [document.getElementsByClassName('Mercury')];
 var venus = [document.getElementsByClassName('Venus')];
 var earth = [document.getElementsByClassName('Earth')];
 var mars = [document.getElementsByClassName('Mars')];
 var jupiter = [document.getElementsByClassName('Jupiter')];
 var saturn = [document.getElementsByClassName('Saturn')];
 var uranus = [document.getElementsByClassName('Uranus')];
-var neptune = [document.getElementsByClassName('Neptune')];
+var neptune = [document.getElementsByClassName('Neptune')];*/
 
 
 
-var json = d3.json("../DATA/json/planets.json", function(data){
-    var svg = d3.select("body")
-            .append("svg")
-            .attr("width",width)
-    var g = svg.selectAll("g")
-            .append("g")
-    var circle = g.selectAll("circle")
-                .append("circle")
-                .data(data)
-                .attr("r", data.r)
-                .attr("cx", data.cx)
-                .attr("name", data.name)
-})
-
-/*var text2 = d3.json("../DATA/json/planets.json", function(data) {
-    var canvas = d3.select("body").append("svg").attr("width", width).attr("height", height);
-    var circles = d3.selectAll("svg")
-    .append("circle")
-    
-    .attr("viewBox", "-480 -450 1000 900")
-
-    circles.on("mouseover", function(d) {
-            canvas.selectAll("g")
-                .data(data)
-                .enter()
-                .append("g")
-                .attr("y", function(d, i) { return i * 50 + 100; })
-                .attr("fill", "white")
-                .text(function(d) {
-                    return "Nom: " + d.name + "</br>" + 
-                    "Masse: " + d.mass + "x 10^(24) kg" + "</br>" +
-                    "Diamètre: " + d.diameter + "km" + "</br>" +
-                    "Température moyenne: " + d.meanTemperature + "°C" + "</br>" +
-                    "Période de rotation: " + d.rotationPeriod + "h" + "</br>" +
-                    "Nombre de lunes: " + d.numberOfMoons + "</br>";
-                })
-            d3.select(this)
-                .style("cursor", "pointer")
-                .transition()
-                .duration(200)
-                .style("opacity", 1);
+var div = d3.select("body")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0)
+    .style("position", "absolute");
 
 
-        })
-        .on("mouseout", function(d) {
-            d3.select(this)
-                .append("image")
-                .attr("width", width)
-                .attr("height", 200)
-                .style("cursor", "")
-                .transition()
-                .duration(200)
-                .style("opacity", 1);
-        })
-
-});*/
-var p = d3.select('svg.planet');
 // load the json
 d3.json('../DATA/json/planets.json', function (error, planets) {
     // Check your console to detect potential errors while loading data
-    if (error) throw ('There was an error while getting geoData: ' + error);
-    var svg = d3.select("body").append("svg")
+    if (error) throw ('There was an error while getting data: ' + error);
 console.log(planets)
 
 // Creation of the SVG
-         p.data(planets)
-        
+      d3.select("svg")
+        .selectAll("circle")
+        .data(planets)
         .enter()
         .append("circle")
         .attr("cx", function(d){return d.cx})
@@ -84,18 +34,17 @@ console.log(planets)
         .on("mouseover", function (d) {
             // makes the tooltip appear on mouseover
             d3.select(this)
+                .style("stroke", "white")
                 .style("stroke-width", 1)
-            svg.transition()
+            div.transition()
                 .duration(200)
-                .style("opacity", .9);
-            svg.html(
-                "Nom: " + d.name + "</br>" + 
-                "Masse: " + d.mass + "x 10^(24) kg" + "</br>" +
-                "Diamètre: " + d.diameter + "km" + "</br>" +
-                "Température moyenne: " + d.meanTemperature + "°C" + "</br>" +
-                "Période de rotation: " + d.rotationPeriod + "h" + "</br>" +
-                "Nombre de lunes: " + d.numberOfMoons + "</br>"
-            )
+                .style("opacity", .9); 
+            div.html("Nom: " + d.name + "</br>" + 
+            "Masse: " + d.mass + "x 10^(24) kg" + "</br>" +
+            "Diamètre: " + d.diameter + "km" + "</br>" +
+            "Température moyenne: " + d.meanTemperature + "°C" + "</br>" +
+            "Période de rotation: " + d.rotationPeriod + "h" + "</br>" +
+            "Nombre de lunes: " + d.numberOfMoons + "</br>")
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
 
@@ -106,11 +55,12 @@ console.log(planets)
                 .style("stroke-width", 0)
             //makes the tooltip disappear on mouseout
 
-            svg.transition()
+            div.transition()
                 .duration(200)
                 .style("opacity", 0);
         });
 })
+
 
 var orbitsOn = true;
 
@@ -122,9 +72,10 @@ var h = window.innerHeight;
 if (w>h) {var max = h}
 else {var max = w}
 
-// Select info g by class
+// Select info div by id
 d3.json('../DATA/json/planets.json', function(planets){
-    var svgDiv = d3.select("#planet");
+
+var svgDiv = d3.select("#planet");
 
 // define scales
 var posScale = d3.scaleLinear()
@@ -139,11 +90,13 @@ var sizeScale = d3.scaleSqrt()
 //Create SVG element
 var svg = d3.select("#planet")
   .append("svg")
+  .data(planets)
+  .enter()
   
 
 // add circles
 
-    all = svg.selectAll("circle")
+  var all = svg.selectAll("circle")
   .data(planets)
   .enter();
 
@@ -200,8 +153,8 @@ function tickFn(_elapsed) {
   t_circle
     .attr("transform", function(d) {return "translate(" + posScale(d.x) + "," + posScale(d.y) + ")"});
 
-}
-})
+}})
+
 
 
 
