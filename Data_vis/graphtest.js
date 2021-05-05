@@ -90,7 +90,6 @@ d3.json("planets.json").then(function (data) {
         })
 
 });
-    
 
 var margin = {top: 20, right: 10, bottom: 20, left: 100};
 var width = 1000 - margin.left - margin.right;
@@ -235,6 +234,10 @@ function GraphUpdate(choice){
     
         u.exit()
             .remove();
-    })}
+        })
+    }else if (graphType == 2){
+        console.log("new graph");
+    }
+
 }
 GraphUpdate(1);
