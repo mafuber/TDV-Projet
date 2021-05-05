@@ -4,23 +4,92 @@
         <meta charset="utf-8">
         <title>testing presentation</title>
         <script type="text/javascript" src="../D3/d3.js"></script>
-        <link type="stylesheet" href="style.css">
-        <link rel="stylesheet" type="text/css" href="test.css" media="screen" />
-        
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="../Présentation/style_hamburger.css" />
+        <link rel="stylesheet" type="text/css" href="../Présentation/style_button.css" />
+        <link rel="stylesheet" type="text/css" href="../Présentation/style_planets_html.css" />
     </head>
     <body>
-        <div id="my_planets"></div><br>
-        <div id="my_buttons"></div>
-        <button onclick="update(1)">Mercury</button>
-        <button onclick="update(2)">Venus</button>
-        <button onclick="update(3)">Earth</button>
-        <button onclick="update(4)">Mars</button>
-        <button onclick="update(5)">Jupiter</button>
-        <button onclick="update(6)">Saturn</button>
-        <button onclick="update(7)">Uranus</button>
-        <button onclick="update(8)">Neptune</button>
-        <button onclick="update(9)">Pluto</button>
-        <div id="my_dataviz"></div>
+        <div class="container myDiv">
+            <nav class="navbar_ham" onclick="out(this)">
+                <!--nav definies a set of navigation links-->
+                <div class="hamburger-menu">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+                        <a href="../0_index.html" class="nav-link">Système solaire</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="../Planets/1_Mercure.html" class="nav-link">Mercure</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="../Planets/2_Venus.html" class="nav-link">Venus</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="../Planets/3_Terre.html" class="nav-link">Terre</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="../Planets/4_Mars.html" class="nav-link">Mars</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="../Planets/5_Jupiter.html" class="nav-link">Jupiter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Planets/6_Saturne.html" class="nav-link">Saturn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Planets/7_Uranus.html" class="nav-link">Uranus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Planets/8_Neptun.html" class="nav-link">Neptun</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="centeredGraph myDiv">
+            <div id="my_planets"></div>
+        </div>
+        <select>
+            <option value="1" onclick="GraphTypeChange(0)">Ground Composition</option>
+            <option value="2" onclick="GraphTypeChange(1)">Atmosphere</option>
+            <option value="3" onclick="GraphTypeChange(2)">New Graph</option>
+        </select>
+        <div class="secondgraph myDiv">
+            <div id="my_dataviz1"></div>
+        </div>
+            <!--
+        <table style="background-color: black;position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+            <tr>
+                <td>
+                    <div id="my_planets"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select>
+                        <option value="1" onclick="GraphTypeChange(0)">Ground Composition</option>
+                        <option value="2" onclick="GraphTypeChange(1)">Atmosphere</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="my_dataviz1"></div>
+                </td>
+            </tr>
+        </table>-->
+    
         <script type="text/javascript" src="graphtest.js"></script>
+        <script src="../Présentation/javascript.js" type="text/javascript"></script>
     </body>
 </html>
