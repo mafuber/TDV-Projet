@@ -18,10 +18,19 @@ var width = 300;
 var height = 300;
 
 var info = d3.json("../../Data_vis/mydata.json", function(data) {
-    var canvas = d3.select(".centered_container").append("svg").attr("width", width).attr("height", height);
-    var imag = canvas.append("image").attr("xlink:href", "../Pictures/Merkur.jpg").attr("width", width).attr("height", height);
 
+    var planete = document.getElementsByTagName("H1")[1].getAttribute("id")
+    var don = data.planete
+    console.log(don)
 
+    if (planete == "Mercure") {
+        var canvas = d3.select(".Mercure").append("svg").attr("width", width).attr("height", height);
+        var imag = canvas.append("image").attr("xlink:href", "../Pictures/Mercure.jpg").attr("width", width).attr("height", height);
+    }
+    if (planete == "Venus") {
+        var canvas = d3.select(".Venus").append("svg").attr("width", width).attr("height", height);
+        var imag = canvas.append("image").attr("xlink:href", "../Pictures/Venus.jpg").attr("width", width).attr("height", height);
+    }
     canvas.on("mouseover", function(d) {
             canvas.selectAll("text").remove()
             canvas.selectAll("image").remove()
@@ -72,7 +81,7 @@ var info = d3.json("../../Data_vis/mydata.json", function(data) {
 
             d3.select(this)
                 .append("image")
-                .attr("xlink:href", "../Pictures/Merkur.jpg")
+                .attr("xlink:href", "../Pictures/Mercure.jpg")
                 .attr("width", width)
                 .attr("height", height)
                 .style("cursor", "")
