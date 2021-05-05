@@ -13,31 +13,25 @@ function out(a) {
     }
     counter += 1
 }
+// demander à Jessica s'il faut effacer la fonction d'avant ou pas?
 
 var width = 300;
 var height = 300;
 
-var info = d3.json("../../Data_vis/mydata.json", function(data) {
+var info = d3.json("../../Data_vis/ivandata.json", function(data) {
 
     var planete = document.getElementsByTagName("H1")[1].getAttribute("id")
-    var don = data[planete]
 
-    console.log(don)
-    console.log(planete)
+    if (planete == "" + planete + "") {
+        var canvas = d3.select("." + planete).append("svg").attr("width", width).attr("height", height);
+        canvas.append("image").attr("xlink:href", "../Pictures/" + planete + ".jpg").attr("width", width).attr("height", height);
+    }
 
-    if (planete == "Mercure") {
-        var canvas = d3.select(".Mercure").append("svg").attr("width", width).attr("height", height);
-        canvas.append("image").attr("xlink:href", "../Pictures/Mercure.jpg").attr("width", width).attr("height", height);
-    }
-    if (planete == "Venus") {
-        var canvas = d3.select(".Venus").append("svg").attr("width", width).attr("height", height);
-        canvas.append("image").attr("xlink:href", "../Pictures/Venus.jpg").attr("width", width).attr("height", height);
-    }
     canvas.on("mouseover", function(d) {
             canvas.selectAll("text").remove()
             canvas.selectAll("image").remove()
             var texto = canvas.selectAll("text")
-                .data(don)
+                .data(data[planete])
                 .enter()
 
             //on n'arrivait pas à effectuer une seule formule avec l'assistant
@@ -83,7 +77,7 @@ var info = d3.json("../../Data_vis/mydata.json", function(data) {
 
             d3.select(this)
                 .append("image")
-                .attr("xlink:href", "../Pictures/Mercure.jpg")
+                .attr("xlink:href", "../Pictures/" + planete + ".jpg")
                 .attr("width", width)
                 .attr("height", height)
                 .style("cursor", "")
