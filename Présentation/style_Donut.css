@@ -1,4 +1,4 @@
-#chart text {
+/*chart text {
     fill: black;
     font: 10px sans-serif;
     text-anchor: end;
@@ -10,13 +10,13 @@
 
 .axis path, .axis line {
     fill: none;
-    /*stroke: #fff;*/
+    stroke: #fff;
     shape-rendering: crispEdges;
 }
 
 body {
-    /*background: #1a1a1a;*/
-    color: #eaeaea;
+    background: #1a1a1a;
+    color: #330d66;
     padding: 10px;
 }
 
@@ -24,4 +24,4 @@ path {
     stroke: steelblue;
     stroke-width: 2;
     fill: none;
-}
+}*/
