@@ -282,17 +282,25 @@ nav>ul li:hover .sous {
 }
 
 .main {
-    position: absolute;
+    position: fixed;
     top: 10%;
-    left: 35%;
+    left: 40%;
     margin: -25px 0 0 -25px;
+    display:flex;
 }
 
 .mainb {
-    position: absolute;
+    position: fixed;
     top: 50%;
-    left: 42%;
-    margin: -25px 0 0 -25px;
+    left:35%;
+    display: flex;
+    margin: 0;
+    padding: 0; /*Zentrieren*/
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     border-radius: 12px;
     /*rounding the button's edges*/
     background-color: rgb(33, 23, 54);
@@ -301,7 +309,6 @@ nav>ul li:hover .sous {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    font-family: sans-serif;
+
 }
