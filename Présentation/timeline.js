@@ -40,7 +40,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
         .duration(200)
         .style("opacity", .9);
       div.html("Nom: " + d.name + "</br>" +
-        "Masse: " + d.mass + "x 10^(24) kg" + "</br>" +
+        "Masse: " + d.mass + " x 10^(24) kg" + "</br>" +
         "Diamètre: " + d.diameter + " km" + "</br>" +
         "Température moyenne: " + d.meanTemperature + " °C" + "</br>" +
         "Période de rotation: " + d.rotationPeriod + " h" + "</br>" +
