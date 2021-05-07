@@ -58,6 +58,65 @@
         </div>
         <div class="centeredGraph myDiv">
             <div id="my_planets"></div>
+            <svg>
+                <defs>
+                    <linearGradient id="Mercury" x1="0" y1="0" x2="0" y2="100%">
+                        <stop offset="0%" stop-color="#bf4c0d" />
+                        <stop offset="100%" stop-color="#bf4c0d" />
+                    </linearGradient>
+                    <linearGradient id="Venus" x1="0" y1="0" x2="0" y2="100%">
+                        <stop offset="30%" stop-color="#f0990e" />
+                        <stop offset="40%" stop-color="#fecb36" />
+                        <stop offset="60%" stop-color="#f0990e" />
+                        <stop offset="100%" stop-color="#f0990e" />
+                    </linearGradient>
+                    <radialGradient id="Earth" fx="0.2" fy="0.2">
+                        <stop offset="50%" stop-color="#009688" />
+                        <stop offset="60%" stop-color="#009688" />
+                        <stop offset="70%" stop-color="#0270e9" />
+                        <stop offset="100%" stop-color="#0270e9" />
+                    </radialGradient>
+                    <radialGradient id="Mars" fx="0.3" fy="0.3">
+                        <stop offset="60%" stop-color="#e25409" />
+                        <stop offset="65%" stop-color="#e25409" />
+                        <stop offset="100%" stop-color="#BF360C" />
+                    </radialGradient>
+                    <linearGradient id="Jupiter" x1="0" y1="0" x2="0" y2="100%">
+                        <stop offset="15%" stop-color="#d7b872" />
+                        <stop offset="25%" stop-color="#a24416" />
+                        <stop offset="30%" stop-color="#a24416" />
+                        <stop offset="40%" stop-color="#a6563e" />
+                        <stop offset="60%" stop-color="#a6563e" />
+                        <stop offset="80%" stop-color="#6f3620" />
+                        <stop offset="100%" stop-color="#d7b872" />
+                    </linearGradient>
+                    <linearGradient id="Saturn" x1="0" x2="0" y1="0" y2="100%">
+                        <stop offset="0%" stop-color="#ec9a22" />
+                        <stop offset="40%" stop-color="#d16c10" />
+                        <stop offset="55%" stop-color="#d16c10" />
+                        <stop offset="50%" stop-color="#ec9925" />
+                        <stop offset="70%" stop-color="#ec9925" />
+                        <stop offset="75%" stop-color="#d07b15" />
+                        <stop offset="100%" stop-color="#ec9a22" />
+                    </linearGradient>
+                    <linearGradient id="Uranus" x1="0" y1="0" x2="0" y2="100%">
+                        <stop offset="15%" stop-color="#199cdd" />
+                        <stop offset="25%" stop-color="#32b1fd" />
+                        <stop offset="30%" stop-color="#199cdd" />
+                        <stop offset="40%" stop-color="#32b1fd" />
+                        <stop offset="60%" stop-color="#199cdd" />
+                        <stop offset="80%" stop-color="#32b1fd" />
+                        <stop offset="100%" stop-color="#199cdd" />
+                    </linearGradient>
+                    <linearGradient id="Neptune" x1="0" y1="0" x2="0" y2="100%">
+                        <stop offset="0%" stop-color="#005de8" />
+                        <stop offset="25%" stop-color="#0747a3" />
+                        <stop offset="50%" stop-color="#287af7" />
+                        <stop offset="75%" stop-color="#0747a3" />
+                        <stop offset="100%" stop-color="#005de8" />
+                    </linearGradient>
+                </defs>
+            </svg>
         </div>
         <select>
             <option value="1" onclick="GraphTypeChange(0)">Ground Composition</option>
@@ -88,7 +147,7 @@
                 </td>
             </tr>
         </table>-->
-    
+        
         <script type="text/javascript" src="graphtest.js"></script>
         <script src="../Présentation/javascript.js" type="text/javascript"></script>
     </body>
