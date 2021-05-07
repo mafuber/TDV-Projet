@@ -236,7 +236,43 @@ function GraphUpdate(choice){
             .remove();
         })
     }else if (graphType == 2){
-        console.log("new graph");
+        d3.json("planets.json").then(function(d){
+            d=data;
+        var xScale = d3.scaleLinear()
+                    .domain([0,1000])
+                    .range([0,width]);
+    
+        var yScale = d3.scaleLinear()
+                    .domain([0,1000])
+                    .range([0,height])
+                    .padding(0.1);
+    
+        svg1.selectAll("g").remove();
+
+        var g1 = svg1.append("g");
+    
+        g1.append("g")
+            .call(d3.axisLeft(yScale))
+            .style("color","white");
+        g1.append("g")
+            .call(d3.axisBottom(xScale))
+            .style("color","white")
+            .attr("transform","translate(" + 0 + "," + height + ")");
+
+        var u = svg1.selectAll("g")
+            .data(data)
+
+        u.enter().append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+              .attr("cx", function (d) { return xScale(d.mass);})
+              .attr("cy", function (d) { return yScale(d.diameter);})
+              .attr("r", 1.5)
+              .style("fill", "#69b3a2");
+        u.exit().remove();
+        })
     }
 
 }
