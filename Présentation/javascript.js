@@ -48,22 +48,22 @@ var info = d3.json("../../Data_vis/ivandata.json", function(data) {
             texto.append("text")
                 .attr("dy", "3em")
                 .text(function(d) {
-                    return "Densité de la planète : " + d.density + " unités"
+                    return "Densité de la planète : " + d.density + " g/dm^3"
                 })
             texto.append("text")
                 .attr("dy", "4em")
                 .text(function(d) {
-                    return "Mesure de la gravité : " + d.gravity + " unités"
+                    return "Mesure de la gravité : " + d.gravity + " m/s^2"
                 })
             texto.append("text")
                 .attr("dy", "5em")
                 .text(function(d) {
-                    return "Période de rotation : " + d.rotationPeriod + " unités"
+                    return "Période de rotation : " + d.rotationPeriod + " h"
                 })
             texto.append("text")
                 .attr("dy", "6em")
                 .text(function(d) {
-                    return "Longeur d'une journée : " + d.lengthOfDay + " unités"
+                    return "Longeur d'une journée : " + d.lengthOfDay + " h"
                 })
             d3.select(this)
                 .style("cursor", "pointer")

@@ -1,11 +1,3 @@
-/*var mercury = [document.getElementsByClassName('Mercury')];
-var venus = [document.getElementsByClassName('Venus')];
-var earth = [document.getElementsByClassName('Earth')];
-var mars = [document.getElementsByClassName('Mars')];
-var jupiter = [document.getElementsByClassName('Jupiter')];
-var saturn = [document.getElementsByClassName('Saturn')];
-var uranus = [document.getElementsByClassName('Uranus')];
-var neptune = [document.getElementsByClassName('Neptune')];*/
 
 var div = d3.select("body")
   .append("div")
@@ -58,12 +50,12 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
         .duration(200)
         .style("opacity", 0);
     })
-    /*.on("click", function(d){
+    .on("click", function(d){
       d3.select(this)
-      .attr("href", function(d){for(i=1;i<=8;i++){
-        return i + "_" + d.name + ".html"
-      }})
-    });*/
+      .attr("xlink:href", function(d, i){
+        return "Planets/" + i + "_" + d.name + ".html"
+      })
+    });
 })
 
 
