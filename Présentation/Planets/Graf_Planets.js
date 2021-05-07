@@ -1,6 +1,6 @@
 //nur anzeigen falls d kondition
 //tooltips
-
+//qqun a change les trucs
 
 // set the dimensions and margins of the graph
 var width = 450
@@ -8,10 +8,10 @@ var height = 450
 var margin = 40
 
 // tooltip
-var tooli = d3.select("body").append("div")
+/*var tooli = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0)
-    ;
+    ;*/
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
 var radius = Math.min(width, height) / 2 - margin
