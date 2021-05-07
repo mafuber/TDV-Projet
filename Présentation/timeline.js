@@ -7,8 +7,6 @@ var saturn = [document.getElementsByClassName('Saturn')];
 var uranus = [document.getElementsByClassName('Uranus')];
 var neptune = [document.getElementsByClassName('Neptune')];*/
 
-
-
 var div = d3.select("body")
   .append("div")
   .attr("class", "tooltip")
@@ -42,7 +40,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
         .duration(200)
         .style("opacity", .9);
       div.html("Nom: " + d.name + "</br>" +
-        "Masse: " + d.mass + "x 10^(24) kg" + "</br>" +
+        "Masse: " + d.mass + " x 10^(24) kg" + "</br>" +
         "Diamètre: " + d.diameter + " km" + "</br>" +
         "Température moyenne: " + d.meanTemperature + " °C" + "</br>" +
         "Période de rotation: " + d.rotationPeriod + " h" + "</br>" +
@@ -51,7 +49,6 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
         .style("top", (d3.event.pageY - 28) + "px");
 
     })
-
     .on("mouseout", function (d) {
       d3.select(this)
         .style("stroke-width", 0)
@@ -60,7 +57,13 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
       div.transition()
         .duration(200)
         .style("opacity", 0);
-    });
+    })
+    /*.on("click", function(d){
+      d3.select(this)
+      .attr("href", function(d){for(i=1;i<=8;i++){
+        return i + "_" + d.name + ".html"
+      }})
+    });*/
 })
 
 
