@@ -78,7 +78,8 @@ d3.json("planets.json").then(function (data) {
         .attr("cx", function (d, i) { return d.offset + planetScale(d.diameter) / 2 + padding; })
         .attr("cy", function (d) { return 60 - planetScale(d.diameter) / 2; })
         .attr("r", function (d) { return planetScale(d.diameter) / 2; })
-        .style("fill", "#33cc33")
+        //.style("fill", "#33cc33")
+        .style("fill", function (d) { return "url(#" + d.name + ")" })
         .on("click",function(d,i){
             var selection = i.id
             d3.select("rect[id='"+(OldSelection-1)+"']")
@@ -237,19 +238,21 @@ function GraphUpdate(choice){
         })
     }else if (graphType == 2){
         d3.json("planets.json").then(function(d){
-            d=data;
-        var xScale = d3.scaleLinear()
-                    .domain([0,1000])
+            data=d;
+            var maxX = d3.max(data, function(d) { return d.diameter; });
+            var xScale = d3.scaleLinear()
+                    .domain([0,maxX])
                     .range([0,width]);
-    
+            
+            var maxY = d3.max(data, function(d) { return d.mass; });
         var yScale = d3.scaleLinear()
-                    .domain([0,1000])
-                    .range([0,height])
-                    .padding(0.1);
+                    .domain([maxY,0])
+                    .range([0,height]);
     
         svg1.selectAll("g").remove();
-
+    
         var g1 = svg1.append("g");
+    
     
         g1.append("g")
             .call(d3.axisLeft(yScale))
@@ -258,20 +261,23 @@ function GraphUpdate(choice){
             .call(d3.axisBottom(xScale))
             .style("color","white")
             .attr("transform","translate(" + 0 + "," + height + ")");
-
-        var u = svg1.selectAll("g")
-            .data(data)
-
-        u.enter().append('g')
-            .selectAll("dot")
-            .data(data)
-            .enter()
-            .append("circle")
-              .attr("cx", function (d) { return xScale(d.mass);})
-              .attr("cy", function (d) { return yScale(d.diameter);})
-              .attr("r", 1.5)
-              .style("fill", "#69b3a2");
-        u.exit().remove();
+    
+       var u = svg1.selectAll("rect")
+                .data(data)
+    
+        u.enter()
+            .append("rect")
+            .merge(u)
+            .transition()
+            .duration(1000)
+            .attr("x",10)
+            .attr("y", function(d) {return yScale(d.mass)})
+            .attr("width", function(d) { return xScale(d.diameter); })
+            .attr("height",yScale.bandwidth() )
+            .attr("fill", "white");
+    
+        u.exit()
+            .remove();
         })
     }
 
