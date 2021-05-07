@@ -13,32 +13,37 @@ function out(a) {
     }
     counter += 1
 }
+// demander à Jessica s'il faut effacer la fonction d'avant ou pas?
 
 var width = 300;
 var height = 300;
 
-var info = d3.json("../../Data_vis/mydata.json", function(data) {
-    var canvas = d3.select(".centered_container").append("svg").attr("width", width).attr("height", height);
-    var imag = canvas.append("image").attr("xlink:href", "../Pictures/Merkur.jpg").attr("width", width).attr("height", height);
+var info = d3.json("../../Data_vis/ivandata.json", function(data) {
 
+    var planete = document.getElementsByTagName("H1")[1].getAttribute("id")
+
+    if (planete == "" + planete + "") {
+        var canvas = d3.select("." + planete).append("svg").attr("width", width).attr("height", height);
+        canvas.append("image").attr("xlink:href", "../Pictures/" + planete + ".jpg").attr("width", width).attr("height", height);
+    }
 
     canvas.on("mouseover", function(d) {
             canvas.selectAll("text").remove()
             canvas.selectAll("image").remove()
             var texto = canvas.selectAll("text")
-                .data(data.Mercury)
+                .data(data[planete])
                 .enter()
 
             //on n'arrivait pas à effectuer une seule formule avec l'assistant
             texto.append("text")
                 .attr("dy", "1em")
                 .text(function(d) {
-                    return "Masse de la planète : " + d.mass + " unités";
+                    return "Masse de la planète : " + d.mass + " x 10^(24) kg";
                 })
             texto.append("text")
                 .attr("dy", "2em")
                 .text(function(d) {
-                    return "Diamètre de la planète : " + d.diameter + " unités"
+                    return "Diamètre de la planète : " + d.diameter + "km"
                 })
             texto.append("text")
                 .attr("dy", "3em")
@@ -72,7 +77,7 @@ var info = d3.json("../../Data_vis/mydata.json", function(data) {
 
             d3.select(this)
                 .append("image")
-                .attr("xlink:href", "../Pictures/Merkur.jpg")
+                .attr("xlink:href", "../Pictures/" + planete + ".jpg")
                 .attr("width", width)
                 .attr("height", height)
                 .style("cursor", "")
