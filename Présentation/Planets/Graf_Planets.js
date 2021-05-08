@@ -1,6 +1,6 @@
 //nur anzeigen falls d kondition
 //tooltips
-
+//qqun a change les trucs
 
 // set the dimensions and margins of the graph
 var width = 450
@@ -8,10 +8,10 @@ var height = 450
 var margin = 40
 
 // tooltip
-var tooli = d3.select("body").append("div")
+/*var tooli = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0)
-    ;
+    ;*/
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
 var radius = Math.min(width, height) / 2 - margin
@@ -85,6 +85,51 @@ svg
   .attr("stroke", "black")
   .style("stroke-width", "2px")
   .style("opacity", 0.7)
+  .on("mouseover", function(d) {
+    d3.select(this)   // DAS AKTUELLE ELEMENT AUSWàHLEN  oder “click”
+.attr("fill", "orange");
+d3.select(this).append("text")
+       .attr("id", "tooltip")
+        .attr("x",  String(event.pageX)) //Get the x values of the mouse
+       .attr("y", String(event.pageY))
+       .attr("height", "90px")
+       .attr("width", "200px")
+       .attr("text-anchor", "middle")
+       .attr("font-family", "sans-serif")
+       .attr("font-size", "700px")
+       .attr("font-weight", "bold")
+       
+       .text("kdjfl")
+       .style("fill", "white");
+       console.log(d.value, d.key, event.pageX);;
+
+
+   
+    /*//Create the tooltip label
+    d3.select(this)
+        .append("text") 
+       .attr("id", "tooltip")
+        .attr("x",  String(event.pageX /2)) //Get the x values of the mouse
+       .attr("y", String(event.pageY))
+       .attr("height", "90px")
+       .attr("width", "200px")
+       .attr("text-anchor", "middle")
+       .attr("font-family", "sans-serif")
+       .attr("font-size", "700px")
+       .attr("font-weight", "bold")
+       .attr("fill", "black")
+       .attr("background-color", "red")
+       .text(343295);
+       console.log(d.value, d.key, event.pageX);
+*/
+})
+.on("mouseout", function() {
+
+    //Remove the tooltip
+    d3.select("#tooltip").remove();
+    d3.select(this).attr("fill", function(d){ console.log("jdkjflkds"); return (color(d.data.key)) ;}) 
+    
+})
 
   
   
@@ -117,23 +162,7 @@ svg
     posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
     return [posA, posB, posC]
   })
-// Add the polylines between chart and labels:
-svg
-.selectAll('allPolylines')
-.data(data_ready)
-.enter()
-.append('polyline')
-  .attr("stroke", "black")
-  .style("fill", "none")
-  .attr("stroke-width", 1)
-  .attr('points', function(d) {
-    var posA = arc.centroid(d) // line insertion in the slice
-    var posB = outerArc.centroid(d) // line break: we use the other arc generator that has been built only for that
-    var posC = outerArc.centroid(d); // Label position = almost the same as posB
-    var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2 // we need the angle to see if the X position will be at the extreme right or extreme left
-    posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
-    return [posA, posB, posC]
-  })
+
 
 // Add the polylines between chart and labels:
 svg
@@ -196,51 +225,7 @@ svg
     })
  */
     
-    .on("mouseover", function(d) {
-        d3.select(this)   // DAS AKTUELLE ELEMENT AUSWàHLEN  oder “click”
-    .attr("fill", "orange");
-    d3.select(this).append("text")
-           .attr("id", "tooltip")
-            .attr("x",  String(event.pageX)) //Get the x values of the mouse
-           .attr("y", String(event.pageY))
-           .attr("height", "90px")
-           .attr("width", "200px")
-           .attr("text-anchor", "middle")
-           .attr("font-family", "sans-serif")
-           .attr("font-size", "700px")
-           .attr("font-weight", "bold")
-           
-           .text("kdjfl")
-           .style("fill", "white");
-           console.log(d.value, d.key, event.pageX);;
-
-
-       
-        /*//Create the tooltip label
-        d3.select(this)
-            .append("text") 
-           .attr("id", "tooltip")
-            .attr("x",  String(event.pageX /2)) //Get the x values of the mouse
-           .attr("y", String(event.pageY))
-           .attr("height", "90px")
-           .attr("width", "200px")
-           .attr("text-anchor", "middle")
-           .attr("font-family", "sans-serif")
-           .attr("font-size", "700px")
-           .attr("font-weight", "bold")
-           .attr("fill", "black")
-           .attr("background-color", "red")
-           .text(343295);
-           console.log(d.value, d.key, event.pageX);
-*/
-   })
-   .on("mouseout", function() {
-   
-        //Remove the tooltip
-        d3.select("#tooltip").remove();
-        d3.select(this).attr("fill", function(d){ console.log("jdkjflkds"); return (color(d.data.key)) ;}) 
-        
-   })
+    
    /* .select("#tooltip")
     .style("left",  parseFloat(d3.select(this).attr("x")) + "px")
     .style ("top", parseFloat(d3.select(this).attr("y"))/2 +  "px")
