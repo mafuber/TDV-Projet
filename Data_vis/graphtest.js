@@ -23,7 +23,7 @@ d3.json("planets.json").then(function (data) {
     var OldSelection=1;
     var svg = d3.select("#my_planets")
         .append("svg")
-        .attr("viewBox", "-19 -100 990 250");
+        .attr("viewBox", "-19 -100 930 250");
     svg.selectAll("rect")
         .data(planets)
         .enter()
@@ -280,6 +280,5 @@ function GraphUpdate(choice){
             .remove();
         })
     }
-
 }
 GraphUpdate(1);
