@@ -53,7 +53,9 @@
     "helium": 0.06,
     "other": 0.03,
     "cx": 7,
-    "r": 3
+    "r": 3,
+    "start": "undefined",
+    "rellipse": 7.2
   },
   {
     "id": 2,
@@ -89,7 +91,9 @@
     "helium": 0,
     "other": 0,
     "cx": 10,
-    "r": 6
+    "r": 6,
+    "start": "undefined",
+    "rellipse": 10.2
   },
   {
     "id": 3,
@@ -125,7 +129,9 @@
     "helium": 0,
     "other": 0,
     "cx": 15,
-    "r": 11
+    "r": 11,
+    "start": "undefined",
+    "rellipse": 15.3
   },
   {
     "id": 4,
@@ -161,7 +167,9 @@
     "helium": 0,
     "other": 0.007,
     "cx": 20,
-    "r": 5
+    "r": 5,
+    "start": "undefined",
+    "rellipse": 20.4
   },
   {
     "id": 5,
@@ -197,7 +205,9 @@
     "helium": 0.102,
     "other": 0,
     "cx": 26.3,
-    "r": 37
+    "r": 37,
+    "start": "undefined",
+    "rellipse": 26.8
   },
   {
     "id": 6,
@@ -233,7 +243,9 @@
     "helium": 0.032,
     "other": 0.005,
     "cx": 35,
-    "r": 30
+    "r": 30,
+    "start": "undefined",
+    "rellipse": 36
   },
   {
     "id": 7,
@@ -269,7 +281,9 @@
     "helium": 0.152,
     "other": 0,
     "cx": 41,
-    "r": 22
+    "r": 22,
+    "start": "undefined",
+    "rellipse": 42
   },
   {
     "id": 8,
@@ -305,6 +319,8 @@
     "helium": 0.19,
     "other": 0,
     "cx": 46,
-    "r": 20
+    "r": 20,
+    "start": "undefined",
+    "rellipse": 47
   }
 ]
