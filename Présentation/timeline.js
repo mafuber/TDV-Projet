@@ -11,12 +11,12 @@ else { var max = w }
 
 // define scales
 var posScale = d3.scaleLinear()
-    .domain([0, 10])
-    .range([0, max / 2]);
+  .domain([0, 10])
+  .range([0, max / 2]);
 
 var sizeScale = d3.scaleSqrt()
-    .domain([0, 10])
-    .range([0, max / 20])
+  .domain([0, 10])
+  .range([0, max / 20])
 
 var div = d3.select("body")
   .append("div")
@@ -24,45 +24,43 @@ var div = d3.select("body")
   .style("opacity", 0)
   .style("position", "absolute");
 
-
+elap = 0;
 // load the json
 d3.json('../DATA/json/planets.json', function (error, planets) {
   // Check your console to detect potential errors while loading data
   if (error) throw ('There was an error while getting data: ' + error);
   // console.log(planets)
-   // timer adapted from http://bl.ocks.org/cloudshapes/5662234
-
+  // timer adapted from http://bl.ocks.org/cloudshapes/5662234
   // Kick off the timer, and the action begins: 
-  d3.timer(tickFn);
-
+  d3.interval(tickFn, 200);
   function tickFn(_elapsed) {
-    timer_elapsed = _elapsed;
+    var t_elapsed = d3.now() - elap;
+    // // Process all circles data. 
+    for (var i = 1; i < planets.length; i++) {
 
-    // Process all circles data. 
-    for (var i = 1; i <= planets.length; i++) {
-
-      var t_circleData = planets;
-
-      if (t_circleData.start == 0) {
-        t_circleData.start = _elapsed;
-      };
-
+      // console.log(planets[i].start)
+      planets[i].start = _elapsed
       // Calc elapsed time.
-      var t_elapsed = _elapsed - t_circleData.start;
+      // var t_elapsed = d3.now() - _elapsed;
 
-      // Calculate how far through the desired time for one iteration.
-      var t = t_elapsed / (parseInt(t_circleData.orbitalVelocity)*1000);
-
-      // Calculate new x/y positions
-      var rotation_radius = parseFloat(t_circleData.rellipse)+"%";
+      //   //   // Calculate how far through the desired time for one iteration.
+      // console.log(planets[i].orbitalVelocity)
+      // console.log(elapsed)
+      var t = t_elapsed / (parseInt(planets[i].orbitalVelocity) * 1000);
+      // console.log(t)
+      //   //   // Calculate new x/y positions
+      var rotation_radius = parseFloat(planets[i].rellipse);
       var t_angle = (2 * Math.PI) * t;
       var t_x = rotation_radius * Math.cos(t_angle);
       var t_y = rotation_radius * Math.sin(t_angle);
-
-      t_circleData.x = t_x - rotation_radius;
-      t_circleData.y = t_y;
+      planets[i].x = t_x - rotation_radius;
+      planets[i].y = t_y;
+      console.log(planets[i].x)
+      elap = d3.now();
+      d3.selectAll(".p").attr("transform", function (d) { if (isNaN(d.x)) { return ""; } else { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" } });
 
     }
+
 
   }
   // Creation of the SVG
@@ -72,10 +70,10 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
     .enter()
     .append("circle")
     .attr("class", "p")
-    .attr("cx", function (d) { console.log(d.cx); return parseInt(d.cx) + '%' })
-    .attr("r", function (d) { console.log(d.r); return parseInt(d.r) })
+    .attr("cx", function (d) { return parseInt(d.cx) + '%' })
+    .attr("r", function (d) { return parseInt(d.r) })
     .attr("fill", function (d) { return "url(#" + d.name.toLowerCase() + ")" })
-    .attr("transform", function (d) { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" })
+    // .attr("transform", function (d) { if (isNaN(d.x)) { return ""; } else { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" } })
     .on("mouseover", function (d) {
       // makes the tooltip appear on mouseover
       console.log("mouseover")
@@ -104,16 +102,16 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
         .duration(200)
         .style("opacity", 0);
     })
-    /*.on("click", function(d){
-      d3.select(this)
-      .attr("xlink:href", function(d, i){
-        return "Planets/" + i + "_" + d.name + ".html"
-      })*/
-      
-    });
+  /*.on("click", function(d){
+    d3.select(this)
+    .attr("xlink:href", function(d, i){
+      return "Planets/" + i + "_" + d.name + ".html"
+    })*/
+
+});
 
 
- 
+
 
 
 /*
