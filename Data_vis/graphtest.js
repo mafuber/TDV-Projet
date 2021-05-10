@@ -23,7 +23,7 @@ d3.json("planets.json").then(function (data) {
     var OldSelection=1;
     var svg = d3.select("#my_planets")
         .append("svg")
-        .attr("viewBox", "-19 -100 990 250");
+        .attr("viewBox", "-19 -100 930 250");
     svg.selectAll("rect")
         .data(planets)
         .enter()
@@ -239,47 +239,7 @@ function GraphUpdate(choice){
     }else if (graphType == 2){
         d3.json("planets.json").then(function(d){
             data=d;
-            var maxX = d3.max(data, function(d) { return d.diameter; });
-            var xScale = d3.scaleLinear()
-                    .domain([0,maxX])
-                    .range([0,width]);
-            
-            var maxY = d3.max(data, function(d) { return d.mass; });
-        var yScale = d3.scaleLinear()
-                    .domain([maxY,0])
-                    .range([0,height]);
-    
-        svg1.selectAll("g").remove();
-    
-        var g1 = svg1.append("g");
-    
-    
-        g1.append("g")
-            .call(d3.axisLeft(yScale))
-            .style("color","white");
-        g1.append("g")
-            .call(d3.axisBottom(xScale))
-            .style("color","white")
-            .attr("transform","translate(" + 0 + "," + height + ")");
-    
-       var u = svg1.selectAll("rect")
-                .data(data)
-    
-        u.enter()
-            .append("rect")
-            .merge(u)
-            .transition()
-            .duration(1000)
-            .attr("x",10)
-            .attr("y", function(d) {return yScale(d.mass)})
-            .attr("width", function(d) { return xScale(d.diameter); })
-            .attr("height",yScale.bandwidth() )
-            .attr("fill", "white");
-    
-        u.exit()
-            .remove();
         })
     }
-
 }
 GraphUpdate(1);
