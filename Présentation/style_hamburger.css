@@ -28,8 +28,8 @@
   top: 0;
   right: -20%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   border-radius: 20% 0 0 30%;
   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
  
@@ -155,12 +155,9 @@
     transform: scaleX(1);
   }
 
-  .changeee{
-    right: 200px;
-  }
 
   ._nav-item {
-    text-align: right;
+    text-align: left;
     list-style: none;
     
   }
@@ -174,7 +171,8 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     position: relative;
-    padding: 3px;
-    text-align: right;
-    margin-right: 40px;
+    padding: 5px;
+    text-align: left;
+    margin-left: 40px;
+    
   }
