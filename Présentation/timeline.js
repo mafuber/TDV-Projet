@@ -1,3 +1,22 @@
+var orbitsOn = true;
+
+
+//Width and height
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+if (w > h) { var max = h }
+else { var max = w }
+
+
+// define scales
+var posScale = d3.scaleLinear()
+    .domain([0, 10])
+    .range([0, max / 2]);
+
+var sizeScale = d3.scaleSqrt()
+    .domain([0, 10])
+    .range([0, max / 20])
 
 var div = d3.select("body")
   .append("div")
@@ -11,7 +30,41 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
   // Check your console to detect potential errors while loading data
   if (error) throw ('There was an error while getting data: ' + error);
   // console.log(planets)
+   // timer adapted from http://bl.ocks.org/cloudshapes/5662234
 
+  // Kick off the timer, and the action begins: 
+  d3.timer(tickFn);
+
+  function tickFn(_elapsed) {
+    timer_elapsed = _elapsed;
+
+    // Process all circles data. 
+    for (var i = 1; i <= planets.length; i++) {
+
+      var t_circleData = planets;
+
+      if (t_circleData.start == 0) {
+        t_circleData.start = _elapsed;
+      };
+
+      // Calc elapsed time.
+      var t_elapsed = _elapsed - t_circleData.start;
+
+      // Calculate how far through the desired time for one iteration.
+      var t = t_elapsed / (parseInt(t_circleData.orbitalVelocity)*1000);
+
+      // Calculate new x/y positions
+      var rotation_radius = t_circleData.r;
+      var t_angle = (2 * Math.PI) * t;
+      var t_x = rotation_radius * Math.cos(t_angle);
+      var t_y = rotation_radius * Math.sin(t_angle);
+
+      t_circleData.x = t_x - rotation_radius;
+      t_circleData.y = t_y;
+
+    }
+
+  }
   // Creation of the SVG
   d3.select("svg")
     .selectAll(".p")
@@ -22,6 +75,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
     .attr("cx", function (d) { console.log(d.cx); return parseInt(d.cx) + '%' })
     .attr("r", function (d) { console.log(d.r); return parseInt(d.r) })
     .attr("fill", function (d) { return "url(#" + d.name.toLowerCase() + ")" })
+    .attr("transform", function (d) { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" })
     .on("mouseover", function (d) {
       // makes the tooltip appear on mouseover
       console.log("mouseover")
@@ -50,110 +104,16 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
         .duration(200)
         .style("opacity", 0);
     })
-    .on("click", function(d){
+    /*.on("click", function(d){
       d3.select(this)
       .attr("xlink:href", function(d, i){
         return "Planets/" + i + "_" + d.name + ".html"
-      })
+      })*/
+      
     });
-})
 
 
-var orbitsOn = true;
-
-
-//Width and height
-var w = window.innerWidth;
-var h = window.innerHeight;
-
-if (w > h) { var max = h }
-else { var max = w }
-
-// Select info div by id
-d3.json('../DATA/json/planets.json', function (planets) {
-
-  var svgDiv = d3.select("#planet");
-
-  // define scales
-  var posScale = d3.scaleLinear()
-    .domain([0, 10])
-    .range([0, max / 2]);
-
-  var sizeScale = d3.scaleSqrt()
-    .domain([0, 10])
-    .range([0, max / 20])
-
-
-  //Create SVG element
-  var svg = d3.select("#planet")
-    .append("svg")
-    .data(planets)
-    .enter()
-
-
-  // add circles
-
-  var all = svg.selectAll("circle")
-    .data(planets)
-    .enter();
-
-  // orbits
-  if (orbitsOn) {
-    all.append("circle")
-
-  }
-
-  // planets
-  all.append("circle")
-    .classed("planet", true)
-    .attr("id", function (d) { return "planet" + d.id })
-
-
-
-  // timer adapted from http://bl.ocks.org/cloudshapes/5662234
-
-  // Kick off the timer, and the action begins: 
-  d3.timer(tickFn);
-
-  function tickFn(_elapsed) {
-    timer_elapsed = _elapsed;
-
-    // Process all circles data. 
-    for (var i = 1; i < planets.length; i++) {
-
-      var t_circleData = planets[i];
-
-      if (t_circleData.start == undefined) {
-        t_circleData.start = _elapsed;
-      };
-
-      // Calc elapsed time.
-      var t_elapsed = _elapsed - t_circleData.start;
-
-      // Calculate how far through the desired time for one iteration.
-      var t = t_elapsed / t_circleData.speed;
-
-      // Calculate new x/y positions
-      var rotation_radius = t_circleData.radius;
-      var t_angle = (2 * Math.PI) * t;
-      var t_x = rotation_radius * Math.cos(t_angle);
-      var t_y = rotation_radius * Math.sin(t_angle);
-
-      t_circleData.x = t_x - rotation_radius;
-      t_circleData.y = t_y;
-
-    }
-
-
-    // Actually move the circles and the text.
-    var t_circle = svg.selectAll("#planet");
-    t_circle
-      .attr("transform", function (d) { return "translate(" + posScale(d.x) + "," + posScale(d.y) + ")" });
-
-  }
-})
-
-
+ 
 
 
 /*

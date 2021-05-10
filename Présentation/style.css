@@ -152,7 +152,7 @@ div.tooltip {
   stroke:#E6E6E6;
   stroke-width:1px;
 }
-
+/*
 .slider {
   -webkit-appearance: none;
   width: 50%;
@@ -165,7 +165,7 @@ div.tooltip {
   transition: opacity .2s;
 }
 .slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+  opacity: 1; /* Fully shown on mouse-over *//*
   position:fixed;
 }
 .slider::-webkit-slider-thumb {
@@ -183,7 +183,7 @@ div.tooltip {
   height: 25px;
   border-radius: 50%;
   cursor: pointer;
-}
+}*/
 
 #title{
   color:white;
