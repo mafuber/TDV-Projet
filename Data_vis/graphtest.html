@@ -22,36 +22,36 @@
                 <ul class="nav-list">
 
                     <li class="nav-item">
-                        <a href="../0_index.html" class="nav-link">Système solaire</a>
+                        <a href="../Présentation/0_index.html" class="nav-link">Système solaire</a>
                     </li>
     
                     <li class="nav-item">
-                        <a href="../Planets/1_Mercure.html" class="nav-link">Mercure</a>
+                        <a href="../Présentation/Planets/1_Mercure.html" class="nav-link">Mercure</a>
                     </li>
     
                     <li class="nav-item">
-                        <a href="../Planets/2_Venus.html" class="nav-link">Venus</a>
+                        <a href="../Présentation/Planets/2_Venus.html" class="nav-link">Venus</a>
                     </li>
     
                     <li class="nav-item">
-                        <a href="../Planets/3_Terre.html" class="nav-link">Terre</a>
+                        <a href="../Présentation/Planets/3_Terre.html" class="nav-link">Terre</a>
                     </li>
     
                     <li class="nav-item">
-                        <a href="../Planets/4_Mars.html" class="nav-link">Mars</a>
+                        <a href="../Présentation/Planets/4_Mars.html" class="nav-link">Mars</a>
                     </li>
     
                     <li class="nav-item">
-                        <a href="../Planets/5_Jupiter.html" class="nav-link">Jupiter</a>
+                        <a href="../Présentation/Planets/5_Jupiter.html" class="nav-link">Jupiter</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../Planets/6_Saturne.html" class="nav-link">Saturn</a>
+                        <a href="../Présentation/Planets/6_Saturne.html" class="nav-link">Saturn</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../Planets/7_Uranus.html" class="nav-link">Uranus</a>
+                        <a href="../Présentation/Planets/7_Uranus.html" class="nav-link">Uranus</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../Planets/8_Neptun.html" class="nav-link">Neptun</a>
+                        <a href="../Présentation/Planets/8_Neptun.html" class="nav-link">Neptun</a>
                     </li>
                 </ul>
             </nav>
@@ -119,9 +119,33 @@
             </svg>
         </div>
         <select>
-            <option value="1" onclick="GraphTypeChange(0)">Ground Composition</option>
-            <option value="2" onclick="GraphTypeChange(1)">Atmosphere</option>
-            <option value="3" onclick="GraphTypeChange(2)">New Graph</option>
+            <option value="1" onclick="GraphTypeChange(0,'mass',0)">Ground Composition</option>
+            <option value="2" onclick="GraphTypeChange(1,'mass',0)">Atmosphere</option>
+            <option value="3" onclick="GraphTypeChange(2,'diameter',0)">Scatter Plot à choix</option>
+        </select>
+        <select>
+            <option value="1" onclick="GraphTypeChange(2,'mass',0)">Mass</option>
+            <option value="1" onclick="GraphTypeChange(2,'diameter',0)">Diameter</option>
+            <option value="1" onclick="GraphTypeChange(2,'density',0)">Density</option>
+            <option value="1" onclick="GraphTypeChange(2,'gravity',0)">Gravity</option>
+            <option value="1" onclick="GraphTypeChange(2,'escapeVelocity',0)">Escape Velocity</option>
+            <option value="1" onclick="GraphTypeChange(2,'rotationPeriod',0)">Rotation Period</option>
+            <option value="1" onclick="GraphTypeChange(2,'lengthOfDay',0)">Length Of The Day</option>
+            <option value="1" onclick="GraphTypeChange(2,'distanceFromSun',0)">Distance From The Sun</option>
+            <option value="1" onclick="GraphTypeChange(2,'meanTemperature',0)">Mean Temperature</option>
+            <option value="1" onclick="GraphTypeChange(2,'numberOfMoons',0)">Number Of Moons</option>
+        </select>
+        <select>
+            <option value="1" onclick="GraphTypeChange(2,'mass',1)">Mass</option>
+            <option value="1" onclick="GraphTypeChange(2,'diameter',1)">Diameter</option>
+            <option value="1" onclick="GraphTypeChange(2,'density',1)">Density</option>
+            <option value="1" onclick="GraphTypeChange(2,'gravity',1)">Gravity</option>
+            <option value="1" onclick="GraphTypeChange(2,'escapeVelocity',1)">Escape Velocity</option>
+            <option value="1" onclick="GraphTypeChange(2,'rotationPeriod',1)">Rotation Period</option>
+            <option value="1" onclick="GraphTypeChange(2,'lengthOfDay',1)">Length Of The Day</option>
+            <option value="1" onclick="GraphTypeChange(2,'distanceFromSun',1)">Distance From The Sun</option>
+            <option value="1" onclick="GraphTypeChange(2,'meanTemperature',1)">Mean Temperature</option>
+            <option value="1" onclick="GraphTypeChange(2,'numberOfMoons',1)">Number Of Moons</option>
         </select>
         <div class="secondgraph myDiv">
             <div id="my_dataviz1"></div>

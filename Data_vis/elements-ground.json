@@ -8,10 +8,7 @@
         { "name": "Sodium", "percentage": 0.22 },
         { "name": "Hydrogen", "percentage": 0.22 },
         { "name": "Helium", "percentage": 0.06 },
-        { "name": "Other", "percentage": 0.03 },
-        { "name": "Others", "percentage": 0},
-        { "name": "hey", "percentage": 0.03 },
-        { "name": "not", "percentage": 0}
+        { "name": "Other", "percentage": 0.03 }
     ],
     "data2": [
         { "name": "Carbon Dioxide", "percentage": 0.5 },
@@ -22,8 +19,7 @@
         { "name": "Sodium", "percentage": 0 },
         { "name": "Hydrogen", "percentage": 0 },
         { "name": "Helium", "percentage": 0},
-        { "name": "Other", "percentage": 0 },
-        { "name": "Others", "percentage": 0}
+        { "name": "Other", "percentage": 0 }
     ],
     "data3": [
         { "name": "Carbon Dioxide", "percentage": 0.4 },
@@ -34,8 +30,7 @@
         { "name": "Sodium", "percentage": 0 },
         { "name": "Hydrogen", "percentage": 0 },
         { "name": "Helium", "percentage": 0},
-        { "name": "Other", "percentage": 0 },
-        { "name": "Others", "percentage": 0}
+        { "name": "Other", "percentage": 0 }
     ],
     "data4": [
         { "name": "Carbon Dioxide", "percentage": 0.3 },
@@ -46,20 +41,18 @@
         { "name": "Sodium", "percentage": 0 },
         { "name": "Hydrogen", "percentage": 0 },
         { "name": "Helium", "percentage": 0},
-        { "name": "Other", "percentage": 0.007 },
-        { "name": "Others", "percentage": 0}
+        { "name": "Other", "percentage": 0.007 }
     ],
     "data5": [
-        { "name": "Hydrogen", "percentage": 0.2 },
-        { "name": "Helium", "percentage": 0.25},
+        { "name": "Carbon Dioxide", "percentage": 0 },
+        { "name": "Nitrogen", "percentage": 0},
         { "name": "Oxygen", "percentage": 0},
         { "name": "Argon", "percentage": 0},
         { "name": "Methane", "percentage": 0 },
         { "name": "Sodium", "percentage": 0 },
-        { "name": "Hydrogen", "percentage": 0.898},
+        { "name": "Hydrogen", "percentage": 0.898 },
         { "name": "Helium", "percentage": 0.102},
-        { "name": "Other", "percentage": 0},
-        { "name": "Others", "percentage": 0}
+        { "name": "Other", "percentage": 0}
     ],
     "data6": [
         { "name": "Carbon Dioxide", "percentage": 0.1 },
@@ -70,8 +63,7 @@
         { "name": "Sodium", "percentage": 0 },
         { "name": "Hydrogen", "percentage": 0.963},
         { "name": "Helium", "percentage": 0.032},
-        { "name": "Other", "percentage": 0.005},
-        { "name": "Others", "percentage": 0}
+        { "name": "Other", "percentage": 0.005}
     ],
     "data7": [
         { "name": "Carbon Dioxide", "percentage": 0 },
@@ -82,8 +74,7 @@
         { "name": "Sodium", "percentage": 0 },
         { "name": "Hydrogen", "percentage": 0.825},
         { "name": "Helium", "percentage": 0.152},
-        { "name": "Other", "percentage": 0},
-        { "name": "Others", "percentage": 0}
+        { "name": "Other", "percentage": 0}
     ],
     "data8": [
         { "name": "Carbon Dioxide", "percentage": 0 },
@@ -94,8 +85,7 @@
         { "name": "Sodium", "percentage": 0 },
         { "name": "Hydrogen", "percentage": 0.8},
         { "name": "Helium", "percentage": 0.19},
-        { "name": "Other", "percentage": 0},
-        { "name": "Others", "percentage": 0}
+        { "name": "Other", "percentage": 0}
 
     ],
     "data9": [
@@ -107,7 +97,6 @@
         { "name": "Sodium", "percentage": 0 },
         { "name": "Hydrogen", "percentage": 0},
         { "name": "Helium", "percentage": 0},
-        { "name": "Other", "percentage": 1},
-        { "name": "Others", "percentage": 0}
+        { "name": "Other", "percentage": 1}
     ]
 }
