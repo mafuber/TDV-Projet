@@ -1,7 +1,7 @@
 {
     "data1": [
-        { "name": "Carbon Dioxide", "percentage": 1 },
-        { "name": "Nitrogen", "percentage": 0},
+        { "name": "Metals", "percentage": 0.7 },
+        { "name": "Silicate Materials ", "percentage": 0.3},
         { "name": "Oxygen", "percentage": 0.42},
         { "name": "Argon", "percentage": 0 },
         { "name": "Methane", "percentage": 0 },
