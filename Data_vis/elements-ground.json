@@ -1,17 +1,10 @@
 {
     "data1": [
         { "name": "Metals", "percentage": 0.7 },
-        { "name": "Silicate Materials ", "percentage": 0.3},
-        { "name": "Oxygen", "percentage": 0.42},
-        { "name": "Argon", "percentage": 0 },
-        { "name": "Methane", "percentage": 0 },
-        { "name": "Sodium", "percentage": 0.22 },
-        { "name": "Hydrogen", "percentage": 0.22 },
-        { "name": "Helium", "percentage": 0.06 },
-        { "name": "Other", "percentage": 0.03 }
+        { "name": "Silicate Materials ", "percentage": 0.3}
     ],
     "data2": [
-        { "name": "Carbon Dioxide", "percentage": 0.5 },
+        { "name": "Bare Rocks", "percentage": 0.75 },
         { "name": "Nitrogen", "percentage": 0.04},
         { "name": "Oxygen", "percentage": 0},
         { "name": "Argon", "percentage": 0 },
