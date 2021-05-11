@@ -246,10 +246,12 @@ function GraphUpdate(choice){
         d3.json("planets.json").then(function(d){
             data=d;
             yMax=d3.max(d,function(d){return eval("d."+scatteryOption+"")});
+            yMin=d3.min(d,function(d){return eval("d."+scatteryOption+"")});
             var yScale = d3.scaleLinear()
-                    .domain([yMax,0])
+                    .domain([yMax,yMin])
                     .range([0,height]);
             xMax=d3.max(d,function(d){return d.name});
+            xMin=d3.min(d,function(d){return d.name});
         var xScale = d3.scaleBand()
                     .domain(d3.map(data,function(d){return d.name}))
                     .range([0,width])
@@ -310,12 +312,14 @@ function GraphUpdate(choice){
         d3.json("planets.json").then(function(d){
         data=d;
         yMax=d3.max(d,function(d){return eval("d."+scatteryOption+"")});
+        yMin=d3.min(d,function(d){return eval("d."+scatteryOption+"")});
         var yScale = d3.scaleLinear()
-                .domain([yMax,0])
+                .domain([yMax,yMin])
                 .range([0,height]);
         xMax=d3.max(d,function(d){return eval("d."+scatterxOption+"")});
+        xMin=d3.min(d,function(d){return eval("d."+scatterxOption+"")});
         var xScale = d3.scaleLinear()
-                .domain([0,xMax])
+                .domain([xMin,xMax])
                 .range([0,width])
                 //.padding(0.1);
 
