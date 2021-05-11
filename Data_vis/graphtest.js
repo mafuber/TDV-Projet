@@ -275,7 +275,7 @@ function GraphUpdate(choice){
             .attr("font-size","100%")
             .style("fill","white")
             .text("Planets");
-            svg1.append("text")
+        svg1.append("text")
             .attr("x",-width/10)
             .attr("y",height/2)
             .attr("transform","translate(-200,120)rotate(-90)")
@@ -332,6 +332,21 @@ function GraphUpdate(choice){
         .call(d3.axisBottom(xScale))
         .style("color","white")
         .attr("transform","translate(" + 0 + "," + height + ")");
+
+
+        svg1.append("text")
+            .attr("x",width/2.2)
+            .attr("y",height+35)
+            .attr("font-size","100%")
+            .style("fill","white")
+            .text(""+scatterxOption);
+        svg1.append("text")
+            .attr("x",-width/10)
+            .attr("y",height/2)
+            .attr("transform","translate(-200,120)rotate(-90)")
+            .attr("font-size","100%")
+            .style("fill","white")
+            .text(""+scatteryOption);
     
         var u = svg1.selectAll("rect")
         .data(data)
