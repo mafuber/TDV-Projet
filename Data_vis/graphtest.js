@@ -1,6 +1,6 @@
 var graphType = 0;
-function GraphTypeChange(type){
-    graphType=type;
+function GraphTypeChange(Type,Option,Axis){
+    graphType=Type;
     GraphUpdate(1);
 }
 
@@ -127,9 +127,6 @@ function GraphUpdate(choice){
             else if(choice==8){
                 data=d.data8;
             }
-            else if(choice==9){
-                data=d.data9;
-            }
         width =630;
         var xScale = d3.scaleLinear()
                     .domain([0,1])
@@ -151,7 +148,7 @@ function GraphUpdate(choice){
             .call(d3.axisBottom(xScale))
             .style("color","white")
             .attr("transform","translate(" + 0 + "," + height + ")");
-    
+            svg1.selectAll("circle").remove();
         var v = svg1.selectAll("rect")
                 .data(data)
     
@@ -194,9 +191,6 @@ function GraphUpdate(choice){
             else if(choice==8){
                 data=d.data8;
             }
-            else if(choice==9){
-                data=d.data9;
-            }
             console.log(data)
         var xScale = d3.scaleLinear()
                     .domain([0,1])
@@ -219,7 +213,7 @@ function GraphUpdate(choice){
             .call(d3.axisBottom(xScale))
             .style("color","white")
             .attr("transform","translate(" + 0 + "," + height + ")");
-    
+            svg1.selectAll("circle").remove();
        var u = svg1.selectAll("rect")
                 .data(data)
     
@@ -237,9 +231,57 @@ function GraphUpdate(choice){
             .remove();
         })
     }else if (graphType == 2){
+        var xAxisOption = "mass";
+        var yAxisOption = "diameter";
+        if(Axis==0){
+            xAxisOption = Option;
+        }else if(Axis==1){
+            yAxisOption = Option;
+        }
+
+
         d3.json("planets.json").then(function(d){
             data=d;
+            xMax=d3.max(d,function(d){return d.diameter});
+            var yScale = d3.scaleLinear()
+                    .domain([xMax,0])
+                    .range([0,height]);
+    
+        var xScale = d3.scaleBand()
+                    .domain(d3.map(data,function(d){return d.name}))
+                    .range([0,width])
+                    //.padding(0.1);
+    
+        svg1.selectAll("g").remove();
+        svg1.selectAll("rect").remove();
+        var g1 = svg1.append("g");
+
+        g1.append("g")
+            .call(d3.axisLeft(yScale))
+            .style("color","white");
+        g1.append("g")
+            .call(d3.axisBottom(xScale))
+            .style("color","white")
+            .attr("transform","translate(" + 0 + "," + height + ")");
+        
+        var u = svg1.selectAll("rect")
+            .data(data)
+        u.enter()
+            .append("circle")
+            .attr("cx", function(d) { return xScale(d.name)+xScale.bandwidth()/2;})
+            .attr("cy",function(d){return yScale(d.diameter)})
+            .attr("r",xScale.bandwidth()/20)
+            .style("fill", function (d) { return "url(#" + d.name + ")" });
+            u.exit()
+        /*u.enter().append("line").data(data)
+        .style("stroke","white")
+        .style("stroke-width",0.05)
+        .attr("x1",0)
+        .attr("y1",function(d){return [10,20]})
+        .attr("x2",width)
+        .attr("y2",function(d){return [10,]});*/
+    u.exit().remove();
         })
     }
 }
-GraphUpdate(1);
+GraphUpdate(3);
