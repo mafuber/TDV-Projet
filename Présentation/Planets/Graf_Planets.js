@@ -10,7 +10,7 @@ const height_document = window.innerHeight;
 var width = width_document/2
 
 
-10 < width
+
 var margin = 20
 
 // tooltip
