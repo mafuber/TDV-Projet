@@ -22,6 +22,7 @@
 
 .navbar_ham {
   width: 20%;
+  max-width: 250px;
   height: 100%;
   background-color: #262626;
   position: fixed;
@@ -75,11 +76,13 @@
     margin: 0%;
     margin-top: 0%;
     margin-left: 0%;
+
   }
 
   .nav-item, .nav-planetes {
     list-style: none;
-    margin: 40%;
+    margin: 20%;
+    text-align: end;
   }
   
   .nav-link, .nav-planetes {
@@ -174,5 +177,5 @@
     padding: 5px;
     text-align: left;
     margin-left: 40px;
-    
+
   }
