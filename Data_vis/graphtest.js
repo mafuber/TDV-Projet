@@ -1,6 +1,14 @@
 var graphType = 0;
+var scatterxOption = "mass";
+var scatteryOption  = "mass";
+d3.selectAll("#scatterplotoptions").attr("class","hidden");
 function GraphTypeChange(Type,Option,Axis){
     graphType=Type;
+    if(Axis==1){
+        scatterxOption = Option;
+    }else if(Axis==2){
+        scatteryOption = Option;
+    }
     GraphUpdate(1);
 }
 
@@ -92,15 +100,16 @@ d3.json("planets.json").then(function (data) {
 
 });
 
-var margin = {top: 20, right: 10, bottom: 20, left: 100};
+var margin = {top: 20, right: 5, bottom: 20, left: 100};
 var width = 1000 - margin.left - margin.right;
 var height = 500 - margin.top - margin.bottom;
 var svg1 = d3.select("#my_dataviz1")
             .append("svg")
-            .attr("viewBox", "0 0 750 350")
+            .attr("viewBox", "0 10 750 350")
             .append("g")
             .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 function GraphUpdate(choice){
+    d3.selectAll("#scatterplotoptions").attr("class","hidden");
     if(graphType == 0){
         d3.json("elements-ground.json").then(function(d){
             if(choice==1){
@@ -148,6 +157,7 @@ function GraphUpdate(choice){
             .call(d3.axisBottom(xScale))
             .style("color","white")
             .attr("transform","translate(" + 0 + "," + height + ")");
+
             svg1.selectAll("circle").remove();
         var v = svg1.selectAll("rect")
                 .data(data)
@@ -231,22 +241,15 @@ function GraphUpdate(choice){
             .remove();
         })
     }else if (graphType == 2){
-        var xAxisOption = "mass";
-        var yAxisOption = "diameter";
-        if(Axis==0){
-            xAxisOption = Option;
-        }else if(Axis==1){
-            yAxisOption = Option;
-        }
-
-
+        console.log(scatterxOption+"  "+scatteryOption)
+        test="mass";
         d3.json("planets.json").then(function(d){
             data=d;
-            xMax=d3.max(d,function(d){return d.diameter});
+            yMax=d3.max(d,function(d){return eval("d."+scatteryOption+"")});
             var yScale = d3.scaleLinear()
-                    .domain([xMax,0])
+                    .domain([yMax,0])
                     .range([0,height]);
-    
+            xMax=d3.max(d,function(d){return d.name});
         var xScale = d3.scaleBand()
                     .domain(d3.map(data,function(d){return d.name}))
                     .range([0,width])
@@ -254,6 +257,8 @@ function GraphUpdate(choice){
     
         svg1.selectAll("g").remove();
         svg1.selectAll("rect").remove();
+        svg1.selectAll("circle").remove();
+        svg1.selectAll("text").remove();
         var g1 = svg1.append("g");
 
         g1.append("g")
@@ -263,13 +268,27 @@ function GraphUpdate(choice){
             .call(d3.axisBottom(xScale))
             .style("color","white")
             .attr("transform","translate(" + 0 + "," + height + ")");
+
+        svg1.append("text")
+            .attr("x",width/2.2)
+            .attr("y",height+35)
+            .attr("font-size","100%")
+            .style("fill","white")
+            .text("Planets");
+            svg1.append("text")
+            .attr("x",-width/10)
+            .attr("y",height/2)
+            .attr("transform","translate(-200,120)rotate(-90)")
+            .attr("font-size","100%")
+            .style("fill","white")
+            .text(""+scatteryOption);
         
         var u = svg1.selectAll("rect")
             .data(data)
         u.enter()
             .append("circle")
             .attr("cx", function(d) { return xScale(d.name)+xScale.bandwidth()/2;})
-            .attr("cy",function(d){return yScale(d.diameter)})
+            .attr("cy",function(d){return yScale(eval("d."+scatteryOption+""))})
             .attr("r",xScale.bandwidth()/20)
             .style("fill", function (d) { return "url(#" + d.name + ")" });
             u.exit()
@@ -280,8 +299,58 @@ function GraphUpdate(choice){
         .attr("y1",function(d){return [10,20]})
         .attr("x2",width)
         .attr("y2",function(d){return [10,]});*/
-    u.exit().remove();
+        u.exit().remove();
         })
-    }
+    }else if (graphType == 3){
+
+        d3.selectAll("#scatterplotoptions").attr("class","visible");
+
+        console.log(scatterxOption+"  "+scatteryOption)
+        test="mass";
+        d3.json("planets.json").then(function(d){
+        data=d;
+        yMax=d3.max(d,function(d){return eval("d."+scatteryOption+"")});
+        var yScale = d3.scaleLinear()
+                .domain([yMax,0])
+                .range([0,height]);
+        xMax=d3.max(d,function(d){return eval("d."+scatterxOption+"")});
+        var xScale = d3.scaleLinear()
+                .domain([0,xMax])
+                .range([0,width])
+                //.padding(0.1);
+
+                svg1.selectAll("g").remove();
+                svg1.selectAll("rect").remove();
+                svg1.selectAll("circle").remove();
+                svg1.selectAll("text").remove();
+        var g1 = svg1.append("g");
+
+        g1.append("g")
+        .call(d3.axisLeft(yScale))
+        .style("color","white");
+        g1.append("g")
+        .call(d3.axisBottom(xScale))
+        .style("color","white")
+        .attr("transform","translate(" + 0 + "," + height + ")");
+    
+        var u = svg1.selectAll("rect")
+        .data(data)
+        u.enter()
+        .append("circle")
+        .attr("cx", function(d) { return xScale(eval("d."+scatterxOption+""))/*+xScale.bandwidth()/2*/;})
+        .attr("cy",function(d){return yScale(eval("d."+scatteryOption+""))})
+        .attr("r",/*xScale.bandwidth()/20*/3)
+        .style("fill", function (d) { return "url(#" + d.name + ")" });
+        u.exit()
+    /*u.enter().append("line").data(data)
+    .style("stroke","white")
+    .style("stroke-width",0.05)
+    .attr("x1",0)
+    .attr("y1",function(d){return [10,20]})
+    .attr("x2",width)
+    .attr("y2",function(d){return [10,]});*/
+u.exit().remove();
+    })
+}
 }
 GraphUpdate(3);

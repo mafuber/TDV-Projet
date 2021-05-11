@@ -119,33 +119,43 @@
             </svg>
         </div>
         <select>
-            <option value="1" onclick="GraphTypeChange(0,'mass',0)">Ground Composition</option>
-            <option value="2" onclick="GraphTypeChange(1,'mass',0)">Atmosphere</option>
-            <option value="3" onclick="GraphTypeChange(2,'diameter',0)">Scatter Plot à choix</option>
+            <option value="1" onclick="GraphTypeChange(0,'default',0)">Ground Composition</option>
+            <option value="2" onclick="GraphTypeChange(1,'default',0)">Atmosphere</option>
+            <option value="3" onclick="GraphTypeChange(2,'mass',2)">Mass</option>
+            <option value="4" onclick="GraphTypeChange(2,'diameter',2)">Diameter</option>
+            <option value="5" onclick="GraphTypeChange(2,'density',2)">Density</option>
+            <option value="6" onclick="GraphTypeChange(2,'gravity',2)">Gravity</option>
+            <option value="7" onclick="GraphTypeChange(2,'escapeVelocity',2)">Escape Velocity</option>
+            <option value="8" onclick="GraphTypeChange(2,'rotationPeriod',2)">Rotation Period</option>
+            <option value="9" onclick="GraphTypeChange(2,'lengthOfDay',2)">Length Of The Day</option>
+            <option value="10" onclick="GraphTypeChange(2,'distanceFromSun',2)">Distance From The Sun</option>
+            <option value="11" onclick="GraphTypeChange(2,'meanTemperature',2)">Mean Temperature</option>
+            <option value="12" onclick="GraphTypeChange(2,'numberOfMoons',2)">Number Of Moons</option>
+            <option value="13" onclick="GraphTypeChange(3,'diameter',2)">Scatter Plot à choix</option>
         </select>
-        <select>
-            <option value="1" onclick="GraphTypeChange(2,'mass',0)">Mass</option>
-            <option value="1" onclick="GraphTypeChange(2,'diameter',0)">Diameter</option>
-            <option value="1" onclick="GraphTypeChange(2,'density',0)">Density</option>
-            <option value="1" onclick="GraphTypeChange(2,'gravity',0)">Gravity</option>
-            <option value="1" onclick="GraphTypeChange(2,'escapeVelocity',0)">Escape Velocity</option>
-            <option value="1" onclick="GraphTypeChange(2,'rotationPeriod',0)">Rotation Period</option>
-            <option value="1" onclick="GraphTypeChange(2,'lengthOfDay',0)">Length Of The Day</option>
-            <option value="1" onclick="GraphTypeChange(2,'distanceFromSun',0)">Distance From The Sun</option>
-            <option value="1" onclick="GraphTypeChange(2,'meanTemperature',0)">Mean Temperature</option>
-            <option value="1" onclick="GraphTypeChange(2,'numberOfMoons',0)">Number Of Moons</option>
+        <select id="scatterplotoptions">
+            <option value="1" onclick="GraphTypeChange(3,'mass',1)">Mass</option>
+            <option value="1" onclick="GraphTypeChange(3,'diameter',1)">Diameter</option>
+            <option value="1" onclick="GraphTypeChange(3,'density',1)">Density</option>
+            <option value="1" onclick="GraphTypeChange(3,'gravity',1)">Gravity</option>
+            <option value="1" onclick="GraphTypeChange(3,'escapeVelocity',1)">Escape Velocity</option>
+            <option value="1" onclick="GraphTypeChange(3,'rotationPeriod',1)">Rotation Period</option>
+            <option value="1" onclick="GraphTypeChange(3,'lengthOfDay',1)">Length Of The Day</option>
+            <option value="1" onclick="GraphTypeChange(3,'distanceFromSun',1)">Distance From The Sun</option>
+            <option value="1" onclick="GraphTypeChange(3,'meanTemperature',1)">Mean Temperature</option>
+            <option value="1" onclick="GraphTypeChange(3,'numberOfMoons',1)">Number Of Moons</option>
         </select>
-        <select>
-            <option value="1" onclick="GraphTypeChange(2,'mass',1)">Mass</option>
-            <option value="1" onclick="GraphTypeChange(2,'diameter',1)">Diameter</option>
-            <option value="1" onclick="GraphTypeChange(2,'density',1)">Density</option>
-            <option value="1" onclick="GraphTypeChange(2,'gravity',1)">Gravity</option>
-            <option value="1" onclick="GraphTypeChange(2,'escapeVelocity',1)">Escape Velocity</option>
-            <option value="1" onclick="GraphTypeChange(2,'rotationPeriod',1)">Rotation Period</option>
-            <option value="1" onclick="GraphTypeChange(2,'lengthOfDay',1)">Length Of The Day</option>
-            <option value="1" onclick="GraphTypeChange(2,'distanceFromSun',1)">Distance From The Sun</option>
-            <option value="1" onclick="GraphTypeChange(2,'meanTemperature',1)">Mean Temperature</option>
-            <option value="1" onclick="GraphTypeChange(2,'numberOfMoons',1)">Number Of Moons</option>
+        <select id="scatterplotoptions">
+            <option value="1" onclick="GraphTypeChange(3,'mass',2)">Mass</option>
+            <option value="1" onclick="GraphTypeChange(3,'diameter',2)">Diameter</option>
+            <option value="1" onclick="GraphTypeChange(3,'density',2)">Density</option>
+            <option value="1" onclick="GraphTypeChange(3,'gravity',2)">Gravity</option>
+            <option value="1" onclick="GraphTypeChange(3,'escapeVelocity',2)">Escape Velocity</option>
+            <option value="1" onclick="GraphTypeChange(3,'rotationPeriod',2)">Rotation Period</option>
+            <option value="1" onclick="GraphTypeChange(3,'lengthOfDay',2)">Length Of The Day</option>
+            <option value="1" onclick="GraphTypeChange(3,'distanceFromSun',2)">Distance From The Sun</option>
+            <option value="1" onclick="GraphTypeChange(3,'meanTemperature',2)">Mean Temperature</option>
+            <option value="1" onclick="GraphTypeChange(3,'numberOfMoons',2)">Number Of Moons</option>
         </select>
         <div class="secondgraph myDiv">
             <div id="my_dataviz1"></div>

@@ -26,3 +26,9 @@ div{
 html{
   background-color: black;
 }
+select.hidden{
+  visibility: hidden;
+}
+select.visible{
+  visibility: visible;
+}
