@@ -93,7 +93,7 @@
     "cx": 10,
     "r": 6,
     "start": "undefined",
-    "rellipse": 10.2
+    "rellipse": 9
   },
   {
     "id": 3,
@@ -131,7 +131,7 @@
     "cx": 15,
     "r": 11,
     "start": "undefined",
-    "rellipse": 15.3
+    "rellipse": 12
   },
   {
     "id": 4,
@@ -169,7 +169,7 @@
     "cx": 20,
     "r": 5,
     "start": "undefined",
-    "rellipse": 20.4
+    "rellipse": 15
   },
   {
     "id": 5,
@@ -207,7 +207,7 @@
     "cx": 26.3,
     "r": 37,
     "start": "undefined",
-    "rellipse": 26.8
+    "rellipse": 19
   },
   {
     "id": 6,
@@ -245,7 +245,7 @@
     "cx": 35,
     "r": 30,
     "start": "undefined",
-    "rellipse": 36
+    "rellipse": 25
   },
   {
     "id": 7,
@@ -283,7 +283,7 @@
     "cx": 41,
     "r": 22,
     "start": "undefined",
-    "rellipse": 42
+    "rellipse": 29
   },
   {
     "id": 8,
@@ -321,6 +321,6 @@
     "cx": 46,
     "r": 20,
     "start": "undefined",
-    "rellipse": 47
+    "rellipse": 32
   }
 ]
