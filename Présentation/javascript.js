@@ -7,8 +7,10 @@ function out(a) {
 
     if ((counter % 2) == 0) {
         document.getElementById("button_next").style.right = "200px";
+        document.getElementById("button_next").style.opacity = "0%";
     } else {
         document.getElementById("button_next").style.right = "0px";
+        document.getElementById("button_next").style.opacity = "100%";
 
     }
     counter += 1
