@@ -169,7 +169,7 @@
     "cx": 20,
     "r": 5,
     "start": "undefined",
-    "rellipse": 17
+    "rellipse": 19
   },
   {
     "id": 5,
@@ -207,83 +207,7 @@
     "cx": 26.3,
     "r": 37,
     "start": "undefined",
-    "rellipse": 23
-  },
-  {
-    "id": 9,
-    "name": "Saturn-ring-1",
-    "mass": 568.0,
-    "diameter": 120536.0,
-    "density": 687.0,
-    "gravity": 9.0,
-    "escapeVelocity": 35.5,
-    "rotationPeriod": 10.7,
-    "lengthOfDay": 10.7,
-    "distanceFromSun": 1433.5,
-    "perihelion": 1352.6,
-    "aphelion": 1514.5,
-    "orbitalPeriod": 10747.0,
-    "orbitalVelocity": 9.7,
-    "orbitalInclination": 2.5,
-    "orbitalEccentricity": 0.057,
-    "obliquityToOrbit": 26.7,
-    "meanTemperature": -140.0,
-    "surfacePressure": null,
-    "numberOfMoons": 62,
-    "hasRingSystem": false,
-    "hasGlobalMagneticField": false,
-    "dwarf": false,
-    "carbonDioxide": 0,
-    "nitrogen": 0,
-    "oxgygen": 0,
-    "argon": 0,
-    "methane": 0,
-    "sodium": 0,
-    "hydrogen": 0.963,
-    "helium": 0.032,
-    "other": 0.005,
-    "cx": 35,
-    "r": 36,
-    "start": "undefined",
-    "rellipse": 31
-  },
-  {
-    "id": 10,
-    "name": "Saturn-ring-2",
-    "mass": 568.0,
-    "diameter": 120536.0,
-    "density": 687.0,
-    "gravity": 9.0,
-    "escapeVelocity": 35.5,
-    "rotationPeriod": 10.7,
-    "lengthOfDay": 10.7,
-    "distanceFromSun": 1433.5,
-    "perihelion": 1352.6,
-    "aphelion": 1514.5,
-    "orbitalPeriod": 10747.0,
-    "orbitalVelocity": 9.7,
-    "orbitalInclination": 2.5,
-    "orbitalEccentricity": 0.057,
-    "obliquityToOrbit": 26.7,
-    "meanTemperature": -140.0,
-    "surfacePressure": null,
-    "numberOfMoons": 62,
-    "hasRingSystem": false,
-    "hasGlobalMagneticField": false,
-    "dwarf": false,
-    "carbonDioxide": 0,
-    "nitrogen": 0,
-    "oxgygen": 0,
-    "argon": 0,
-    "methane": 0,
-    "sodium": 0,
-    "hydrogen": 0.963,
-    "helium": 0.032,
-    "other": 0.005,
-    "cx": 35,
-    "r": 42,
-    "start": "undefined",
-    "rellipse": 31
+    "rellipse": 25
   },
   {
     "id": 6,
@@ -321,7 +245,7 @@
     "cx": 35,
     "r": 30,
     "start": "undefined",
-    "rellipse": 31
+    "rellipse": 33
   },
   {
     "id": 7,
@@ -359,7 +283,7 @@
     "cx": 41,
     "r": 22,
     "start": "undefined",
-    "rellipse": 36
+    "rellipse": 39
   },
   {
     "id": 8,
@@ -397,6 +321,6 @@
     "cx": 46,
     "r": 20,
     "start": "undefined",
-    "rellipse": 40
+    "rellipse": 44
   }
   ]
