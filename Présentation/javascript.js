@@ -60,7 +60,7 @@ var info = d3.json("../../Data_vis/ivandata.json", function(data) {
             texto.append("text")
                 .attr("dy", "5em")
                 .text(function(d) {
-                    return "Période de rotation : " + d.rotationPeriod + " h"
+                    return "Température moyenne : " + d.meanTemperature + " °C"
                 })
             texto.append("text")
                 .attr("dy", "6em")

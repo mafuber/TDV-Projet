@@ -14,7 +14,7 @@ body{
 .svg-content-responsive {
   display: inline-block;
   position: absolute;
-  top: 10px;
+  top: 0px;
   left: 0;
 }
 .myDiv{
@@ -28,6 +28,7 @@ div{
 }
 html{
   background-color: black;
+  font-family: Dosis;
 }
 select.hidden{
   visibility: hidden;
