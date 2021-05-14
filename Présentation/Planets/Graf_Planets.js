@@ -78,7 +78,10 @@ var arc = d3.arc()
 .innerRadius(width / 5)         // This is the size of the donut hole
 .outerRadius(radius)
 
-
+var div = d3.select("body")
+          .append("div")
+          .attr("class", "tooltip")
+          
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
 svg
   .selectAll("div")
@@ -91,7 +94,9 @@ svg
   .style("stroke-width", "2px")
   .style("opacity", 0.7)
   
+  
   .on("mouseover", function(d) {
+
     d3.select(this)   // DAS AKTUELLE ELEMENT AUSWàHLEN  oder “click”
 .attr("fill", "orange");
  // makes the tooltip appear on mouseover
@@ -117,6 +122,7 @@ svg
    .style("left", (d3.event.pageX) + "px")
    .style("top", (d3.event.pageY - 28) + "px")
    .style("padding", "10px");})
+   
 /*.append("text")
        .attr("id", "tooltip")
         .attr("x",  String(event.pageX) /2) //Get the x values of the mouse
@@ -185,6 +191,8 @@ svg
   
         d3.selectAll(".tooltip")
         .style("opacity", 0)
+      .remove()
+        .exit();
   
       })
 
