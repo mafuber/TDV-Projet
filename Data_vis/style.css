@@ -25,6 +25,7 @@ body{
 }
 div{
   background-color: black;
+  font-family: Dosis;
 }
 html{
   background-color: black;
@@ -35,4 +36,7 @@ select.hidden{
 }
 select.visible{
   visibility: visible;
+}
+.scale{
+  font-family: Dosis;
 }

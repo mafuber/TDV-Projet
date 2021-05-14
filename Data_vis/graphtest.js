@@ -265,10 +265,12 @@ function GraphUpdate(choice){
 
         g1.append("g")
             .call(d3.axisLeft(yScale))
-            .style("color","white");
+            .style("color","white")
+            .attr("class", "scale");
         g1.append("g")
             .call(d3.axisBottom(xScale))
             .style("color","white")
+            .attr("class", "scale")
             .attr("transform","translate(" + 0 + "," + height + ")");
 
         svg1.append("text")
