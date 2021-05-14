@@ -17,37 +17,20 @@ function out(a) {
 }
 // demander à Jessica s'il faut effacer la fonction d'avant ou pas?
 
-var height = 300;
-
-var canvas = d3.select("Mercure").append("svg").attr("viewbox", "0 0 700 350");
-
-
-function planeteswap(planete) {
-    svg.selectAll("test").remove();
-    console.log("test");
-    // var canvas = d3.select("." + planete).append("svg").attr("class", "test").attr("width", width).attr("height", height);
-    canvas.append("image").attr("xlink:href", "../Pictures/" + planete + ".jpg").attr("width", "100%").attr("height", "100%");
-
-
-
-
+var canvas = d3.select(".Mercure").append("svg").attr("viewBox", "0 0 700 350");
+function planeteswap(planeteName){
     var info = d3.json("../../Data_vis/ivandata.json", function(data) {
 
-        // var planete = document.getElementsByTagName("H1")[1].getAttribute("id");
-
-
-        /*if (planete == "" + planete + "") {
-        var canvas = d3.select("." + planete).append("svg").attr("width", width).attr("height", height);
-        canvas.append("image").attr("xlink:href", "../Pictures/" + planete + ".jpg").attr("width", width).attr("height", height);
-    }
-*/
+    
+        canvas.append("image").attr("xlink:href", "../Pictures/" + planeteName + ".jpg").attr("width", "100%").attr("height", "100%");
+    
         canvas.on("mouseover", function(d) {
                 canvas.selectAll("text").remove()
-                canvas.selectAll("image").remove()
+                canvas.selectAll("image").attr("transform","translate(-200,120)rotate(-90)");
                 var texto = canvas.selectAll("text")
-                    .data(data[planete])
+                    .data(data[planeteName])
                     .enter()
-
+    
                 //on n'arrivait pas à effectuer une seule formule avec l'assistant
                 texto.append("text")
                     .attr("dy", "1em")
@@ -88,10 +71,10 @@ function planeteswap(planete) {
             .on("mouseout", function(d) {
                 canvas.selectAll("text").remove()
                 canvas.selectAll("image").remove()
-
+    
                 d3.select(this)
                     .append("image")
-                    .attr("xlink:href", "../Pictures/" + planete + ".jpg")
+                    .attr("xlink:href", "../Pictures/" + planeteName + ".jpg")
                     .attr("width", "100%")
                     .attr("height", "100%")
                     .style("cursor", "")
@@ -99,7 +82,6 @@ function planeteswap(planete) {
                     .duration(200)
                     .style("opacity", 1);
             })
-
-    })
+    
+    });
 }
-
