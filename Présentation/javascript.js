@@ -20,9 +20,20 @@ function out(a) {
 var width = 300;
 var height = 300;
 
+function planeteswap() {
+    console.log("test");
+    var planete = "Mercure"
+        // var canvas = d3.select("." + planete).append("svg").attr("width", width).attr("height", height);
+        // canvas.append("image").attr("xlink:href", "../Pictures/" + planete + ".jpg").attr("width", width).attr("height", height);
+
+}
+
+
+
 var info = d3.json("../../Data_vis/ivandata.json", function(data) {
 
     var planete = document.getElementsByTagName("H1")[1].getAttribute("id")
+
 
     if (planete == "" + planete + "") {
         var canvas = d3.select("." + planete).append("svg").attr("width", width).attr("height", height);
