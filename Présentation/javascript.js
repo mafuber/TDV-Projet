@@ -26,7 +26,7 @@ function planeteswap(planeteName){
     
         canvas.on("mouseover", function(d) {
                 canvas.selectAll("text").remove()
-                canvas.selectAll("image").remove()
+                canvas.selectAll("image").attr("transform","translate(-200,120)rotate(-90)");
                 var texto = canvas.selectAll("text")
                     .data(data[planeteName])
                     .enter()
