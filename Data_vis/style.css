@@ -1,7 +1,3 @@
-body{
-  font-family: Dosis;
-}
-
 .svg-container {
     display: inline-block;
     position: relative;
@@ -25,11 +21,9 @@ body{
 }
 div{
   background-color: black;
-  font-family: Dosis;
 }
 html{
   background-color: black;
-  font-family: Dosis;
 }
 select.hidden{
   visibility: hidden;

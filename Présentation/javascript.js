@@ -22,7 +22,7 @@ var height = 300;
 
 var info = d3.json("../../Data_vis/ivandata.json", function(data) {
 
-    var planete = document.getElementsByTagName("H1")[1].getAttribute("id")
+    var planete = document.getElementsByTagName("H1")[1].getAttribute("id");
 
     if (planete == "" + planete + "") {
         var canvas = d3.select("." + planete).append("svg").attr("width", width).attr("height", height);
