@@ -9,14 +9,14 @@
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet" />
     <link rel="stylesheet" href="../style_hamburger.css" />
-    <link rel="stylesheet" href="../style_button.css"/>
-    <link rel="stylesheet" href="../style_planets_html.css"/>
+    <link rel="stylesheet" href="../style_button.css" />
+    <link rel="stylesheet" href="../style_planets_html.css" />
     <link href="../Pictures/index.jpg" rel="stylesheet" />
 </head>
 
 <body class="background">
 
-    <h1>Planète</h1>
+    <h1>Le système solaire</h1>
 
     <div class="container">
         <nav class="navbar_ham" onclick="out(this)">
@@ -30,8 +30,8 @@
 
             <ul class="nav-list">
 
-                <li class = "nav-item">
-                    <a href = "../0_index.html" class = "nav-link">Système solaire</a>
+                <li class="nav-item">
+                    <a href="../0_index.html" class="nav-link">Système solaire</a>
                 </li>
 
                 <li class="nav-item">
@@ -98,13 +98,63 @@
 
     <article class="global">
         <div class="space">
-            <h1 id="Mercure">Mercure</h1>
-            Placez-vous sur la planète pour voir ses caractéristiques.
+            <h1 id="Mercure">Planètes</h1>
+            Le système solaire est composé de huit planètes. Veuillez en choisir une :
+            </br>
+            </br>
+            <select>
+                <option value="1" onclick="planeteswap('Mercure')">Mercure</option>
+                <option value="2" onclick="planeteswap('Venus')">Venus</option>
+                <option value="3" onclick="planeteswap('Terre')">Terre</option>
+                <option value="4" onclick="planeteswap('Mars')">Mars</option>
+                <option value="5" onclick="planeteswap('Jupiter')">Jupiter</option>
+                <option value="6" onclick="planeteswap('Saturne')">Saturne</option>
+                <option value="7" onclick="planeteswap('Uranus')">Uranus</option>
+                <option value="8" onclick="planeteswap('Neptune')">Neptune</option>
+               
+            </select>
         </div>
         <article class="paragraph">
+
             <div class="centered_container">
-                <div class="Mercure">
-                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="paragraphe">
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                                Texte à placer ici selon la planète choisie. Texte à placer ici selon la planète choisie.
+                                </br>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Mercure">
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
             </div>
         </article>
     </article>
@@ -115,9 +165,7 @@
             Graphique
         </div>
         <article class="paragraph">
-            <div id="my_dataviz" style = "text-align:center;"></div>
-            <!--Placer des graphiques ici-->
-
+            <div id="my_dataviz" style="text-align:center;"></div>
         </article>
     </article>
     <br>

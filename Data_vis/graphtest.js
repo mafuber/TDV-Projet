@@ -136,6 +136,7 @@ function GraphUpdate(choice){
             else if(choice==8){
                 data=d.data8;
             }
+            svg1.selectAll("text").remove();
         width =630;
         var xScale = d3.scaleLinear()
                     .domain([0,1])
@@ -152,7 +153,8 @@ function GraphUpdate(choice){
     
         g2.append("g")
             .call(d3.axisLeft(yScale))
-            .style("color","white");
+            .style("color","white")
+            .style("font-family","Dosis");
         g2.append("g")
             .call(d3.axisBottom(xScale))
             .style("color","white")
@@ -202,6 +204,7 @@ function GraphUpdate(choice){
                 data=d.data8;
             }
             console.log(data)
+            svg1.selectAll("text").remove();
         var xScale = d3.scaleLinear()
                     .domain([0,1])
                     .range([0,width]);
@@ -218,7 +221,8 @@ function GraphUpdate(choice){
     
         g1.append("g")
             .call(d3.axisLeft(yScale))
-            .style("color","white");
+            .style("color","white")
+            .style("font-family","Dosis");
         g1.append("g")
             .call(d3.axisBottom(xScale))
             .style("color","white")
@@ -246,10 +250,12 @@ function GraphUpdate(choice){
         d3.json("planets.json").then(function(d){
             data=d;
             yMax=d3.max(d,function(d){return eval("d."+scatteryOption+"")});
+            yMin=d3.min(d,function(d){return eval("d."+scatteryOption+"")});
             var yScale = d3.scaleLinear()
-                    .domain([yMax,0])
+                    .domain([yMax,yMin])
                     .range([0,height]);
             xMax=d3.max(d,function(d){return d.name});
+            xMin=d3.min(d,function(d){return d.name});
         var xScale = d3.scaleBand()
                     .domain(d3.map(data,function(d){return d.name}))
                     .range([0,width])
@@ -267,6 +273,7 @@ function GraphUpdate(choice){
         g1.append("g")
             .call(d3.axisBottom(xScale))
             .style("color","white")
+            .style("font-family","Dosis")
             .attr("transform","translate(" + 0 + "," + height + ")");
 
         svg1.append("text")
@@ -275,7 +282,7 @@ function GraphUpdate(choice){
             .attr("font-size","100%")
             .style("fill","white")
             .text("Planets");
-            svg1.append("text")
+        svg1.append("text")
             .attr("x",-width/10)
             .attr("y",height/2)
             .attr("transform","translate(-200,120)rotate(-90)")
@@ -310,12 +317,14 @@ function GraphUpdate(choice){
         d3.json("planets.json").then(function(d){
         data=d;
         yMax=d3.max(d,function(d){return eval("d."+scatteryOption+"")});
+        yMin=d3.min(d,function(d){return eval("d."+scatteryOption+"")});
         var yScale = d3.scaleLinear()
-                .domain([yMax,0])
+                .domain([yMax,yMin])
                 .range([0,height]);
         xMax=d3.max(d,function(d){return eval("d."+scatterxOption+"")});
+        xMin=d3.min(d,function(d){return eval("d."+scatterxOption+"")});
         var xScale = d3.scaleLinear()
-                .domain([0,xMax])
+                .domain([xMin,xMax])
                 .range([0,width])
                 //.padding(0.1);
 
@@ -332,6 +341,21 @@ function GraphUpdate(choice){
         .call(d3.axisBottom(xScale))
         .style("color","white")
         .attr("transform","translate(" + 0 + "," + height + ")");
+
+
+        svg1.append("text")
+            .attr("x",width/2.2)
+            .attr("y",height+35)
+            .attr("font-size","100%")
+            .style("fill","white")
+            .text(""+scatterxOption);
+        svg1.append("text")
+            .attr("x",-width/10)
+            .attr("y",height/2)
+            .attr("transform","translate(-200,120)rotate(-90)")
+            .attr("font-size","100%")
+            .style("fill","white")
+            .text(""+scatteryOption);
     
         var u = svg1.selectAll("rect")
         .data(data)
@@ -342,13 +366,6 @@ function GraphUpdate(choice){
         .attr("r",/*xScale.bandwidth()/20*/3)
         .style("fill", function (d) { return "url(#" + d.name + ")" });
         u.exit()
-    /*u.enter().append("line").data(data)
-    .style("stroke","white")
-    .style("stroke-width",0.05)
-    .attr("x1",0)
-    .attr("y1",function(d){return [10,20]})
-    .attr("x2",width)
-    .attr("y2",function(d){return [10,]});*/
 u.exit().remove();
     })
 }

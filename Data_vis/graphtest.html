@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Visualisations</title>
         <script type="text/javascript" src="../D3/d3.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" type="text/css" href="../Présentation/style_hamburger.css" />
         <link rel="stylesheet" type="text/css" href="../Présentation/style_button.css" />
@@ -51,7 +52,7 @@
                         <a href="../Présentation/Planets/7_Uranus.html" class="nav-link">Uranus</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../Présentation/Planets/8_Neptun.html" class="nav-link">Neptun</a>
+                        <a href="../Présentation/Planets/8_Neptune.html" class="nav-link">Neptune</a>
                     </li>
                 </ul>
             </nav>
@@ -118,9 +119,9 @@
                 </defs>
             </svg>
         </div>
-        <select>
-            <option value="1" onclick="GraphTypeChange(0,'default',0)">Ground Composition</option>
-            <option value="2" onclick="GraphTypeChange(1,'default',0)">Atmosphere</option>
+        <select style="width:20%;height:100%;">
+            <option value="1" onclick="GraphTypeChange(0,'',0)">Ground Composition</option>
+            <option value="2" onclick="GraphTypeChange(1,'',0)">Atmosphere</option>
             <option value="3" onclick="GraphTypeChange(2,'mass',2)">Mass</option>
             <option value="4" onclick="GraphTypeChange(2,'diameter',2)">Diameter</option>
             <option value="5" onclick="GraphTypeChange(2,'density',2)">Density</option>
@@ -133,7 +134,7 @@
             <option value="12" onclick="GraphTypeChange(2,'numberOfMoons',2)">Number Of Moons</option>
             <option value="13" onclick="GraphTypeChange(3,'diameter',2)">Scatter Plot à choix</option>
         </select>
-        <select id="scatterplotoptions">
+        <select id="scatterplotoptions" style="width:20%;">
             <option value="1" onclick="GraphTypeChange(3,'mass',1)">Mass</option>
             <option value="1" onclick="GraphTypeChange(3,'diameter',1)">Diameter</option>
             <option value="1" onclick="GraphTypeChange(3,'density',1)">Density</option>
@@ -145,7 +146,7 @@
             <option value="1" onclick="GraphTypeChange(3,'meanTemperature',1)">Mean Temperature</option>
             <option value="1" onclick="GraphTypeChange(3,'numberOfMoons',1)">Number Of Moons</option>
         </select>
-        <select id="scatterplotoptions">
+        <select id="scatterplotoptions" style="width:20%;">
             <option value="1" onclick="GraphTypeChange(3,'mass',2)">Mass</option>
             <option value="1" onclick="GraphTypeChange(3,'diameter',2)">Diameter</option>
             <option value="1" onclick="GraphTypeChange(3,'density',2)">Density</option>
