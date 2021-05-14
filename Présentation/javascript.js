@@ -17,20 +17,21 @@ function out(a) {
 }
 // demander à Jessica s'il faut effacer la fonction d'avant ou pas?
 
-var canvas = d3.select(".Mercure").append("svg").attr("viewBox", "0 0 700 350");
-function planeteswap(planeteName){
+var canvas = d3.select(".Mercure").append("svg").attr("viewBox", "0 0 700 350").attr("width", "50%").attr("height", "50%");;
+
+function planeteswap(planeteName) {
     var info = d3.json("../../Data_vis/ivandata.json", function(data) {
 
-    
+
         canvas.append("image").attr("xlink:href", "../Pictures/" + planeteName + ".jpg").attr("width", "100%").attr("height", "100%");
-    
+
         canvas.on("mouseover", function(d) {
                 canvas.selectAll("text").remove()
-                canvas.selectAll("image").attr("transform","translate(-200,120)rotate(-90)");
+                canvas.selectAll("image").attr("transform", "translate(-200,120)rotate(-90)");
                 var texto = canvas.selectAll("text")
                     .data(data[planeteName])
                     .enter()
-    
+
                 //on n'arrivait pas à effectuer une seule formule avec l'assistant
                 texto.append("text")
                     .attr("dy", "1em")
@@ -71,7 +72,7 @@ function planeteswap(planeteName){
             .on("mouseout", function(d) {
                 canvas.selectAll("text").remove()
                 canvas.selectAll("image").remove()
-    
+
                 d3.select(this)
                     .append("image")
                     .attr("xlink:href", "../Pictures/" + planeteName + ".jpg")
@@ -82,6 +83,6 @@ function planeteswap(planeteName){
                     .duration(200)
                     .style("opacity", 1);
             })
-    
+
     });
 }
