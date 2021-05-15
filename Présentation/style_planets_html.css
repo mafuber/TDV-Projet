@@ -9,11 +9,14 @@
     min-width: 600px;
     max-width: 2000px;
     margin: 0px;
-    background-image: url('Pictures/space_mainpage.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: white;
+}
+
+body {
+    background-color: Black;
 }
 
 
@@ -103,4 +106,9 @@ td {
 
 .container {
     margin-top: 150px;
+}
+
+.newtext {
+    font-size: 16px;
+    text-align: justify;
 }
