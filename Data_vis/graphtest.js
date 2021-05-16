@@ -274,11 +274,7 @@ function GraphUpdate(choice){
         g1.append("g")
             .call(d3.axisBottom(xScale))
             .style("color","white")
-<<<<<<< HEAD
-            .attr("class", "scale")
-=======
             .style("font-family","Dosis")
->>>>>>> dcf0dee17d6d22090fe47041f6901ec4f56264ed
             .attr("transform","translate(" + 0 + "," + height + ")");
 
         svg1.append("text")
