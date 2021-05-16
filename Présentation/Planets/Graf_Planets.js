@@ -194,8 +194,8 @@ tooltip.style("opacity", 0)
   
         d3.selectAll(".tooltip")
         .style("opacity", 0)
-      .remove()
-        .exit();
+      //.remove()
+        //.exit();
   
       })
 
