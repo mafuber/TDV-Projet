@@ -1,2 +1,12 @@
-Ici, on pourrait commencer un rapport
-et là on a une deuxième version
+\section{Introduction}
+"Insérer phrase d'introduction". Le but de ce projet fut de créer une représentation de notre système solaire, afin de visualiser certaines des caractéristiques des différentes planètes le composant. 
+L'implémentation a été faite à partir de données sous format json, ainsi que de pages HTML, feuilles de style CSS, et Javascript, dont la librairie d3.
+
+\section{Description du projet}
+Le voyage commence sur la page d'accueil, constituée d'une image de fond de l'espace, et d'un bouton qui mène à la page principale représentant le système solaire. 
+On arrive alors sur les planètes orbitant autour du Soleil *ajouter image*.
+
+Les planètes, le Soleil, ainsi que les orbites sont des éléments SVG (cercles), qui ont été crées à l'aide de la librairie d3 js *ajouter image du code*. 
+La couleur des planètes a été faite à partir de gradients de couleurs (SVG), qui ont été repris d'Internet. 
+En haut de la page à droite, un clic de la souris permets d'ouvrir un "menu hamburger", à partir duquel on a accès aux différentes pages du projet. *ajouter image?* 
+Les différentes sections du menu sont abordées par la suite, mais en cliquant sur "Video", on accède à une vidéo explicative de National Geographic sur le système solaire.

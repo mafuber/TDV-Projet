@@ -9,11 +9,14 @@
     min-width: 600px;
     max-width: 2000px;
     margin: 0px;
-    background-image: url('Pictures/space_mainpage.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: white;
+}
+
+body {
+    background-color: Black;
 }
 
 
@@ -84,4 +87,28 @@ h1 {
 
 td {
     width: 50%;
+}
+
+.Mercure {
+    animation: transitionIn 1s;
+    text-align: left;
+    font-size: 21px;
+}
+
+.titre {
+    position: fixed;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    top: 0;
+    background: black;
+}
+
+.container {
+    margin-top: 150px;
+}
+
+.newtext {
+    font-size: 16px;
+    text-align: justify;
 }

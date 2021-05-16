@@ -55,7 +55,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
       var t_y = rotation_radius * Math.sin(t_angle);
       planets[i].x = t_x - rotation_radius;
       planets[i].y = t_y;
-      console.log(planets[i].x)
+      //console.log(planets[i].x)
       elap = d3.now();
       d3.selectAll(".p").attr("transform", function (d) { if (isNaN(d.x)) { return ""; } else { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" } });
 
@@ -115,6 +115,8 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
     })*/
 
 });
+
+
 
 
 
