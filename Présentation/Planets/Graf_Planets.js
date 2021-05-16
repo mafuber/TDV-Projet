@@ -1,11 +1,18 @@
 //nur anzeigen falls d kondition
 //tooltips
-
-
+/*
+window.onresize = function(){ location.reload(); }
 
 const width_document  = window.innerWidth;
 const height_document = window.innerHeight;
+*/
 
+window.onresize = function(){ 
+  console.log("fghgf"); location.reload(); }
+console.log("jdkfjsaldjföladskjf")
+const width_document  = window.innerWidth;
+const height_document = window.innerHeight;
+//const height_document = window.onresize = function(){ return window.innerHeight;}
 
 var width = width_document/2
 
@@ -78,8 +85,8 @@ var arc = d3.arc()
 .innerRadius(width / 5)         // This is the size of the donut hole
 .outerRadius(radius)
 
-var div = d3.select("body")
-          .append("div")
+var tooltip = d3.select("body")
+          .append("p")
           .attr("class", "tooltip")
           
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
@@ -100,15 +107,17 @@ svg
     d3.select(this)   // DAS AKTUELLE ELEMENT AUSWàHLEN  oder “click”
 .attr("fill", "orange");
  // makes the tooltip appear on mouseover
-    console.log("Happy Birthday")
+    console.log("Happy Birthday");
+
  d3.select(this)
    .style("stroke", "white")
    .style("stroke-width", "3px");
-div.style("opacity", 0)
+
+tooltip.style("opacity", 0)
    .style("position", "absolute").transition()
    .duration(200)
    .style("opacity", .9);
-   div.style("opacity", 1)
+  tooltip.style("opacity", 1)
    .style("position", "absolute")
    .style("fill", "black")
    .style("background-color", "black")
