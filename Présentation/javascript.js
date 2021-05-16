@@ -82,37 +82,37 @@ var info = d3.json("../../Data_vis/ivandata.json", function(data) {
                 })
             texto.append("text")
                 .attr("dy", "12em")
-                .attr("x", "" + width / 2.5 + "")
+                .attr("x", "" + width / 1.5 + "")
                 .text(function(d) {
                     return "Longeur d'une journée : " + d.lengthOfDay + " h"
                 })
             texto.append("text")
                 .attr("dy", "13em")
-                .attr("x", "" + width / 2.5 + "")
+                .attr("x", "" + width / 1.5 + "")
                 .text(function(d) {
                     return "Distance au soleil : " + d.distanceFromSun + " km"
                 })
             texto.append("text")
                 .attr("dy", "14em")
-                .attr("x", "" + width / 2.5 + "")
+                .attr("x", "" + width / 1.5 + "")
                 .text(function(d) {
                     return "Nombre de lunes : " + d.numberOfMoons
                 })
             texto.append("text")
                 .attr("dy", "15em")
-                .attr("x", "" + width / 2.5 + "")
+                .attr("x", "" + width / 1.5 + "")
                 .text(function(d) {
                     return "Période orbitale : " + d.orbitalPeriod + " jours"
                 })
             texto.append("text")
                 .attr("dy", "16em")
-                .attr("x", "" + width / 2.5 + "")
+                .attr("x", "" + width / 1.5 + "")
                 .text(function(d) {
                     return "Période de révolution : " + d.orbitalVelocity + " jours"
                 })
             texto.append("text")
                 .attr("dy", "17em")
-                .attr("x", "" + width / 2.5 + "")
+                .attr("x", "" + width / 1.5 + "")
                 .text(function(d) {
                     return "Période de révolution : " + d.orbitalVelocity + " jours"
                 })
