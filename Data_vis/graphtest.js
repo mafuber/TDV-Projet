@@ -136,6 +136,7 @@ function GraphUpdate(choice){
             else if(choice==8){
                 data=d.data8;
             }
+            svg1.selectAll("text").remove();
         width =630;
         var xScale = d3.scaleLinear()
                     .domain([0,1])
@@ -152,7 +153,8 @@ function GraphUpdate(choice){
     
         g2.append("g")
             .call(d3.axisLeft(yScale))
-            .style("color","white");
+            .style("color","white")
+            .style("font-family","Dosis");
         g2.append("g")
             .call(d3.axisBottom(xScale))
             .style("color","white")
@@ -202,6 +204,7 @@ function GraphUpdate(choice){
                 data=d.data8;
             }
             console.log(data)
+            svg1.selectAll("text").remove();
         var xScale = d3.scaleLinear()
                     .domain([0,1])
                     .range([0,width]);
@@ -218,7 +221,8 @@ function GraphUpdate(choice){
     
         g1.append("g")
             .call(d3.axisLeft(yScale))
-            .style("color","white");
+            .style("color","white")
+            .style("font-family","Dosis");
         g1.append("g")
             .call(d3.axisBottom(xScale))
             .style("color","white")
@@ -270,7 +274,11 @@ function GraphUpdate(choice){
         g1.append("g")
             .call(d3.axisBottom(xScale))
             .style("color","white")
+<<<<<<< HEAD
             .attr("class", "scale")
+=======
+            .style("font-family","Dosis")
+>>>>>>> dcf0dee17d6d22090fe47041f6901ec4f56264ed
             .attr("transform","translate(" + 0 + "," + height + ")");
 
         svg1.append("text")
@@ -363,13 +371,6 @@ function GraphUpdate(choice){
         .attr("r",/*xScale.bandwidth()/20*/3)
         .style("fill", function (d) { return "url(#" + d.name + ")" });
         u.exit()
-    /*u.enter().append("line").data(data)
-    .style("stroke","white")
-    .style("stroke-width",0.05)
-    .attr("x1",0)
-    .attr("y1",function(d){return [10,20]})
-    .attr("x2",width)
-    .attr("y2",function(d){return [10,]});*/
 u.exit().remove();
     })
 }
