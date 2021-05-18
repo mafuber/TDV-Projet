@@ -12,7 +12,7 @@ else { var max = w }
 // define scales
 var posScale = d3.scaleLinear()
   .domain([0, 10])
-  .range([0, max/5]);
+  .range([0, max/2]);
 
 var sizeScale = d3.scaleSqrt()
   .domain([0, 10])
@@ -32,21 +32,21 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
   // console.log(planets)
   // timer adapted from http://bl.ocks.org/cloudshapes/5662234
   // Kick off the timer, and the action begins: 
-  d3.interval(tickFn, 200);
+  d3.interval(tickFn, 20);
   function tickFn(_elapsed) {
-    var t_elapsed = d3.now() - elap;
+    var t_elapsed = _elapsed;
     // // Process all circles data. 
     for (var i = 1; i < planets.length; i++) {
-
+      t_circleData = planets[i]
       // console.log(planets[i].start)
-      planets[i].start = _elapsed
+      t_circleData.start = _elapsed
       // Calc elapsed time.
       // var t_elapsed = d3.now() - _elapsed;
 
       //   //   // Calculate how far through the desired time for one iteration.
       // console.log(planets[i].orbitalVelocity)
       // console.log(elapsed)
-      var t = t_elapsed / (parseFloat(planets[i].orbitalVelocity)*70);
+      var t = t_elapsed / (parseFloat(planets[i].speed));
       // console.log(t)
       //   //   // Calculate new x/y positions
       var rotation_radius = parseFloat(planets[i].rellipse);

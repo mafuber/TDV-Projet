@@ -55,7 +55,8 @@
     "cx": 7,
     "r": 3,
     "start": "undefined",
-    "rellipse": 7.2
+    "rellipse": 2.5,
+    "speed": 1000
   },
   {
     "id": 2,
@@ -93,7 +94,8 @@
     "cx": 10,
     "r": 6,
     "start": "undefined",
-    "rellipse": 9
+    "rellipse": 3.5,
+    "speed": 2550
   },
   {
     "id": 3,
@@ -131,7 +133,8 @@
     "cx": 15,
     "r": 11,
     "start": "undefined",
-    "rellipse": 12
+    "rellipse": 5.2,
+    "speed": 4150
   },
   {
     "id": 4,
@@ -169,7 +172,8 @@
     "cx": 20,
     "r": 5,
     "start": "undefined",
-    "rellipse": 19
+    "rellipse": 7,
+    "speed": 7800
   },
   {
     "id": 5,
@@ -207,7 +211,8 @@
     "cx": 26.3,
     "r": 37,
     "start": "undefined",
-    "rellipse": 25
+    "rellipse": 9,
+    "speed": 49200
   },
   {
     "id": 6,
@@ -245,7 +250,8 @@
     "cx": 35,
     "r": 30,
     "start": "undefined",
-    "rellipse": 33
+    "rellipse": 12.2,
+    "speed": 122100
   },
   {
     "id": 7,
@@ -283,7 +289,8 @@
     "cx": 41,
     "r": 22,
     "start": "undefined",
-    "rellipse": 39
+    "rellipse": 14.4,
+    "speed": 347600
   },
   {
     "id": 8,
@@ -321,6 +328,7 @@
     "cx": 46,
     "r": 20,
     "start": "undefined",
-    "rellipse": 44
+    "rellipse": 16,
+    "speed": 679500
   }
   ]
