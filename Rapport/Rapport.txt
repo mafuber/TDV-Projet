@@ -7,6 +7,35 @@ Le voyage commence sur la page d'accueil, constituée d'une image de fond de l'e
 On arrive alors sur les planètes orbitant autour du Soleil *ajouter image*.
 
 Les planètes, le Soleil, ainsi que les orbites sont des éléments SVG (cercles), qui ont été crées à l'aide de la librairie d3 js *ajouter image du code*. 
-La couleur des planètes a été faite à partir de gradients de couleurs (SVG), qui ont été repris d'Internet. 
+La couleur des planètes a été faite à partir de gradients de couleurs (SVG), qui ont été repris d'Internet. Lorsqu'on survole chaque élément avec la souris, quelques caractéristiques clés de chaque planète et du Soleil s'affichent, comme le nom, la masse, le diamètre et ainsi de suite. *insérer image?*
+La rotation des planètes a été implémentée à partir du set de données et d'un timer d3.
+
 En haut de la page à droite, un clic de la souris permets d'ouvrir un "menu hamburger", à partir duquel on a accès aux différentes pages du projet. *ajouter image?* 
 Les différentes sections du menu sont abordées par la suite, mais en cliquant sur "Video", on accède à une vidéo explicative de National Geographic sur le système solaire.
+Si l'on clique sur un des noms de planètes, par exemple "Mercure", on tombe sur une page caractéristique de la planète en question. 
+Toutes les pages individuelles des planètes sont structurées de la même manière, avec le titre du projet en haut de la page, des boutons permettant de naviguer entre les pages à droite, à gauche, et en bas de la page, toujours le menu hamburger, et enfin, 2 sections sur la planète en question. 
+
+\section{Collaboration}
+
+\section{Conclusion}
+\subsection{Difficultés rencontrées}
+
+
+\section{Sources}
+\subsection{Données et informations}
+Voici les différents sites que nous avons utilisés pour nos informations:
+\begin{itemize}
+    \item  https://devstronomy.com/#/datasets
+    \item  https://pds.nasa.gov/
+    \item https://www.nasa.gov/sites/default/files/files/YOSS\_Act\_4.pdf
+    \item https://fr.wikipedia.org/wiki/Syst\%C3\%A8me\_solaire#Mercure
+    \item https://1lib.ch/
+\end{itemize}
+\subsection{Code}
+Ces sites nous ont servi d'inspiration ou d'aide pour le code:
+\begin{itemize}
+    \item  https://github.com/treedbox/solar-system-orbit-planets
+    \item https://bl.ocks.org/sarah37/107471af4ec03186d2795f68db0c91ff
+    \item https://github.com/sarah37/solarsystem
+    \item https://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
+\end{itemize}
