@@ -10,3 +10,16 @@ Les planètes, le Soleil, ainsi que les orbites sont des éléments SVG (cercles
 La couleur des planètes a été faite à partir de gradients de couleurs (SVG), qui ont été repris d'Internet. 
 En haut de la page à droite, un clic de la souris permets d'ouvrir un "menu hamburger", à partir duquel on a accès aux différentes pages du projet. *ajouter image?* 
 Les différentes sections du menu sont abordées par la suite, mais en cliquant sur "Video", on accède à une vidéo explicative de National Geographic sur le système solaire.
+
+
+Sources Jessica
+
+Hamburger Menu 
+
+Idées principales Video turtorial: 
+https://www.youtube.com/watch?v=BN6fH1nRDxA
+
+Donut chart
+
+https://www.d3-graph-gallery.com/graph/donut_basic.html
+
