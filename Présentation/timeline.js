@@ -68,7 +68,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
     .enter()
     .append("circle")
     .attr("class", "c")
-    .attr("cx", function (d) { return 0 + '%' })
+    .attr("cx", function (d) { return parseFloat(0) + '%' })
     .attr("r", function (d) { return parseFloat(d.rellipse)*2.895 + "%" })
     .attr("fill", "none")
     .attr("stroke", "white")
