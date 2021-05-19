@@ -1,13 +1,13 @@
-
 * {
-  margin: 0;
-  padding: 0; /*Zentrieren*/
-  font-family: 'Dosis';
-  font-style: normal;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-transform: uppercase; /*Grossbuchstaben*/
-
+    margin: 0;
+    padding: 0;
+    /*Zentrieren*/
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /*Grossbuchstaben*/
 }
 
 
@@ -58,7 +58,6 @@
 }
 */
 
-
 .background {
     Width: 100%;
     min-width: 600px;
@@ -69,69 +68,76 @@
     background-attachment: fixed;
     background-size: cover;
     color: white;
-    
 }
 
-.index{
-  background-color: rgb(5, 4, 7);
+.index {
+    background-color: rgb(5, 4, 7);
 }
 
-svg{
-  display:flex;
-  width: 60%;
-  height:60%;
-  position:relative;
-  left:20%;
-  top:20%;
+svg {
+    display: flex;
+    width: 60%;
+    height: 60%;
+    position: relative;
+    left: 20%;
+    top: 20%;
 }
-
 
 div.tooltip {
-  position: absolute;
-  text-align: center;
-  width: auto;
-  height: auto;
-  padding: 10px;
-  font: 12px sans-serif;
-  background: lightsteelblue;
-  border: 5px;
-  border-radius: 8px;
-  pointer-events: none;
-  text-size-adjust: auto;
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 5px;
+    border-radius: 8px;
+    pointer-events: none;
+    text-size-adjust: auto;
 }
 
 
 /*orbits line*/
+
 .mercury-orbit {
-  fill: none;
-  stroke:#E6E6E6;
-  stroke-width:1px;
+    fill: none;
+    stroke: #E6E6E6;
+    stroke-width: 1px;
 }
+
 .venus-orbit {
-  fill: none;
-  stroke:#E6E6E6;
-  stroke-width:1px;
+    fill: none;
+    stroke: #E6E6E6;
+    stroke-width: 1px;
 }
+
 .earth-orbit {
-  fill:none;
-  stroke:#E6E6E6;
-  stroke: width 1px;;
+    fill: none;
+    stroke: #E6E6E6;
+    stroke: width 1px;
+    ;
 }
+
 .mars-orbit {
-  fill:none;
-  stroke:#E6E6E6;
-  stroke-width:1px;
+    fill: none;
+    stroke: #E6E6E6;
+    stroke-width: 1px;
 }
+
 .jupiter-orbit {
-  fill:none;
-  stroke:#E6E6E6;
-  stroke-width:1px;
+    fill: none;
+    stroke: #E6E6E6;
+    stroke-width: 1px;
 }
+
 .saturn-orbit {
-  fill:none;
-  stroke:#E6E6E6;
-  stroke-width:1px;
+    fill: none;
+    stroke: #E6E6E6;
+    stroke-width: 1px;
 }
+
+
 /*.saturn-ring1{
   fill:none;
   stroke:#bf4c0d;
@@ -142,16 +148,20 @@ div.tooltip {
   stroke:#bf4c0d;
   stroke-width:1px;
 }*/
+
 .uranus-orbit {
-  fill:none;
-  stroke:#E6E6E6;
-  stroke-width:1px;
+    fill: none;
+    stroke: #E6E6E6;
+    stroke-width: 1px;
 }
+
 .neptune-orbit {
-  fill:none;
-  stroke:#E6E6E6;
-  stroke-width:1px;
+    fill: none;
+    stroke: #E6E6E6;
+    stroke-width: 1px;
 }
+
+
 /*
 .slider {
   -webkit-appearance: none;
@@ -165,7 +175,10 @@ div.tooltip {
   transition: opacity .2s;
 }
 .slider:hover {
-  opacity: 1; /* Fully shown on mouse-over *//*
+  opacity: 1; /* Fully shown on mouse-over */
+
+
+/*
   position:fixed;
 }
 .slider::-webkit-slider-thumb {
@@ -185,14 +198,15 @@ div.tooltip {
   cursor: pointer;
 }*/
 
-#title{
-  color:white;
+#title {
+    color: white;
 }
 
 h1 {
-  padding: 40px;
-  text-align: center;
+    padding: 40px;
+    text-align: center;
 }
+
 
 /*
 .navbar {
@@ -286,16 +300,17 @@ nav>ul li:hover .sous {
     top: 10%;
     left: 40%;
     margin: -25px 0 0 -25px;
-    display:flex;
+    display: flex;
 }
 
 .mainb {
     position: fixed;
     top: 50%;
-    left:35%;
+    left: 35%;
     display: flex;
     margin: 0;
-    padding: 0; /*Zentrieren*/
+    padding: 0;
+    /*Zentrieren*/
     font-family: 'Dosis';
     font-style: normal;
     font-weight: 300;
@@ -310,5 +325,4 @@ nav>ul li:hover .sous {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-
 }

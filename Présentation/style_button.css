@@ -1,130 +1,129 @@
-
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-
-.change_left{
-  right: 0px;
+.change_left {
+    right: 0px;
 }
 
-.change_right{
-  right: 200px;
+.change_right {
+    right: 200px;
 }
 
 .button_last {
-  cursor: pointer;
-  color: white;
-  background-color: rgba(0,0,0,0);
-  font-family: 'Dosis';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  letter-spacing: 1px;
-  text-transform: uppercase; /*Grossbuchstaben*/
-
-  /*freier Platz darum*/
-  position: relative;
-  padding: 3px;
-  margin: 25px;
-  text-decoration: none;    /*underlined none*/
-
-  /*left centering*/
-   position: fixed;
-   margin: 0;
-   top: 50%;
-   left: 0;
-    
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /*Grossbuchstaben*/
+    /*freier Platz darum*/
+    position: relative;
+    padding: 3px;
+    margin: 25px;
+    text-decoration: none;
+    /*underlined none*/
+    /*left centering*/
+    position: fixed;
+    margin: 0;
+    top: 50%;
+    left: 0;
 }
+
 
 /*transformation of the orange lines*/
 
-.button_last::before, /*insert bevor the element*/
+.button_last::before,
+
+/*insert bevor the element*/
+
 .button_last::after,
 #button_next::before,
 #button_next::after,
 .button_overview::before,
-.button_overview::after{   /*insert after the element*/
-  content: "";    /*what is going to be insert */
-  width: 100%;  
-  height: 2px;
-  background-color: chocolate;
-  position: absolute;
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 0.5s;
+.button_overview::after {
+    /*insert after the element*/
+    content: "";
+    /*what is going to be insert */
+    width: 100%;
+    height: 2px;
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
 }
 
 .button_overview::after,
-.button_last::after, 
-#button_next::after{
-  bottom: 0;
-  transform-origin: right;
+.button_last::after,
+#button_next::after {
+    bottom: 0;
+    transform-origin: right;
 }
 
 .button_overview::before,
 .button_last::before,
 #button_next::before {
-  top: 0;
-  transform-origin: left;
+    top: 0;
+    transform-origin: left;
 }
 
 .button_overview:hover::after,
 .button_overview:hover::before,
 .button_last:hover::before,
 .button_last:hover::before,
-.button_last:hover::after ,
+.button_last:hover::after,
 #button_next:hover::before,
 #button_next:hover::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 #button_next {
-
-  cursor: pointer;
-  color: white;
-  background-color: rgba(0,0,0,0);
-  font-family: 'Dosis';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  letter-spacing: 1px;
-  text-transform: uppercase; /*Grossbuchstaben*/
- 
-  position: relative;
-  padding: 3px 0;
-  margin: 25px;
-  text-decoration: none;    /*underlined none*/
-
-  position: fixed;
-  margin: 0;
-  top: 50%;
-  right: 0;
-
-  
-  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);   /*smooth transition*/
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /*Grossbuchstaben*/
+    position: relative;
+    padding: 3px 0;
+    margin: 25px;
+    text-decoration: none;
+    /*underlined none*/
+    position: fixed;
+    margin: 0;
+    top: 50%;
+    right: 0;
+    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /*smooth transition*/
 }
 
-
-.button_overview{
-
-cursor: pointer;
-color: white;
-background-color: rgba(0,0,0,0);
-font-family: 'Dosis';
-font-style: normal;
-font-weight: 300;
-font-size: 22px;
-letter-spacing: 1px;
-text-transform: uppercase; /*Grossbuchstaben*/
-position: relative;
-padding: 3px 0;
-margin: 25px;
-text-decoration: none;    /*underlined none*/
-
-position: fixed;
-bottom: 0;
-left: 45%;
+.button_overview {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /*Grossbuchstaben*/
+    position: relative;
+    padding: 3px 0;
+    margin: 25px;
+    text-decoration: none;
+    /*underlined none*/
+    position: fixed;
+    bottom: 0;
+    left: 45%;
 }
-

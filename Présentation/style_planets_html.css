@@ -78,6 +78,7 @@ h1 {
     text-transform: uppercase;
     padding: 40px;
     text-align: center;
+    border-bottom: 1px solid white;
 }
 
 .centered_container {
@@ -92,7 +93,6 @@ td {
 .Mercure {
     animation: transitionIn 1s;
     text-align: left;
-    font-size: 21px;
 }
 
 .titre {

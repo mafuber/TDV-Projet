@@ -1,10 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  
+}
 
-  h1 {
+h1 {
     font-family: 'Dosis';
     font-style: normal;
     font-weight: 300;
@@ -12,35 +11,34 @@
     text-transform: uppercase;
     text-align: center;
     padding: 40px;
-  }
+}
 
-  body {
-    background-color: rgba(0,0,0,0);
+body {
+    background-color: rgba(0, 0, 0, 0);
     font-family: 'Dosis';
-    font-style: normal;}
-  
+    font-style: normal;
+}
 
 .navbar_ham {
-  width: 20%;
-  max-width: 250px;
-  height: 100%;
-  background-color: #262626;
-  position: fixed;
-  top: 0;
-  right: -20%;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  border-radius: 20% 0 0 30%;
-  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
- 
+    width: 20%;
+    max-width: 250px;
+    height: 100%;
+    background-color: #262626;
+    position: fixed;
+    top: 0;
+    right: -20%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    border-radius: 20% 0 0 30%;
+    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .change {
-  right: 0%;
+    right: 0%;
 }
-  
-  .hamburger-menu {
+
+.hamburger-menu {
     width: 30px;
     height: 3%;
     position: fixed;
@@ -50,42 +48,43 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-  
-  .line {
+}
+
+.line {
     width: 100%;
     height: 10%;
     background-color: chocolate;
     transition: all 0.8s;
-  }
-  
-  .change .line-1 {
+}
+
+.change .line-1 {
     transform: rotateZ(-405deg) translate(-8px, 6px);
-  }
-  
-  .change .line-2 {
+}
+
+.change .line-2 {
     opacity: 0;
-  }
-  
-  .change .line-3 {
+}
+
+.change .line-3 {
     transform: rotateZ(405deg) translate(-8px, -6px);
-  }
-  
-  .nav-list {
+}
+
+.nav-list {
     text-align: left;
     margin: 0%;
     margin-top: 0%;
     margin-left: 0%;
+}
 
-  }
-
-  .nav-item, .nav-planetes {
+.nav-item,
+.nav-planetes {
     list-style: none;
     margin: 20%;
     text-align: end;
-  }
-  
-  .nav-link, .nav-planetes {
+}
+
+.nav-link,
+.nav-planetes {
     text-decoration: none;
     font-size: 130%;
     color: #eee;
@@ -93,25 +92,24 @@
     letter-spacing: 1%;
     text-transform: uppercase;
     position: relative;
-    
-  }
-  
- .nav_p::after,
- .nav_p::before{
-  content: "";
-  width: 100%;
-  height: 10;
-  background-color: chocolate;
-  position: absolute;
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 0.5s;
+}
 
- }
-  ._nav-link::before,
-  ._nav-link::after,
-  .nav-link::before,
-  .nav-link::after {
+.nav_p::after,
+.nav_p::before {
+    content: "";
+    width: 100%;
+    height: 10;
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+._nav-link::before,
+._nav-link::after,
+.nav-link::before,
+.nav-link::after {
     content: "";
     width: 100%;
     height: 8%;
@@ -120,53 +118,45 @@
     left: 0;
     transform: scaleX(0);
     transition: transform 0.5s;
-  }
-  
-   
+}
 
-  .nav_p::after{  
+.nav_p::after {
     transform-origin: right;
     padding-bottom: 2px;
+}
 
-  }
-
-  .nav_p::before{
+.nav_p::before {
     transform-origin: left;
     padding-top: 2px;
-  }
+}
 
-  
-  ._nav-link::after,
-  .nav-link::after {
-    bottom: 0;  
+._nav-link::after,
+.nav-link::after {
+    bottom: 0;
     transform-origin: right;
-  }
-  
+}
 
-  ._nav-link::before,
-  .nav-link::before {
+._nav-link::before,
+.nav-link::before {
     top: 0;
     transform-origin: left;
-  }
-  
-  .nav_p:hover::after,
-  .nav_p:hover::before,
-  ._nav-link:hover::before,
-  ._nav-link:hover::after,
-  .nav-link:hover::before,
-  .nav-link:hover::after {
+}
+
+.nav_p:hover::after,
+.nav_p:hover::before,
+._nav-link:hover::before,
+._nav-link:hover::after,
+.nav-link:hover::before,
+.nav-link:hover::after {
     transform: scaleX(1);
-  }
+}
 
-
-  ._nav-item {
+._nav-item {
     text-align: left;
     list-style: none;
-    
-  }
+}
 
-  ._nav-link {
-
+._nav-link {
     font-size: 15px;
     text-decoration: none;
     color: #eee;
@@ -177,5 +167,18 @@
     padding: 5px;
     text-align: left;
     margin-left: 40px;
+}
 
-  }
+#title {
+    border-bottom: 1px solid white;
+    position: fixed;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    top: 0;
+    background: black;
+}
+
+.svgcentered {
+    margin-top: 150px;
+}
