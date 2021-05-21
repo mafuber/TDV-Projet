@@ -78,15 +78,11 @@ h1 {
 .centered_container {
     animation: transitionIn 1s;
     border: 1px solid black;
+    text-align: left;
 }
 
 td {
     width: 50%;
-}
-
-.Mercure {
-    animation: transitionIn 1s;
-    text-align: left;
 }
 
 .titre {
