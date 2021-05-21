@@ -42,8 +42,8 @@ svg{
   left: 25%; 
 }
 option{
-  cursor:pointer;
+  font-family: Dosis;
 }
 select{
-  cursor:pointer;
+  font-family: Dosis;
 }
