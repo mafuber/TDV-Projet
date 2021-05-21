@@ -20,7 +20,7 @@ d3.json("planets.json").then(function (data) {
         .domain([0, d3.max(planets, function (d) { return d.diameter; })])
         .range([0, 150]);
 
-    var padding = 27;
+    var padding = 30.2;
     planets.forEach(function (d, i) {
         if (i === 0) {
             d.offset = 0;
