@@ -199,7 +199,7 @@ div.tooltip {
 }*/
 
 #title {
-    border-bottom: 1px solid white;
+    border-bottom: 5px solid chocolate;
     color: white;
     position: fixed;
     width: 100%;
@@ -211,6 +211,19 @@ div.tooltip {
 
 
 /*
+
+#title {
+    border-bottom: 1px solid chocolate;
+    color: chocolate;
+    position: fixed;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    top: 0;
+    background-color: black;
+    font-weight: bold;
+}
+
 .navbar {
   width: 10%;
   height: 100%;
