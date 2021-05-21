@@ -316,7 +316,7 @@ nav>ul li:hover .sous {
     left: 35%;
     display: flex;
     margin: 0;
-    padding: 1;
+    padding: 0;
     /*Zentrieren*/
     font-family: 'Dosis';
     font-style: normal;
