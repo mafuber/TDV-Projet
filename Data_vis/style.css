@@ -43,7 +43,11 @@ svg{
 }
 option{
   font-family: Dosis;
+  background-color: #262626;
+  color: white;
 }
 select{
   font-family: Dosis;
+  background-color: #262626;
+  color: white;
 }
