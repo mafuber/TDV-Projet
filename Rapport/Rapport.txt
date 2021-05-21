@@ -69,6 +69,19 @@ Pour une approximation générale, nous avons probablement travaillé en moyenne
 
 Jessica:
 
+Sources Jessica
+
+Hamburger Menu 
+
+Idées principales Video turtorial: 
+https://www.youtube.com/watch?v=BN6fH1nRDxA
+
+Donut chart
+
+https://www.d3-graph-gallery.com/graph/donut_basic.html
+=======
+Le
+
 Kira: Un apprentissage important fut, pour ma part, qu'il est important de ne pas avoir 
 trop d'attentes par rapport au rendu d'un projet, car au final il ne sera jamais exactement
 comme on l'avait imaginé au départ. Le projet m'a également appris à utiliser Internet de manière plus efficace comme outil d'éducation.
