@@ -39,5 +39,11 @@ select.visible{
 svg{
   width: 85%;
   position: relative;
-  left: 45%; 
+  left: 25%; 
+}
+option{
+  cursor:pointer;
+}
+select{
+  cursor:pointer;
 }
