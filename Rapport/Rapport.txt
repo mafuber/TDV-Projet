@@ -1,25 +1,68 @@
 \section{Introduction}
-"Insérer phrase d'introduction". Le but de ce projet fut de créer une représentation de notre système solaire, afin de visualiser certaines des caractéristiques des différentes planètes le composant. 
-L'implémentation a été faite à partir de données sous format json, ainsi que de pages HTML, feuilles de style CSS, et Javascript, dont la librairie d3.
+"Insérer phrase d'introduction". Le but de ce projet fut de créer une représentation de notre système solaire, afin de visualiser certaines des caractéristiques des différentes planètes le composant. L'implémentation a été faite à partir de données sous format json, ainsi que de pages HTML, feuilles de style CSS, et Javascript, dont la librairie d3.
 
 \section{Description du projet}
+\subsection{Page(s) principale(s)}
 Le voyage commence sur la page d'accueil, constituée d'une image de fond de l'espace, et d'un bouton qui mène à la page principale représentant le système solaire. 
 On arrive alors sur les planètes orbitant autour du Soleil *ajouter image*.
 
-Les planètes, le Soleil, ainsi que les orbites sont des éléments SVG (cercles), qui ont été crées à l'aide de la librairie d3 js *ajouter image du code*. 
-La couleur des planètes a été faite à partir de gradients de couleurs (SVG), qui ont été repris d'Internet. 
-En haut de la page à droite, un clic de la souris permets d'ouvrir un "menu hamburger", à partir duquel on a accès aux différentes pages du projet. *ajouter image?* 
-Les différentes sections du menu sont abordées par la suite, mais en cliquant sur "Video", on accède à une vidéo explicative de National Geographic sur le système solaire.
+Les planètes, le Soleil, ainsi que les orbites sont des éléments SVG (cercles), qui ont été crées à l'aide de la librairie d3 js *ajouter image du code*. La couleur des planètes a été faite à partir de gradients de couleurs (SVG), qui ont été repris d'Internet. Lorsqu'on survole chaque élément avec la souris, quelques caractéristiques clés de chaque planète et du Soleil s'affichent, comme le nom, la masse, le diamètre et ainsi de suite. *insérer image?*
+La rotation des planètes a été implémentée à partir du set de données et d'un timer d3.
+
+En haut de la page à droite, un clic de la souris permets d'ouvrir un "menu hamburger", à partir duquel on a accès aux différentes pages du projet. *ajouter image?* Les différentes sections du menu sont abordées par la suite, mais en cliquant sur "Video", on accède à une vidéo explicative de National Geographic sur le système solaire.
+
+\subsection{Pages individuelles des planètes}
+Si l'on clique sur un des noms de planètes, par exemple "Mercure", on tombe sur une page caractéristique de la planète en question. Toutes les pages individuelles des planètes sont structurées de la même manière, avec le titre du projet en haut de la page, des boutons permettant de naviguer entre les pages à droite, à gauche, et en bas de la page, toujours le menu hamburger, et enfin, 2 sections sur la planète en question. 
+
+La première section se compose d'une brève description de la planète ainsi que d'une image. Lorsque l'on place la souris sur l'image, une animation fait diminuer l'image en taille et la déplace de telle sorte à afficher quelques caractéristiques principales de la planète. *insérer image*
+
+La deuxième section représente un graphique sous forme de "donut chart", qui permet de visualiser la composition atmosphérique de chaque planète. Si l'on survole une des parties du graphique avec la souris, la partie change de couleur et un tooltip implémenté avec d3 permet de visualiser la proportion de gaz figurant dans l'atmsophère.
+
+\subsection{Visualisations}
+A partir du menu, on accède à une page nommée "Visualisations", sur laquelle la majeure partie des graphiques implémentés en d3 se situe. En haut de la page, les mêmes planètes que sur la page principale, crées en SVG, sont reprises, mais cette fois, avec leurs tailles proportionnelles à leurs tailles réelles. En cliquant sur chacune des planètes, on voit que le bar chart sur la composition de l'atmosphère des planètes se met automatiquement à jour. 
+
+Une liste à choix permet également de représenter divers scatter plots afin de comparer les planètes, notamment sur leur masse, densité, période de rotation, etc. Cette liste contient également une fonctionnalité "Scatter plots à choix", sous laquelle l'utilisateur peut choisir quelles propriétés des planètes il/elle souhaite représenter pour chaque axe. On peut donc visualiser par exemple le diamètre de chaque planète en fonction de la distance, ou la valeur de la gravité en fonction de la température moyenne, entre autres. *insérer image* 
+
+\subsection{Formulaire de contact}
+Enfin, cliquer sur la section "Contact" donne accès à une page permettant de nous contacter en cas de questions ou de remarques. On peut entrer le nom, prénom, l'adresse e-mail, le sexe, numéro de téléphone, ainsi qu'une demande. Ces informations nous seront envoyées par e-mail. *insérer image*
+
+Cette page contient également quelques liens externes menant aux sources de nos informations, ainsi qu'un lien interne permettant de revenir sur la représentation du système solaire.
+
+\section{Collaboration}
+La collaboration dans le groupe s'est globalement plutôt bien déroulée. Nous avons rencontré quelques soucis au niveau de l'organisation; comme tous les membres de notre groupe ne sont pas dans la même faculté, nous avons différents horaires de cours et ainsi, n'avons pas toujours facilement trouvé une heure pour travailler qui convenait à tout le monde. En outre, puisque nous n'habitons pas tous dans le canton de Fribourg de manière permanente et en raison de la situation sanitaire, nous n'avons pu nous rencontrer en vrai uniquement une fois, pour la présentation. Toute notre collaboration s'est faite sur la plateforme Teams, ainsi que par l'outil de messagerie Signal. Même si nous avons essayé de nous voir plusieurs fois hebdomadairement, cela n'a pas toujours été possible.  
+
+Ainsi, nous avons travaillé de manière plutôt individuelle et nous sommes réunis virtuellement pour échanger sur nos difficultés, nos progrès et bien évidemment sur l'organisation. Quant à la répartition des tâches, elle s'est faite relativement naturellement. La difficulté principale a été au tout début du projet, quand on ne savait pas vraiment par où commencer. Kira s'est principalement occupée de la page principale, des éléments SVG et de la recherche des données; Jessica et Ivan ont travaillé sur les pages individuelles des planètes, le style et l'ergonomie, alors que Michel s'est focalisé sur la page "Visualisations". En fin de compte, cette répartition du travail fut plutôt bénéfique, car même si certains membres du groupe ont eu plus à faire avec certains sujets que d'autres, tout le monde a pu toucher à tout: du HTML, du CSS, du SVG, du Javascript et du d3.
+
+\section{Conclusion}
+\subsection{Difficultés rencontrées}
+Une des plus grandes difficultés que nous avons rencontré, était le manque de données. En effet, même si nous avons trouvé un relativement bon dataset, il a été difficile d'en trouver d'autres afin de créer des visualisations suffisamment variées. Les données concernant les planètes disponibles sur Internet n'étaient très souvent pas disponibles sous le bon format (JSON, csv, sql), et donc, nous avons dû entrer certaines données dans le fichier JSON à la main. 
+
+Une autre grande difficulté, à laquelle la plupart des autres groupes ont également été confrontés, fut de se familiariser avec Github. De nombreux différents problèmes inexplicables rendaient la plateforme presque inutilisable, et nous avons perdu beaucoup d'énergie et de temps à essayer de la faire fonctionner correctement. Néanmoins, une fois ces "bugs" résolus, Github nous a malgré tout bien facilité la tâche, d'autant plus comme nous avons dû collaborer à distance.
 
 
-Sources Jessica
 
-Hamburger Menu 
+\subsection{Eventuels ajouts ou modifications}
 
-Idées principales Video turtorial: 
-https://www.youtube.com/watch?v=BN6fH1nRDxA
 
-Donut chart
+\subsection{Vécu individuel}
 
-https://www.d3-graph-gallery.com/graph/donut_basic.html
+
+\section{Sources}
+\subsection{Données et informations}
+Voici les différents sites que nous avons utilisés pour nos informations:
+\begin{itemize}
+    \item  https://devstronomy.com/#/datasets
+    \item  https://pds.nasa.gov/
+    \item https://www.nasa.gov/sites/default/files/files/YOSS\_Act\_4.pdf
+    \item https://fr.wikipedia.org/wiki/Syst\%C3\%A8me\_solaire#Mercure
+    \item https://1lib.ch/
+\end{itemize}
+\subsection{Code}
+Ces sites nous ont servi d'inspiration ou d'aide pour le code:
+\begin{itemize}
+    \item  https://github.com/treedbox/solar-system-orbit-planets
+    \item https://bl.ocks.org/sarah37/107471af4ec03186d2795f68db0c91ff
+    \item https://github.com/sarah37/solarsystem
+    \item https://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
+\end{itemize}
 
