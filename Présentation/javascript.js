@@ -16,7 +16,7 @@ function out(a) {
     counter += 1
 }
 
-var info = d3.json("../../Data_vis/ivandata.json", function(data) {
+var info = d3.json("../../Data_vis/Ivandata.json", function(data) {
     var planete = document.getElementsByTagName("H1")[1].getAttribute("id");
 
     if (planete == "" + planete + "") {
