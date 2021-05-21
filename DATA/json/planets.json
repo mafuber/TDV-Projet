@@ -94,7 +94,7 @@
     "cx": 10,
     "r": 6,
     "start": "undefined",
-    "rellipse": 3.5,
+    "rellipse": 3.6,
     "speed": 2550
   },
   {
@@ -133,7 +133,7 @@
     "cx": 15,
     "r": 11,
     "start": "undefined",
-    "rellipse": 5.2,
+    "rellipse": 5.35,
     "speed": 4150
   },
   {
@@ -172,7 +172,7 @@
     "cx": 20,
     "r": 5,
     "start": "undefined",
-    "rellipse": 6.9,
+    "rellipse": 7.1,
     "speed": 7800
   },
   {
@@ -211,7 +211,7 @@
     "cx": 26.3,
     "r": 37,
     "start": "undefined",
-    "rellipse": 9.1,
+    "rellipse": 9.2,
     "speed": 49200
   },
   {
@@ -250,7 +250,7 @@
     "cx": 35,
     "r": 30,
     "start": "undefined",
-    "rellipse": 12.21,
+    "rellipse": 12.4,
     "speed": 122100
   },
   {
@@ -289,7 +289,7 @@
     "cx": 41,
     "r": 22,
     "start": "undefined",
-    "rellipse": 14.33,
+    "rellipse": 14.6,
     "speed": 347600
   },
   {
@@ -328,7 +328,7 @@
     "cx": 46,
     "r": 20,
     "start": "undefined",
-    "rellipse": 16.05,
+    "rellipse": 16.1,
     "speed": 679500
   }
   ]

@@ -43,7 +43,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
       // Calc elapsed time.
       // var t_elapsed = d3.now() - _elapsed;
 
-      //   //   // Calculate how far through the desired time for one iteration.
+      // Calculate how far through the desired time for one iteration.
       // console.log(planets[i].orbitalVelocity)
       // console.log(elapsed)
       var t = t_elapsed / (parseFloat(planets[i].speed));
@@ -63,6 +63,17 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
   }
   // Creation of the SVG
   d3.select("svg")
+    .selectAll(".c")
+    .data(planets)
+    .enter()
+    .append("circle")
+    .attr("class", "c")
+    .attr("cx", function (d) { return parseFloat(0) + '%' })
+    .attr("r", function (d) { return parseFloat(d.rellipse)*2.895 + "%" })
+    .attr("fill", "none")
+    .attr("stroke", "white")
+
+  d3.select("svg")
     .selectAll(".p")
     .data(planets)
     .enter()
@@ -71,14 +82,6 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
     .attr("cx", function (d) { return parseInt(d.cx) + '%' })
     .attr("r", function (d) { return parseInt(d.r) })
     .attr("fill", function (d) { return "url(#" + d.name.toLowerCase() + ")" })
-    .attr("xlink:href", function(d){if(d.name == "Mercury"){return "1_Mercure.html"}})
-    .attr("xlink:href", function(d){if(d.name == "Venus"){return "2_Venus.html"}})
-    .attr("xlink:href", function(d){if(d.name == "Earth"){return "3_Terre.html"}})
-    .attr("xlink:href", function(d){if(d.name == "Mars"){return "4_Mars.html"}})
-    .attr("xlink:href", function(d){if(d.name == "Jupiter"){return "5_Jupiter.html"}})
-    .attr("xlink:href", function(d){if(d.name == "Saturn"){return "6_Saturne.html"}})
-    .attr("xlink:href", function(d){if(d.name == "Uranus"){return "7_Uranus.html"}})
-    .attr("xlink:href", function(d){if(d.name == "Neptune"){return "8_Neptune.html"}})
     // .attr("transform", function (d) { if (isNaN(d.x)) { return ""; } else { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" } })
     .on("mouseover", function (d) {
       // makes the tooltip appear on mouseover
@@ -108,6 +111,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
         .duration(200)
         .style("opacity", 0);
     })
+  
   /*.on("click", function(d){
     d3.select(this)
     .attr("xlink:href", function(d, i){
