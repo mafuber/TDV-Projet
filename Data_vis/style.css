@@ -51,3 +51,6 @@ select{
   background-color: #262626;
   color: white;
 }
+option:hover{
+  background-color: chocolate;
+}
