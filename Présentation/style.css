@@ -199,12 +199,14 @@ div.tooltip {
 }*/
 
 #title {
+    border-bottom: 1px solid white;
     color: white;
-}
-
-h1 {
-    padding: 40px;
-    text-align: center;
+    position: fixed;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    top: 0;
+    background-color: black;
 }
 
 
@@ -287,14 +289,6 @@ nav>ul li:hover .sous {
 
 */
 
-#page1 {
-    background-image: url('space_mainpage.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-}
-
 .main {
     position: fixed;
     top: 10%;
@@ -319,7 +313,7 @@ nav>ul li:hover .sous {
     border-radius: 12px;
     /*rounding the button's edges*/
     background-color: rgb(33, 23, 54);
-    border: none;
+    border: 1px solid white;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -329,5 +323,6 @@ nav>ul li:hover .sous {
 
 .textcentered {
     text-align: center;
-    top: 50%;
+    display: fixed;
+    top: 100;
 }
