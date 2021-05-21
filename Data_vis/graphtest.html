@@ -1,69 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Visualisations</title>
-        <script type="text/javascript" src="../D3/d3.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <link rel="stylesheet" type="text/css" href="../Présentation/style_hamburger.css" />
-        <link rel="stylesheet" type="text/css" href="../Présentation/style_button.css" />
-        <link rel="stylesheet" type="text/css" href="../Présentation/style_planets_html.css" />
-    </head>
-    <body>
-        <div class="container myDiv">
-            <nav class="navbar_ham" onclick="out(this)">
-                <!--nav definies a set of navigation links-->
-                <div class="hamburger-menu">
-                    <div class="line line-1"></div>
-                    <div class="line line-2"></div>
-                    <div class="line line-3"></div>
-                </div>
 
-                <ul class="nav-list">
+<head>
+    <meta charset="utf-8">
+    <title>Visualisations</title>
+    <script type="text/javascript" src="../D3/d3.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../Présentation/style_hamburger.css" />
+    <link rel="stylesheet" type="text/css" href="../Présentation/style_button.css" />
+    <link rel="stylesheet" type="text/css" href="../Présentation/style_planets_html.css" />
+</head>
 
-                    <li class="nav-item">
-                        <a href="../Présentation/0_index.html" class="nav-link">Système solaire</a>
-                    </li>
-    
-                    <li class="nav-item">
-                        <a href="../Présentation/Planets/1_Mercure.html" class="nav-link">Mercure</a>
-                    </li>
-    
-                    <li class="nav-item">
-                        <a href="../Présentation/Planets/2_Venus.html" class="nav-link">Venus</a>
-                    </li>
-    
-                    <li class="nav-item">
-                        <a href="../Présentation/Planets/3_Terre.html" class="nav-link">Terre</a>
-                    </li>
-    
-                    <li class="nav-item">
-                        <a href="../Présentation/Planets/4_Mars.html" class="nav-link">Mars</a>
-                    </li>
-    
-                    <li class="nav-item">
-                        <a href="../Présentation/Planets/5_Jupiter.html" class="nav-link">Jupiter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../Présentation/Planets/6_Saturne.html" class="nav-link">Saturn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../Présentation/Planets/7_Uranus.html" class="nav-link">Uranus</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../Présentation/Planets/8_Neptune.html" class="nav-link">Neptune</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="centeredGraph myDiv">
-            <div id="my_planets"></div>
-            <svg>
+<body class="index">
+    <div class="svgcentered">
+        <div id="my_planets"></div>
+        <svg width="0px" height="0px">
                 <defs>
                     <linearGradient id="Mercury" x1="0" y1="0" x2="0" y2="100%">
-                        <stop offset="0%" stop-color="#bf4c0d" />
-                        <stop offset="100%" stop-color="#bf4c0d" />
+                        <stop offset="0%" stop-color="#888787" />
+                        <stop offset="100%" stop-color="#888787" />
                     </linearGradient>
                     <linearGradient id="Venus" x1="0" y1="0" x2="0" y2="100%">
                         <stop offset="30%" stop-color="#f0990e" />
@@ -118,72 +74,119 @@
                     </linearGradient>
                 </defs>
             </svg>
-        </div>
-        <select style="width:20%;height:100%;">
-            <option value="1" onclick="GraphTypeChange(0,'',0)">Ground Composition</option>
-            <option value="2" onclick="GraphTypeChange(1,'',0)">Atmosphere</option>
-            <option value="3" onclick="GraphTypeChange(2,'mass',2)">Mass</option>
-            <option value="4" onclick="GraphTypeChange(2,'diameter',2)">Diameter</option>
-            <option value="5" onclick="GraphTypeChange(2,'density',2)">Density</option>
-            <option value="6" onclick="GraphTypeChange(2,'gravity',2)">Gravity</option>
-            <option value="7" onclick="GraphTypeChange(2,'escapeVelocity',2)">Escape Velocity</option>
-            <option value="8" onclick="GraphTypeChange(2,'rotationPeriod',2)">Rotation Period</option>
-            <option value="9" onclick="GraphTypeChange(2,'lengthOfDay',2)">Length Of The Day</option>
-            <option value="10" onclick="GraphTypeChange(2,'distanceFromSun',2)">Distance From The Sun</option>
-            <option value="11" onclick="GraphTypeChange(2,'meanTemperature',2)">Mean Temperature</option>
-            <option value="12" onclick="GraphTypeChange(2,'numberOfMoons',2)">Number Of Moons</option>
-            <option value="13" onclick="GraphTypeChange(3,'diameter',2)">Scatter Plot à choix</option>
+    </div>
+    <div style="padding-left: 25%;">
+        <select style="width:20%;">
+            <option  onclick="GraphTypeChange(0,'',0)">Ground Composition</option>
+            <option  onclick="GraphTypeChange(1,'',0)">Atmosphere</option>
+            <option  onclick="GraphTypeChange(2,'mass',2)">Mass</option>
+            <option  onclick="GraphTypeChange(2,'diameter',2)">Diameter</option>
+            <option  onclick="GraphTypeChange(2,'density',2)">Density</option>
+            <option  onclick="GraphTypeChange(2,'gravity',2)">Gravity</option>
+            <option  onclick="GraphTypeChange(2,'escapeVelocity',2)">Escape Velocity</option>
+            <option  onclick="GraphTypeChange(2,'rotationPeriod',2)">Rotation Period</option>
+            <option  onclick="GraphTypeChange(2,'lengthOfDay',2)">Length Of The Day</option>
+            <option  onclick="GraphTypeChange(2,'distanceFromSun',2)">Distance From The Sun</option>
+            <option  onclick="GraphTypeChange(2,'meanTemperature',2)">Mean Temperature</option>
+            <option  onclick="GraphTypeChange(2,'numberOfMoons',2)">Number Of Moons</option>
+            <option  onclick="GraphTypeChange(3,'diameter',2)">Scatter Plot à choix</option>
         </select>
         <select id="scatterplotoptions" style="width:20%;">
-            <option value="1" onclick="GraphTypeChange(3,'mass',1)">Mass</option>
-            <option value="1" onclick="GraphTypeChange(3,'diameter',1)">Diameter</option>
-            <option value="1" onclick="GraphTypeChange(3,'density',1)">Density</option>
-            <option value="1" onclick="GraphTypeChange(3,'gravity',1)">Gravity</option>
-            <option value="1" onclick="GraphTypeChange(3,'escapeVelocity',1)">Escape Velocity</option>
-            <option value="1" onclick="GraphTypeChange(3,'rotationPeriod',1)">Rotation Period</option>
-            <option value="1" onclick="GraphTypeChange(3,'lengthOfDay',1)">Length Of The Day</option>
-            <option value="1" onclick="GraphTypeChange(3,'distanceFromSun',1)">Distance From The Sun</option>
-            <option value="1" onclick="GraphTypeChange(3,'meanTemperature',1)">Mean Temperature</option>
-            <option value="1" onclick="GraphTypeChange(3,'numberOfMoons',1)">Number Of Moons</option>
+            
+            <option onclick="GraphTypeChange(3,'mass',1)">Mass</option>
+            <option onclick="GraphTypeChange(3,'diameter',1)">Diameter</option>
+            <option onclick="GraphTypeChange(3,'density',1)">Density</option>
+            <option onclick="GraphTypeChange(3,'gravity',1)">Gravity</option>
+            <option onclick="GraphTypeChange(3,'escapeVelocity',1)">Escape Velocity</option>
+            <option onclick="GraphTypeChange(3,'rotationPeriod',1)">Rotation Period</option>
+            <option onclick="GraphTypeChange(3,'lengthOfDay',1)">Length Of The Day</option>
+            <option onclick="GraphTypeChange(3,'distanceFromSun',1)">Distance From The Sun</option>
+            <option onclick="GraphTypeChange(3,'meanTemperature',1)">Mean Temperature</option>
+            <option onclick="GraphTypeChange(3,'numberOfMoons',1)">Number Of Moons</option>
         </select>
         <select id="scatterplotoptions" style="width:20%;">
-            <option value="1" onclick="GraphTypeChange(3,'mass',2)">Mass</option>
-            <option value="1" onclick="GraphTypeChange(3,'diameter',2)">Diameter</option>
-            <option value="1" onclick="GraphTypeChange(3,'density',2)">Density</option>
-            <option value="1" onclick="GraphTypeChange(3,'gravity',2)">Gravity</option>
-            <option value="1" onclick="GraphTypeChange(3,'escapeVelocity',2)">Escape Velocity</option>
-            <option value="1" onclick="GraphTypeChange(3,'rotationPeriod',2)">Rotation Period</option>
-            <option value="1" onclick="GraphTypeChange(3,'lengthOfDay',2)">Length Of The Day</option>
-            <option value="1" onclick="GraphTypeChange(3,'distanceFromSun',2)">Distance From The Sun</option>
-            <option value="1" onclick="GraphTypeChange(3,'meanTemperature',2)">Mean Temperature</option>
-            <option value="1" onclick="GraphTypeChange(3,'numberOfMoons',2)">Number Of Moons</option>
+            <option  onclick="GraphTypeChange(3,'mass',2)">Mass</option>
+            <option  onclick="GraphTypeChange(3,'diameter',2)">Diameter</option>
+            <option  onclick="GraphTypeChange(3,'density',2)">Density</option>
+            <option  onclick="GraphTypeChange(3,'gravity',2)">Gravity</option>
+            <option  onclick="GraphTypeChange(3,'escapeVelocity',2)">Escape Velocity</option>
+            <option  onclick="GraphTypeChange(3,'rotationPeriod',2)">Rotation Period</option>
+            <option  onclick="GraphTypeChange(3,'lengthOfDay',2)">Length Of The Day</option>
+            <option  onclick="GraphTypeChange(3,'distanceFromSun',2)">Distance From The Sun</option>
+            <option  onclick="GraphTypeChange(3,'meanTemperature',2)">Mean Temperature</option>
+            <option  onclick="GraphTypeChange(3,'numberOfMoons',2)">Number Of Moons</option>
         </select>
-        <div class="secondgraph myDiv">
-            <div id="my_dataviz1"></div>
-        </div>
-            <!--
-        <table style="background-color: black;position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
-            <tr>
-                <td>
-                    <div id="my_planets"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <select>
-                        <option value="1" onclick="GraphTypeChange(0)">Ground Composition</option>
-                        <option value="2" onclick="GraphTypeChange(1)">Atmosphere</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="my_dataviz1"></div>
-                </td>
-            </tr>
-        </table>-->
-        
-        <script type="text/javascript" src="graphtest.js"></script>
-        <script src="../Présentation/javascript.js" type="text/javascript"></script>
-    </body>
+        </br>
+        </br>
+
+    </div>
+    <div class="">
+        <div id="my_dataviz1"></div>
+    </div>
+
+    <script type="text/javascript" src="graphtest.js"></script>
+    <script src="../Présentation/javascript.js" type="text/javascript"></script>
+
+    <h1 class="titre">Le système solaire</h1>
+
+    <div class="container myDiv">
+        <nav class="navbar_ham" onclick="out(this)">
+            <!--nav definies a set of navigation links-->
+            <div class="hamburger-menu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="../Présentation/00_main.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Présentation/0_index.html" class="nav-link">Système solaire</a>
+                </li>
+                <li class="nav-item">
+                    <a href="graphtest.html" class="nav-link">Visualisation</a>
+                </li>
+                <ul class="nav_p">
+                    <li class="nav-planetes">Planètes</li>
+                    <li class="_nav-item">
+                        <a href="../Présentation/Planets/1_Mercure.html" class="nav-link">Mercure</a>
+                    </li>
+                    <li class="_nav-item">
+                        <a href="../Présentation/Planets/2_Venus.html" class="nav-link">Venus</a>
+                    </li>
+                    <li class="_nav-item">
+                        <a href="../Présentation/Planets/3_Terre.html" class="nav-link">Terre</a>
+                    </li>
+
+                    <li class="_nav-item">
+                        <a href="../Présentation/Planets/4_Mars.html" class="nav-link">Mars</a>
+                    </li>
+
+                    <li class="_nav-item">
+                        <a href="../Présentation/Planets/5_Jupiter.html" class="nav-link">Jupiter</a>
+                    </li>
+                    <li class="_nav-item">
+                        <a href="../Présentation/Planets/6_Saturne.html" class="nav-link">Saturn</a>
+                    </li>
+                    <li class="_nav-item">
+                        <a href="../Présentation/Planets/7_Uranus.html" class="nav-link">Uranus</a>
+                    </li>
+                    <li class="_nav-item">
+                        <a href="../Présentation/Planets/8_Neptune.html" class="nav-link">Neptune</a>
+                    </li>
+                </ul>
+                <li class="nav-item">
+                    <a href="https://www.youtube.com/watch?v=libKVRa01L8" class="nav-link">Video</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Présentation/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</body>
+
 </html>

@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="../style_hamburger.css" />
     <link rel="stylesheet" href="../style_button.css" />
     <link rel="stylesheet" href="../style_planets_html.css" />
-    <link href="../Pictures/index.jpg" rel="stylesheet" />
 </head>
 
 <body class="background">
 
-    <h1>Le système solaire</h1>
+    <h1 class="titre">Le système solaire</h1>
 
     <div class="container">
         <nav class="navbar_ham" onclick="out(this)">
@@ -27,83 +26,87 @@
                 <div class="line line-3"></div>
             </div>
 
-
             <ul class="nav-list">
-                <li class = "nav-item">
-                    <a href = "../0_index.html" class = "nav-link">Système solaire</a>
-                </li>
-
                 <li class="nav-item">
-
+                    <a href="../0_index.html" class="nav-link">Système solaire</a>
+                </li>
+                <li class="nav-item">
                     <a href="../00_main.html" class="nav-link">Accueil</a>
                 </li>
-
                 <li class="nav-item">
-
                     <a href="../../Data_vis/graphtest.html" class="nav-link">Visualisation</a>
                 </li>
-
-
                 <ul class="nav_p">
-
-
                     <li class="nav-planetes">Planètes</li>
-
                     <li class="_nav-item">
                         <a href="1_Mercure.html" class="_nav-link">Mercure</a>
                     </li>
-
                     <li class="_nav-item">
                         <a href="2_Venus.html" class="_nav-link">Venus</a>
                     </li>
-
                     <li class="_nav-item">
                         <a href="3_Terre.html" class="_nav-link">Terre</a>
                     </li>
-
                     <li class="_nav-item">
                         <a href="4_Mars.html" class="_nav-link">Mars</a>
                     </li>
-
                     <li class="_nav-item">
                         <a href="5_Jupiter.html" class="_nav-link">Jupiter</a>
                     </li>
-
                     <li class="_nav-item">
                         <a href="6_Saturne.html" class="_nav-link">Saturne</a>
                     </li>
-
                     <li class="_nav-item">
                         <a href="7_Uranus.html" class="_nav-link">Uranus</a>
                     </li>
-
                     <li class="_nav-item">
                         <a href="8_Neptune.html" class="_nav-link">Neptune</a>
                     </li>
-
                 </ul>
-
                 <li class="nav-item">
                     <a href="https://www.youtube.com/watch?v=libKVRa01L8" class="nav-link">Video</a>
                 </li>
                 <li class="nav-item">
                     <a href="../contact.html" class="nav-link">Contact</a>
                 </li>
-
             </ul>
         </nav>
     </div>
 
-
     <article class="global">
         <div class="space">
             <h1 id="Terre">Terre</h1>
-            Placez-vous sur la planète pour voir ses caractéristiques.
+            </br>
+            Description
+            </br>
         </div>
         <article class="paragraph">
             <div class="centered_container">
-                <div class="Terre">
-                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="paragraphe">
+                                <p class="newtext">
+                                    Notre planète <b>Terre</b> est la troisième planète par ordre d'éloignement au soleil et la cinquième plus grande du système solaire. Effectivement la terre est le seul objet celeste connu pour abriter de la vie (biosphère).
+                                    Grâce à son axe (circulaire) de rotation et avec une vitesse moyenne d'environ 30km/s; la terre orbite autour du soleil avec une période de révolution de 365 jours (année sidérale) à une distance moyenne de 150 millions
+                                    de kilomètres du soleil. Un jour est composé de 86'400secondes soit de 24h (jour sidéral). La Terre possède un axe de rotation ainsi qu'une inclisaison de 23° produisant ainsi les saisons. Malgré le fait que la terre
+                                    ne soit pas complètement ronde, son périmètre équatorial est d'environ 40'075km. Le satellite connu de la terre se nomme lune (fonction de stabiliser les marées). La terre est également connu comme la planète bleu,
+                                    nom dû par son taux élevé en eau (couverture de la surface à 71%). La masse de la terre est déterminé par diverses expériences scientifiques concluant ainsi d'une masse de 5.972x 10^24kg. La terre possède diverses composant
+                                    au sein de son atmosphère (riche en densité) et sur sa surface. Elle est principalement composée de fer (32,1 %), d'oxygène (30,1 %), de silicium (15,1 %), de magnésium (13,9 %), de soufre (2,9 %), de nickel (1,8 %),
+                                    de calcium (1,5 %) et d'aluminium (1,4 %), le reste (1,2 %) consistant en des traces d'autres éléments. La température varie en fonction de la saison (hiver, printemps, été, automne). Cependant la température moyennede
+                                    la terre est d'environ 15°C.
+                                </p>
+                            </div>
+                        </td>
+                        <td>
+                            &emsp;&emsp;Placez-vous sur l'image de la planète pour voir ses caractéristiques.
+                            </br>
+                            </br>
+                            <div class="Terre">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </article>
     </article>
@@ -111,12 +114,10 @@
 
     <article class="global">
         <div class="space">
-            Graphique
+            Composition de l'atmosphère
         </div>
         <article class="paragraph">
-            <div id="my_dataviz" style = "text-align:center;"></div>
-            <!--Placer des graphiques ici-->
-
+            <div id="my_dataviz" style="text-align:center;"></div>
         </article>
     </article>
     <br>
@@ -124,16 +125,16 @@
     <ul>
         <li>
             <span>
-          <a href= "../Planets/2_Venus.html" class = "button_last" >last one</a>
+          <a href= "../Planets/2_Venus.html" class = "button_last" >Venus</a>
         </span>
             <span>
-          <a href = "../Planets/4_Mars.html" id = "button_next">next one</a>
+          <a href = "../Planets/4_Mars.html" id = "button_next">Mars</a>
         </span>
         </li>
     </ul>
 
     <footer>
-        <a href="../0_index.html" class="button_overview">View all</a>
+        <a href="../0_index.html" class="button_overview">Accueil</a>
     </footer>
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
     <script src="../javascript.js" type="text/javascript"></script>
