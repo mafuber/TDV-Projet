@@ -101,7 +101,7 @@
     }],
 
     "Mars": [{
-        "mass": 0.642,
+        "mass": 6.42,
         "diameter": 6792.0,
         "diameternextplanet": 142984.0,
         "density": 3933.0,
@@ -135,7 +135,7 @@
     }],
 
     "Jupiter": [{
-        "mass": 1898.0,
+        "mass": 1898,
         "diameter": 142984.0,
         "diameternextplanet": 120536.0,
         "density": 1326.0,
@@ -169,7 +169,7 @@
     }],
 
     "Saturne": [{
-        "mass": 568.0,
+        "mass": 5684,
         "diameter": 120536.0,
         "diameternextplanet": 51118.0,
         "density": 687.0,
@@ -203,7 +203,7 @@
     }],
 
     "Uranus": [{
-        "mass": 86.8,
+        "mass": 868.1,
         "diameter": 51118.0,
         "diameternextplanet": 49528.0,
         "density": 1271.0,
@@ -237,7 +237,7 @@
     }],
 
     "Neptune": [{
-        "mass": 102.0,
+        "mass": 1024,
         "diameter": 49528.0,
         "diameternextplanet": 2370.0,
         "density": 1638.0,
@@ -252,7 +252,7 @@
         "orbitalVelocity": 5.4,
         "orbitalInclination": 1.8,
         "orbitalEccentricity": 0.011,
-        "obliquityToOrbit": 28.3,
+        "obliquityToOrbit": 28.32,
         "meanTemperature": -200.0,
         "surfacePressure": null,
         "numberOfMoons": 14,

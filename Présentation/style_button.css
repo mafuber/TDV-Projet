@@ -18,13 +18,14 @@
     /*Grossbuchstaben*/
     /*freier Platz darum*/
     position: relative;
-    padding: 3px;
+    padding: 25px;
     margin: 25px;
     text-decoration: none;
     /*underlined none*/
     /*left centering*/
     position: fixed;
     margin: 0;
+    margin-left: 2%;
     top: 50%;
     left: 0;
 }
@@ -88,12 +89,13 @@
     text-transform: uppercase;
     /*Grossbuchstaben*/
     position: relative;
-    padding: 3px 0;
+    padding: 25px;
     margin: 25px;
     text-decoration: none;
     /*underlined none*/
     position: fixed;
     margin: 0;
+    margin-right: 2%;
     top: 50%;
     right: 0;
     transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -111,10 +113,8 @@
     text-transform: uppercase;
     /*Grossbuchstaben*/
     position: relative;
-    padding: 3px 0;
+    padding: 25px;
     margin: 25px;
     text-decoration: none;
-    /*underlined none*/
-    bottom: 0;
-    left: 45%;
+    left: 43%;
 }
