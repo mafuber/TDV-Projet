@@ -95,8 +95,7 @@ td {
 }
 
 .newtext {
-    text-decoration: underline 2px;
+    text-decoration: underline 1px;
     margin: 10px;
     font-size: 17px;
-    text-align: justify;
 }

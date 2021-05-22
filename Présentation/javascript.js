@@ -75,7 +75,7 @@ var info = d3.json("../../Data_vis/Ivandata.json", function(data) {
 
             texto.append("text")
                 .attr("dy", "17em")
-                .attr("x", "20")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Période de rotation : " + d.rotationPeriod + " jours"
