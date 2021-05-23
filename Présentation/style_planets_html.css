@@ -3,30 +3,12 @@
     min-width: 600px;
     max-width: 2000px;
     margin: 0px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     color: white;
 }
 
 body {
     background-color: Black;
 }
-
-
-/*Planet Bild positionieren
-
-#planet {
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-*/
-
-
-/*Planeten erscheinen rotierend*/
 
 @keyframes transitionIn {
     from {
@@ -77,11 +59,19 @@ h1 {
 
 .centered_container {
     animation: transitionIn 1s;
+    margin: 10px;
     border: 1px solid black;
     text-align: left;
 }
 
+#my_dataviz {
+    animation: transitionIn 1s;
+    margin: 10px;
+    text-align: center;
+}
+
 td {
+    vertical-align: top;
     width: 50%;
 }
 
@@ -99,7 +89,13 @@ td {
     margin-top: 150px;
 }
 
-.newtext {
-    font-size: 16px;
+.paragraphe {
+    margin: 10px;
     text-align: justify;
+}
+
+.newtext {
+    text-decoration: underline 1px;
+    margin: 10px;
+    font-size: 17px;
 }

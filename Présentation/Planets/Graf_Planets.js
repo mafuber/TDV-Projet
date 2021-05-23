@@ -1,10 +1,12 @@
-window.onresize = function(){ 
-  console.log("fghgf"); location.reload(); }
+window.onresize = function() {
+    console.log("fghgf");
+    location.reload();
+}
 console.log("jdkfjsaldjföladskjf")
-const width_document  = window.innerWidth;
+const width_document = window.innerWidth;
 const height_document = window.innerHeight;
 
-var width = width_document/4
+var width = width_document / 4
 
 var margin = 20
 
@@ -12,14 +14,14 @@ var radius = width / 2 - margin
 
 // append the svg object to the div called 'my_dataviz'
 var svg = d3.select("#my_dataviz")
-  .append("svg")
-    .attr("width", width *1.5)
+    .append("svg")
+    .attr("width", width * 1.5)
     .attr("height", width)
-  .append("g")
-    .attr("transform", "translate(" + width *1.5/ 2 + "," + width / 2 + ")");
+    .append("g")
+    .attr("transform", "translate(" + width * 1.5 / 2 + "," + width / 2 + ")");
 
-d3.json("data.json", function(data){
-    var planet = document.getElementsByTagName("H1")[1].getAttribute("id")  //der aktuelle Planet
+d3.json("data.json", function(data) {
+    var planet = document.getElementsByTagName("H1")[1].getAttribute("id") //der aktuelle Planet
     var Werte = data[planet][0]
     var Datas = {"CarbonDioxid": Werte.carbonDioxide, "nitrogen": Werte.nitrogen, "oxygen": Werte.argon, "methan": Werte.methane, "sodium" : Werte.sodium, "hydrogen" : Werte.hydrogen, "helium" : Werte.helium, "other": Werte.other}
   
