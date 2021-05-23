@@ -20,7 +20,7 @@ body{
 	display: block;
 	margin-left: 20%;
 	margin-right: 20%;
-	background: black;
+	background: rgb(124, 51, 28);
   }
   
   .global > h2, .paragraph {
