@@ -1,3 +1,6 @@
+/*Les planètes ne tournent pas trop mal sur Chrome et Edge
+mais leur trajectoire ne fonctionne pas très bien sur Firefox*/ 
+
 var orbitsOn = true;
 
 
@@ -25,7 +28,6 @@ var div = d3.select("body")
 
 elap = 0;
 // load the json
-<<<<<<< HEAD
 d3.json('../DATA/json/planets.json', function (error, planets) {
   // Check your console to detect potential errors while loading data
   if (error) throw ('There was an error while getting data: ' + error);
@@ -47,7 +49,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
       // console.log(elapsed)
       var t = t_elapsed / (parseFloat(planets[i].speed));
       // console.log(t)
-      //   //   // Calculate new x/y positions
+      // Calculate new x/y positions
       var rotation_radius = parseFloat(planets[i].rellipse);
       var t_angle = (2 * Math.PI) * t;
       var t_x = rotation_radius * Math.cos(t_angle);
@@ -68,7 +70,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
     .append("circle")
     .attr("class", "c")
     .attr("cx", function (d) { return parseFloat(0) + '%' })
-    .attr("r", function (d) { return parseFloat(d.rellipse)*2.9 + "%" })
+    .attr("r", function (d) { return parseFloat(d.rellipse)*2.92 + "%" })
     .attr("fill", "none")
     .attr("stroke", "white")
 
@@ -102,105 +104,16 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
 
     })
     .on("mouseout", function (d) {
-=======
-d3.json('../DATA/json/planets.json', function(error, planets) {
-    // Check your console to detect potential errors while loading data
-    if (error) throw ('There was an error while getting data: ' + error);
-    // console.log(planets)
-    // timer adapted from http://bl.ocks.org/cloudshapes/5662234
-    // Kick off the timer, and the action begins: 
-    d3.interval(tickFn, 20);
-
-    function tickFn(_elapsed) {
-        var t_elapsed = _elapsed;
-        // // Process all circles data. 
-        for (var i = 1; i < planets.length; i++) {
-            t_circleData = planets[i]
-                // console.log(planets[i].start)
-            t_circleData.start = _elapsed
-                // Calc elapsed time.
-                // var t_elapsed = d3.now() - _elapsed;
-
-            // Calculate how far through the desired time for one iteration.
-            // console.log(planets[i].orbitalVelocity)
-            // console.log(elapsed)
-            var t = t_elapsed / (parseFloat(planets[i].speed));
-            // console.log(t)
-            //   //   // Calculate new x/y positions
-            var rotation_radius = parseFloat(planets[i].rellipse);
-            var t_angle = (2 * Math.PI) * t;
-            var t_x = rotation_radius * Math.cos(t_angle);
-            var t_y = rotation_radius * Math.sin(t_angle);
-            planets[i].x = t_x - rotation_radius;
-            planets[i].y = t_y;
-            //console.log(planets[i].x)
-            elap = d3.now();
-            d3.selectAll(".p").attr("transform", function(d) { if (isNaN(d.x)) { return ""; } else { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" } });
-
-        }
-    }
-    // Creation of the SVG
-    d3.select("svg")
-        .selectAll(".c")
-        .data(planets)
-        .enter()
-        .append("circle")
-        .attr("class", "c")
-        .attr("cx", function(d) { return parseFloat(0) + '%' })
-        .attr("r", function(d) { return parseFloat(d.rellipse) * 2.94 + "%" })
-        .attr("fill", "none")
-        .attr("stroke", "white")
-
-    d3.select("svg")
-        .selectAll(".p")
-        .data(planets)
-        .enter()
-        .append("circle")
-        .attr("class", "p")
-        .attr("cx", function(d) { return parseInt(d.cx) + '%' })
-        .attr("r", function(d) { return parseInt(d.r) })
-        .attr("fill", function(d) { return "url(#" + d.name.toLowerCase() + ")" })
-        // .attr("transform", function (d) { if (isNaN(d.x)) { return ""; } else { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" } })
-        .on("mouseover", function(d) {
-            // makes the tooltip appear on mouseover
-            console.log("mouseover")
-            d3.select(this)
-                .style("stroke", "white")
-                .style("stroke-width", 1)
-            div.transition()
-                .duration(200)
-                .style("opacity", .9);
-            div.html("Nom: " + d.name + "</br>" +
-                    "Masse: " + d.mass + " x 10^(24) kg" + "</br>" +
-                    "Diamètre: " + d.diameter + " km" + "</br>" +
-                    "Température moyenne: " + d.meanTemperature + " °C" + "</br>" +
-                    "Période de rotation: " + d.rotationPeriod + " h" + "</br>" +
-                    "Nombre de lunes: " + d.numberOfMoons + "</br>")
-                .style("left", (d3.event.pageX) + "px")
-                .style("top", (d3.event.pageY - 28) + "px");
-
-        })
-        .on("mouseout", function(d) {
-            d3.select(this)
-                .style("stroke-width", 0)
-                //makes the tooltip disappear on mouseout
-
-            div.transition()
-                .duration(200)
-                .style("opacity", 0);
-        })
-
-    /*.on("click", function(d){
->>>>>>> d812d64d0e357cb8fbc24eb70d54c5debe9e6423
       d3.select(this)
-      .attr("xlink:href", function(d, i){
-        return "Planets/" + i + "_" + d.name + ".html"
-      })*/
+        .style("stroke-width", 0)
+      //makes the tooltip disappear on mouseout
+
+      div.transition()
+        .duration(200)
+        .style("opacity", 0);
+    })
 
 });
-
-
-
 
 
 

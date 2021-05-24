@@ -89,49 +89,49 @@ var info = d3.json("../../Data_vis/Ivandata.json", function(data) {
                 })
             texto.append("text")
                 .attr("dy", "12em")
-                .attr("x", "" + width / 1.3 + "")
+                .attr("x", "" + width / 1.1 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Distance au soleil : " + d.distanceFromSun + " millions de km"
                 })
             texto.append("text")
                 .attr("dy", "13em")
-                .attr("x", "" + width / 1.3 + "")
+                .attr("x", "" + width / 1.1 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Période orbitale : " + d.orbitalPeriod + " jours"
                 })
             texto.append("text")
                 .attr("dy", "14em")
-                .attr("x", "" + width / 1.3 + "")
+                .attr("x", "" + width / 1.1 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Période de révolution : " + d.orbitalVelocity + " km/s"
                 })
             texto.append("text")
                 .attr("dy", "15em")
-                .attr("x", "" + width / 1.3 + "")
+                .attr("x", "" + width / 1.1 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Inclinaison sur l'écliptique : " + d.orbitalInclination + " °"
                 })
             texto.append("text")
                 .attr("dy", "16em")
-                .attr("x", "" + width / 1.3 + "")
+                .attr("x", "" + width / 1.1 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Température moyenne : " + d.meanTemperature + " °C"
                 })
             texto.append("text")
                 .attr("dy", "17em")
-                .attr("x", "" + width / 1.3 + "")
+                .attr("x", "" + width / 1.1 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Pression de surface : " + d.surfacePressure + " Pa"
                 })
             texto.append("text")
                 .attr("dy", "18em")
-                .attr("x", "" + width / 1.3 + "")
+                .attr("x", "" + width / 1.1 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Nombre de lunes : " + d.numberOfMoons
