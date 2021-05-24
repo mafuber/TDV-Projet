@@ -92,12 +92,13 @@ svg
       .select(this)
       .attr("fill", function(d){return (color(d.data.key))})
       .style("stroke-width", "2px")
-      .style("stroke", "black")
+      .style("stroke", "black");
         //makes the tooltip disappear on mouseout
   
     d3
       .selectAll(".tooltip")
       .style("opacity", 0)  
+
       })
   
 // The arc generator
