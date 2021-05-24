@@ -49,7 +49,7 @@ d3.json('../DATA/json/planets.json', function(error, planets) {
             var t = t_elapsed / (parseFloat(planets[i].speed));
             // console.log(t)
             //   //   // Calculate new x/y positions
-            var rotation_radius = parseFloat(planets[i].rellipse) - 0.6;
+            var rotation_radius = parseFloat(planets[i].rellipse);
             var t_angle = (2 * Math.PI) * t;
             var t_x = rotation_radius * Math.cos(t_angle);
             var t_y = rotation_radius * Math.sin(t_angle);
