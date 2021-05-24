@@ -55,6 +55,8 @@ h1 {
     padding: 40px;
     text-align: center;
     border-bottom: 5px solid chocolate;
+    position:relative;
+    left: -4%;
 }
 
 .centered_container {
@@ -77,6 +79,7 @@ td {
 
 .titre {
     position: fixed;
+    left: -4%;
     width: 100%;
     padding: auto;
     margin: auto;
