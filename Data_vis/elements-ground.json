@@ -1,40 +1,36 @@
+
+
+
 {
     "data1": [
         { "name": "Metals", "percentage": 0.7 },
         { "name": "Silicate Materials ", "percentage": 0.3}
     ],
+    
     "data2": [
-        { "name": "Bare Rocks", "percentage": 0.75 },
-        { "name": "Nitrogen", "percentage": 0.04},
-        { "name": "Oxygen", "percentage": 0},
-        { "name": "Argon", "percentage": 0 },
-        { "name": "Methane", "percentage": 0 },
-        { "name": "Sodium", "percentage": 0 },
-        { "name": "Hydrogen", "percentage": 0 },
-        { "name": "Helium", "percentage": 0},
-        { "name": "Other", "percentage": 0 }
+        { "name": "Quartz", "percentage": 0.45 },
+        { "name": "Aluminimum", "percentage": 0.16},
+        { "name": "Iron", "percentage": 0.09},
+        { "name": "Magnesium", "percentage": 0.11 },
+        { "name": "Calcium", "percentage": 0.07},
+        { "name": "Potassium", "percentage": 0.04 },
+        { "name": "Others", "percentage": 0.08 }
     ],
     "data3": [
-        { "name": "Carbon Dioxide", "percentage": 0.4 },
-        { "name": "Nitrogen", "percentage": 0.78},
-        { "name": "Oxygen", "percentage": 0.21},
-        { "name": "Argon", "percentage": 0.01},
-        { "name": "Methane", "percentage": 0 },
-        { "name": "Sodium", "percentage": 0 },
-        { "name": "Hydrogen", "percentage": 0 },
-        { "name": "Helium", "percentage": 0},
-        { "name": "Other", "percentage": 0 }
+        { "name": "Iron", "percentage": 0.32 },
+        { "name": "Oxygen", "percentage": 0.30},
+        { "name": "Silicon", "percentage": 0.15},
+        { "name": "Magnesium", "percentage": 0.13},
+        { "name": "Sulfur", "percentage": 0.02 },
+        { "name": "Others", "percentage": 0.08 }
     ],
     "data4": [
-        { "name": "Carbon Dioxide", "percentage": 0.3 },
-        { "name": "Nitrogen", "percentage": 0.027},
-        { "name": "Oxygen", "percentage": 0},
-        { "name": "Argon", "percentage": 0.016},
-        { "name": "Methane", "percentage": 0 },
-        { "name": "Sodium", "percentage": 0 },
-        { "name": "Hydrogen", "percentage": 0 },
-        { "name": "Helium", "percentage": 0},
-        { "name": "Other", "percentage": 0.007 }
+        { "name": "Iron", "percentage": 0.14 },
+        { "name": "Oxygen", "percentage": 0.43},
+        { "name": "Silicon", "percentage": 0.23},
+        { "name": "Magnesium", "percentage": 0.055},
+        { "name": "Aluminium", "percentage": 0.056 },
+        { "name": "Others", "percentage": 0.089 }
     ],
     "data5": [
         { "name": "Carbon Dioxide", "percentage": 0 },
@@ -43,12 +39,12 @@
         { "name": "Argon", "percentage": 0},
         { "name": "Methane", "percentage": 0 },
         { "name": "Sodium", "percentage": 0 },
-        { "name": "Hydrogen", "percentage": 0.898 },
+        { "name": "Hydrogen", "percentage": 0.898},
         { "name": "Helium", "percentage": 0.102},
         { "name": "Other", "percentage": 0}
     ],
     "data6": [
-        { "name": "Carbon Dioxide", "percentage": 0.1 },
+        { "name": "Carbon Dioxide", "percentage": 0 },
         { "name": "Nitrogen", "percentage": 0},
         { "name": "Oxygen", "percentage": 0},
         { "name": "Argon", "percentage": 0},
@@ -79,7 +75,6 @@
         { "name": "Hydrogen", "percentage": 0.8},
         { "name": "Helium", "percentage": 0.19},
         { "name": "Other", "percentage": 0}
-
     ],
     "data9": [
         { "name": "Carbon Dioxide", "percentage": 0.08 },

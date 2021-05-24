@@ -39,5 +39,18 @@ select.visible{
 svg{
   width: 85%;
   position: relative;
-  left: 45%; 
+  left: 25%; 
+}
+option{
+  font-family: Dosis;
+  background-color: #262626;
+  color: white;
+}
+select{
+  font-family: Dosis;
+  background-color: #262626;
+  color: white;
+}
+option:hover{
+  background-color: chocolate;
 }

@@ -16,7 +16,7 @@ function out(a) {
     counter += 1
 }
 
-var info = d3.json("../../Data_vis/ivandata.json", function(data) {
+var info = d3.json("../../Data_vis/Ivandata.json", function(data) {
     var planete = document.getElementsByTagName("H1")[1].getAttribute("id");
 
     if (planete == "" + planete + "") {
@@ -34,40 +34,40 @@ var info = d3.json("../../Data_vis/ivandata.json", function(data) {
 
             texto.append("text")
                 .attr("dy", "10em")
-                .attr("dx", "50")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text("En résumé :")
             texto.append("text")
                 .attr("dy", "12em")
-                .attr("dx", "50")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Masse de la planète : " + d.mass + " x 10^(23) kg";
                 })
             texto.append("text")
                 .attr("dy", "13em")
-                .attr("dx", "50")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Diamètre de la planète : " + d.diameter + " km"
                 })
             texto.append("text")
                 .attr("dy", "14em")
-                .attr("dx", "50")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Densité de la planète : " + d.density + " g/dm^3"
                 })
             texto.append("text")
                 .attr("dy", "15em")
-                .attr("dx", "50")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Mesure de la gravité : " + d.gravity + " m/s^2"
                 })
             texto.append("text")
                 .attr("dy", "16em")
-                .attr("dx", "50")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Vitesse de libération : " + d.escapeVelocity + " km/s^2"
@@ -75,14 +75,14 @@ var info = d3.json("../../Data_vis/ivandata.json", function(data) {
 
             texto.append("text")
                 .attr("dy", "17em")
-                .attr("x", "50")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Période de rotation : " + d.rotationPeriod + " jours"
                 })
             texto.append("text")
                 .attr("dy", "18em")
-                .attr("dx", "50")
+                .attr("dx", "20")
                 .attr("font-size", "21px")
                 .text(function(d) {
                     return "Longeur d'une journée : " + d.lengthOfDay + " h"
@@ -92,7 +92,7 @@ var info = d3.json("../../Data_vis/ivandata.json", function(data) {
                 .attr("x", "" + width / 2 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
-                    return "Distance au soleil : " + d.distanceFromSun + " km"
+                    return "Distance au soleil : " + d.distanceFromSun + " millions de km"
                 })
             texto.append("text")
                 .attr("dy", "13em")
@@ -106,14 +106,14 @@ var info = d3.json("../../Data_vis/ivandata.json", function(data) {
                 .attr("x", "" + width / 2 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
-                    return "Période de révolution : " + d.orbitalVelocity + " jours"
+                    return "Période de révolution : " + d.orbitalVelocity + " km/s"
                 })
             texto.append("text")
                 .attr("dy", "15em")
                 .attr("x", "" + width / 2 + "")
                 .attr("font-size", "21px")
                 .text(function(d) {
-                    return "Inclinaison sur l'écliptique : " + d.orbitalInclination + " jours"
+                    return "Inclinaison sur l'écliptique : " + d.orbitalInclination + " °"
                 })
             texto.append("text")
                 .attr("dy", "16em")
