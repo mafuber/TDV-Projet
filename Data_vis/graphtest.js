@@ -15,7 +15,7 @@ https://nssdc.gsfc.nasa.gov/planetary/factsheet/
 
 //Definition of a few global variables and attribute a class
 
-var graphType = 0;
+var graphType = 1;
 var scatterxOption = "numberOfMoons";
 var scatteryOption = "diameter";
 var OldSelection = 1;
@@ -148,6 +148,7 @@ function GraphUpdate(choice) {
     //first option: the ground data:
     if (graphType == 0) {
         d3.json("elements-ground.json").then(function(d) {
+            console.log(data);
             if (choice == 1) {
                 data = d.data1;
             } else if (choice == 2) {
@@ -230,6 +231,7 @@ function GraphUpdate(choice) {
                 data = d.data8;
             }
             console.log(data)
+            width = 630;
             svg1.selectAll("text").remove();
             var xScale = d3.scaleLinear()
                 .domain([0, 1])
@@ -399,4 +401,4 @@ function GraphUpdate(choice) {
     }
 }
 //Calling the function when the page launches
-GraphUpdate(3);
+GraphUpdate(1);

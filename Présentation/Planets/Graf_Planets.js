@@ -30,7 +30,7 @@ d3.json("data.json", function(data) {
 var color = d3.scaleOrdinal()
   .domain([0, d3.max(Object.values(Datas))])
   //.range(["#ba0298", "#a802ba", "#8902ba", "#7c02ba", "#6a02ba", "#5902ba", "#4102ba", "#2c02ba"])
-  .range(["#ff6600", "#cc5100", "#e67e30", "#993d00", "#7f3300", "#c46210", "#662800", "#4c1e00"])
+  .range(["#ff6600", "#cc5100", "#e67e30", "#993d00", "#7f3300", "#662800", "#4c1e00"])
   
   //.range(["#ff6600", "#cc5100","#7f3300","#993d00", "#662800", "#190a00"])
   
@@ -92,12 +92,13 @@ svg
       .select(this)
       .attr("fill", function(d){return (color(d.data.key))})
       .style("stroke-width", "2px")
-      .style("stroke", "black")
+      .style("stroke", "black");
         //makes the tooltip disappear on mouseout
   
     d3
       .selectAll(".tooltip")
       .style("opacity", 0)  
+
       })
   
 // The arc generator
