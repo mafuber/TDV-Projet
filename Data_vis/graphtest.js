@@ -191,6 +191,13 @@ function GraphUpdate(choice) {
                 .call(d3.axisBottom(xScale))
                 .style("color", "white")
                 .attr("transform", "translate(" + 0 + "," + height + ")");
+            
+                svg1.append("text")
+                .attr("x", width / 2.2)
+                .attr("y", height + 35)
+                .attr("font-size", "100%")
+                .style("fill", "white")
+                .text("percentage");
 
             //remove the circle if the scatter plot was called before
             svg1.selectAll("circle").remove();
@@ -256,6 +263,14 @@ function GraphUpdate(choice) {
                 .style("color", "white")
                 .attr("transform", "translate(" + 0 + "," + height + ")");
             svg1.selectAll("circle").remove();
+
+            svg1.append("text")
+            .attr("x", width / 2.2)
+            .attr("y", height + 35)
+            .attr("font-size", "100%")
+            .style("fill", "white")
+            .text("percentage");
+            
             var u = svg1.selectAll("rect")
                 .data(data)
 
