@@ -69,10 +69,13 @@ Pour une approximation générale, nous avons probablement travaillé en moyenne
 
 Jessica:
 
+<<<<<<< HEAD
 $ $
 
 Kira: Un apprentissage important fut, pour ma part, qu'il est essentiel de ne pas avoir 
 trop d'attentes par rapport au rendu d'un projet, car, au final, il ne sera jamais exactement
+=======
+>>>>>>> e56fca0296d0703b85cfef4c9a0759887d66a1c0
 Sources Jessica
 
 Hamburger Menu 
@@ -96,7 +99,7 @@ qui n'a pas toujours été des plus simples mais dont j'ai beaucoup appris.
 
 $ $
 
-Michel:
+Michel: Lors de ce projet je me suis principalement concentré sur la partie avec la visualisation de données. 
 
 $ $
 
