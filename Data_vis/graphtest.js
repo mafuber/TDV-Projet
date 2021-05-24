@@ -382,7 +382,7 @@ function GraphUpdate(choice) {
             svg1.append("text")
                 .attr("x", -width / 10)
                 .attr("y", height / 2)
-                .attr("transform", "translate(-200,120)rotate(-90)")
+                .attr("transform", "translate(-140,60)rotate(-90)")
                 .attr("font-size", "100%")
                 .style("fill", "white")
                 .text("" + scatteryOption);
