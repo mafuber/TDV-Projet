@@ -41,10 +41,9 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
       // console.log(planets[i].start)
       t_circleData.start = _elapsed
       // Calc elapsed time.
-      // var t_elapsed = d3.now() - _elapsed;
+      //var t_elapsed = d3.now() - _elapsed;
 
       // Calculate how far through the desired time for one iteration.
-      // console.log(planets[i].orbitalVelocity)
       // console.log(elapsed)
       var t = t_elapsed / (parseFloat(planets[i].speed));
       // console.log(t)
@@ -69,7 +68,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
     .append("circle")
     .attr("class", "c")
     .attr("cx", function (d) { return parseFloat(0) + '%' })
-    .attr("r", function (d) { return parseFloat(d.rellipse)*2.94 + "%" })
+    .attr("r", function (d) { return parseFloat(d.rellipse)*2.9 + "%" })
     .attr("fill", "none")
     .attr("stroke", "white")
 
@@ -79,7 +78,7 @@ d3.json('../DATA/json/planets.json', function (error, planets) {
     .enter()
     .append("circle")
     .attr("class", "p")
-    .attr("cx", function (d) { return parseInt(d.cx) + '%' })
+    .attr("cx", function (d) { return parseFloat(d.cx) + '%' })
     .attr("r", function (d) { return parseInt(d.r) })
     .attr("fill", function (d) { return "url(#" + d.name.toLowerCase() + ")" })
     // .attr("transform", function (d) { if (isNaN(d.x)) { return ""; } else { return "translate(" + posScale(parseFloat(d.x)) + "," + posScale(parseFloat(d.y)) + ")" } })

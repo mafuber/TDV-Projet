@@ -69,12 +69,10 @@ Pour une approximation générale, nous avons probablement travaillé en moyenne
 
 Jessica:
 
-<<<<<<< HEAD
 $ $
 
 Kira: Un apprentissage important fut, pour ma part, qu'il est essentiel de ne pas avoir 
 trop d'attentes par rapport au rendu d'un projet, car, au final, il ne sera jamais exactement
-=======
 Sources Jessica
 
 Hamburger Menu 
@@ -90,7 +88,6 @@ Le
 
 Kira: Un apprentissage important fut, pour ma part, qu'il est important de ne pas avoir 
 trop d'attentes par rapport au rendu d'un projet, car au final il ne sera jamais exactement
->>>>>>> 7e9dcead96444e063fceda2ad5e65daba50caff6
 comme on l'avait imaginé au départ. Le projet m'a également appris à utiliser Internet de manière plus efficace comme outil d'éducation.
 Ayant toujours été fascinée par l'astronomie, cela m'a beaucoup plu de pouvoir travailler sur un projet en lien avec le sujet. 
 Malgré la grande frustration de travailler parfois des heures sur un problème sans succès, la satisfaction est d'autant plus grande lorsqu'on arrive
@@ -123,10 +120,7 @@ Ces sites nous ont servi d'inspiration ou d'aide pour le code:
     \item https://github.com/sarah37/solarsystem
     \item https://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
 \end{itemize}
-<<<<<<< HEAD
 \subsection{Images}
-=======
-\subsection{Sources des images}
 \item image accueil espace: https://c.wallhere.com/photos/61/2e/space_TylerCreatesWorlds_space_art_digital_art_artwork_nebula_orange-163304.jpg!d
 \item image mercure: https://www.lactugeek.com/wp-content/uploads/2020/03/mercure-plan%C3%A8te.jpg
 \item image venus: https://file1.science-et-vie.com/var/scienceetvie/storage/images/1/0/7/107478/pourquoi-mercure-venus-ont-satellite.jpg?alias=exact1024x768_l
@@ -136,7 +130,6 @@ Ces sites nous ont servi d'inspiration ou d'aide pour le code:
 \item image saturne: https://cap.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fdegts.2F2020.2F04.2F23.2Fa00ab0e9-329a-4da2-bb72-2b75dcad4b04.2Epng/1120x1120/quality/80/thumbnail.png
 \item image uranus: https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg
 \item image neptune: https://www.planetenweg-mosel.de/planetenbilder/neptun-m.png
->>>>>>> 7e9dcead96444e063fceda2ad5e65daba50caff6
 \begin{itemize}
     \item  
 \end{itemize}
