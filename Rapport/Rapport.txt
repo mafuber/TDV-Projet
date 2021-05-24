@@ -123,9 +123,6 @@ Ces sites nous ont servi d'inspiration ou d'aide pour le code:
     \item https://github.com/sarah37/solarsystem
     \item https://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
 \end{itemize}
-<<<<<<< HEAD
-\subsection{Images}
-=======
 \subsection{Sources des images}
 \item image accueil espace: https://c.wallhere.com/photos/61/2e/space_TylerCreatesWorlds_space_art_digital_art_artwork_nebula_orange-163304.jpg!d
 \item image mercure: https://www.lactugeek.com/wp-content/uploads/2020/03/mercure-plan%C3%A8te.jpg
@@ -136,7 +133,6 @@ Ces sites nous ont servi d'inspiration ou d'aide pour le code:
 \item image saturne: https://cap.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fdegts.2F2020.2F04.2F23.2Fa00ab0e9-329a-4da2-bb72-2b75dcad4b04.2Epng/1120x1120/quality/80/thumbnail.png
 \item image uranus: https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg
 \item image neptune: https://www.planetenweg-mosel.de/planetenbilder/neptun-m.png
->>>>>>> 7e9dcead96444e063fceda2ad5e65daba50caff6
 \begin{itemize}
     \item  
 \end{itemize}
