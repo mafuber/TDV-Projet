@@ -58,7 +58,7 @@ De plus, l'utilisation de Javascript et de d3 ne fut pas non plus une tâche év
 Cela a été un grand problème lorsque nous voulions réadapter du code d'Internet. Nous avons également dû regarder un certain nombre de tutoriels Youtube pour réellement comprendre la matière.
 
 \subsection{Temps investi}
-Comme nous n'avons pas travaillé sur le projet d'une traite, il est difficile d'estimer le temps qu'il nous a pris pour le compléter. 
+Comme nous n'avons pas travaillé sur le projet d'une traite, il est difficile d'estimer le temps que nous avons pris pour le compléter. 
 Pour une approximation générale, nous avons probablement travaillé en moyenne 2-3 jours entiers (~8h par jour) par semaine dessus, voire un peu plus.
 
 
@@ -69,6 +69,12 @@ Pour une approximation générale, nous avons probablement travaillé en moyenne
 
 Jessica:
 
+<<<<<<< HEAD
+$ $
+
+Kira: Un apprentissage important fut, pour ma part, qu'il est essentiel de ne pas avoir 
+trop d'attentes par rapport au rendu d'un projet, car, au final, il ne sera jamais exactement
+=======
 Sources Jessica
 
 Hamburger Menu 
@@ -84,13 +90,18 @@ Le
 
 Kira: Un apprentissage important fut, pour ma part, qu'il est important de ne pas avoir 
 trop d'attentes par rapport au rendu d'un projet, car au final il ne sera jamais exactement
+>>>>>>> 7e9dcead96444e063fceda2ad5e65daba50caff6
 comme on l'avait imaginé au départ. Le projet m'a également appris à utiliser Internet de manière plus efficace comme outil d'éducation.
 Ayant toujours été fascinée par l'astronomie, cela m'a beaucoup plu de pouvoir travailler sur un projet en lien avec le sujet. 
 Malgré la grande frustration de travailler parfois des heures sur un problème sans succès, la satisfaction est d'autant plus grande lorsqu'on arrive
 enfin à le résoudre. Enfin, ce projet m'a permis d'améliorer mes compétences de travail d'équipe, tâche
 qui n'a pas toujours été des plus simples mais dont j'ai beaucoup appris.
 
+$ $
+
 Michel:
+
+$ $
 
 Ivan:
 
@@ -112,6 +123,9 @@ Ces sites nous ont servi d'inspiration ou d'aide pour le code:
     \item https://github.com/sarah37/solarsystem
     \item https://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
 \end{itemize}
+<<<<<<< HEAD
+\subsection{Images}
+=======
 \subsection{Sources des images}
 \item image accueil espace: https://c.wallhere.com/photos/61/2e/space_TylerCreatesWorlds_space_art_digital_art_artwork_nebula_orange-163304.jpg!d
 \item image mercure: https://www.lactugeek.com/wp-content/uploads/2020/03/mercure-plan%C3%A8te.jpg
@@ -122,6 +136,7 @@ Ces sites nous ont servi d'inspiration ou d'aide pour le code:
 \item image saturne: https://cap.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fdegts.2F2020.2F04.2F23.2Fa00ab0e9-329a-4da2-bb72-2b75dcad4b04.2Epng/1120x1120/quality/80/thumbnail.png
 \item image uranus: https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg
 \item image neptune: https://www.planetenweg-mosel.de/planetenbilder/neptun-m.png
+>>>>>>> 7e9dcead96444e063fceda2ad5e65daba50caff6
 \begin{itemize}
     \item  
 \end{itemize}
