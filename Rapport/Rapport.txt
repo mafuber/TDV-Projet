@@ -69,13 +69,10 @@ Pour une approximation générale, nous avons probablement travaillé en moyenne
 
 Jessica:
 
-<<<<<<< HEAD
 $ $
 
 Kira: Un apprentissage important fut, pour ma part, qu'il est essentiel de ne pas avoir 
 trop d'attentes par rapport au rendu d'un projet, car, au final, il ne sera jamais exactement
-=======
->>>>>>> e56fca0296d0703b85cfef4c9a0759887d66a1c0
 Sources Jessica
 
 Hamburger Menu 
@@ -123,11 +120,7 @@ Ces sites nous ont servi d'inspiration ou d'aide pour le code:
     \item https://github.com/sarah37/solarsystem
     \item https://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
 \end{itemize}
-<<<<<<< HEAD
 \subsection{Images}
-=======
-\subsection{Sources des images}
->>>>>>> d812d64d0e357cb8fbc24eb70d54c5debe9e6423
 \item image accueil espace: https://c.wallhere.com/photos/61/2e/space_TylerCreatesWorlds_space_art_digital_art_artwork_nebula_orange-163304.jpg!d
 \item image mercure: https://www.lactugeek.com/wp-content/uploads/2020/03/mercure-plan%C3%A8te.jpg
 \item image venus: https://file1.science-et-vie.com/var/scienceetvie/storage/images/1/0/7/107478/pourquoi-mercure-venus-ont-satellite.jpg?alias=exact1024x768_l
@@ -140,4 +133,18 @@ Ces sites nous ont servi d'inspiration ou d'aide pour le code:
 \begin{itemize}
     \item  
 \end{itemize}
+/*sources for elements-ground.json :
+Mercury:    https://www.universetoday.com/13992/composition-of-mercury/ 
+Venus :     http://mentallandscape.com/V_Venera11.htm (end of the document)
+Earth:      https://en.wikipedia.org/wiki/Earth
+Mars:       https://www.lpi.usra.edu/education/IYPT/Mars.pdf
+Jupiter:    composition is the same as atmospheric (gaz giant)
+Saturn:     composition is the same as atmospheric (gaz giant)
+Uranus:     composition is the same as atmospheric (gaz giant)
+Neptune:    composition is the same as atmospheric (gaz giant)
+
+
+Sources for the atmosphere:
+https://nssdc.gsfc.nasa.gov/planetary/factsheet/
+*/
 

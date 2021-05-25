@@ -1,17 +1,4 @@
-/*sources for elements-ground.json :
-Mercury:    https://www.universetoday.com/13992/composition-of-mercury/ 
-Venus :     http://mentallandscape.com/V_Venera11.htm (end of the document)
-Earth:      https://en.wikipedia.org/wiki/Earth
-Mars:       https://www.lpi.usra.edu/education/IYPT/Mars.pdf
-Jupiter:    composition is the same as atmospheric (gaz giant)
-Saturn:     composition is the same as atmospheric (gaz giant)
-Uranus:     composition is the same as atmospheric (gaz giant)
-Neptune:    composition is the same as atmospheric (gaz giant)
 
-
-Sources for the atmosphere:
-https://nssdc.gsfc.nasa.gov/planetary/factsheet/
-*/
 //Attention. Certaines animations ne fonctionnent que sur Firefox et Je n'ai pas trouvé la source du problème
 //Definition of a few global variables and attribute a class
 
