@@ -12,7 +12,7 @@ Neptune:    composition is the same as atmospheric (gaz giant)
 Sources for the atmosphere:
 https://nssdc.gsfc.nasa.gov/planetary/factsheet/
 */
-
+//Attention. Certaines animations ne fonctionnent que sur Firefox et Je n'ai pas trouvé la source du problème
 //Definition of a few global variables and attribute a class
 
 var graphType = 1;
