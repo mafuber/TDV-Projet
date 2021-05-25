@@ -23,7 +23,7 @@ var svg = d3.select("#my_dataviz")
 d3.json("data.json", function(data) {
     var planet = document.getElementsByTagName("H1")[1].getAttribute("id") //der aktuelle Planet
     var Werte = data[planet][0]
-    var Datas = { "CarbonDioxid": Werte.carbonDioxide, "nitrogen": Werte.nitrogen, "oxygen": Werte.argon, "methan": Werte.methane, "sodium": Werte.sodium, "hydrogen": Werte.hydrogen, "helium": Werte.helium, "other": Werte.other }
+    var Datas = { "CarbonDioxid": Werte.carbonDioxide, "nitrogen": Werte.nitrogen, "oxygen": Werte.oxygen,"argon": Werte.argon, "methan": Werte.methane, "sodium": Werte.sodium, "hydrogen": Werte.hydrogen, "helium": Werte.helium, "other": Werte.other }
 
 
     // set the color scale

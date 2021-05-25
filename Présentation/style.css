@@ -11,54 +11,6 @@
     /*Grossbuchstaben*/
 }
 
-
-/*
-.button_last {
-  cursor: pointer;
-  color: white;
-  background-color: rgba(0,0,0,0);
-
-  /*freier Platz darum
-  position: relative;
-  padding: 4px;
-  margin: 10px;
-  text-decoration: none;    /*underlined none
-
-}
-
-
-.button_last::before, /*insert bevor the element
-.button_last::after{   /*insert after the element
-  content: "";    /*what is going to be insert 
-  width: 40%;  
-  height: 2px;
-  background-color: chocolate;
-  position: absolute;
-  left: 30%;
-  right: 30%;
-  transform: scaleX(0);
-  transition: transform 0.5s;
-}
-
-.button_last::after{
-  bottom: 0;
-  transform-origin: right;
-}
-
-
-.button_last::before {
-  top: 0;
-  transform-origin: left;
-}
-
-
-.button_last:hover::before,
-.button_last:hover::before,
-.button_last:hover::after{
-  transform: scaleX(1);
-}
-*/
-
 .background {
     Width: 100%;
     min-width: 600px;
@@ -99,7 +51,6 @@ div.tooltip {
     pointer-events: none;
     text-size-adjust: auto;
 }
-
 
 /*orbits line*/
 
