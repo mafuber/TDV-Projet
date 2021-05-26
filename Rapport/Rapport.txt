@@ -101,6 +101,14 @@ Michel: Lors de ce projet je me suis principalement concentré sur la partie ave
 $ $
 
 Ivan:
+En ce qui concerne dans son ensemble et de manière personnelle; ce projet fut un apprentissage riche en connaissances que ce soit informatiques tout comme éducatives.
+Effectivement, certaines investigations dans la construction de nos données, m'ont apporté un nouveau savoir astronomique que j'ignorais. 
+En addition, le processus de cette création m'ont permis un conception plus vaste des notions informatiques à travers des languages spécifiques différents. 
+Il est vrai qu'avec un début enthousiaste, ma documentation personnelle, notamment grâce aux tutoriels sur youtube, au site de d3 et à leurs difficulté de réalisation, avait pris une tournure contraignante. 
+Certaines ébauches ont dû vite été délaissées, par incompréhension, prise de temps et manque de données ou d'informations. Ceci impactais négativement le déroulement d'une semaine académique, avec des charges de travail de plus en plus importantes.
+l'un des facteurs cléf pour la réussite de ce projet est l'organisation. Travailler à quatre, n'est pas une chose évidente et surtout lorsque tout le monde a un horaire différent.
+L'avancement de notre projet est le fruit d'une organisation qui devenait de plus en plus rapprochée, au fur et à mesure que le date du rendu  avait lieu. 
+Evidemment la communication au sein de notre groupe était importante et le partage d'idées m'était également d'une grande utilité. En conclusion, j'en garde une bilan positif dans l'ensemble.
 
 \section{Sources}
 \subsection{Données et informations}
