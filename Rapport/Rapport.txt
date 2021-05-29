@@ -96,7 +96,14 @@ qui n'a pas toujours été des plus simples mais dont j'ai beaucoup appris.
 
 $ $
 
-Michel: Lors de ce projet je me suis principalement concentré sur la partie avec la visualisation de données. 
+Michel: Lors de ce projet je me suis principalement concentré sur la partie avec la visualisation de données.
+Cela m'a permis de bien comprendre le fonctionnement de la librairie D3.js et des fichiers .json qui conservent nos données. 
+Je suis fier de ce que j'ai réussi à accomplir avec le peu de données et de temps qu'on avait à disposition. Toutefois, 
+je pense que avec plus de temps je pourrais encore bien améliorer la visualisation et l'interaction. 
+Le plus grand défi dans ce projet était l'organisation nécessaire pour travailler à plusieurs et à distance. 
+J'ai donc appris à utiliser GitHub. Ce n'était pas simple au début mais au fil du temps c'était plus compréhensible. 
+On a régulièrement organisé des appels sur Teams pour discuter de nos avancements, problèmes et idées.
+Dans l'ensemble je trouve que ce projet a été une bonne expérience.
 
 $ $
 
